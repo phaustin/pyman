@@ -3,8 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to PyMan's documentation!
-=================================
+D. J. Pine's PyMan book
+=======================
+
+This is a local fork of David Pine's `Introduction to Python for Science <https://github.com/djpine/pyman>`_
 
 Contents:
 
