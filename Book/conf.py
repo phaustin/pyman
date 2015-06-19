@@ -16,8 +16,8 @@ import sys, os
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('.'))
-sys.path.append(os.path.abspath('sphinxext'))
+#sys.path.insert(0, os.path.abspath('.'))
+#sys.path.append(os.path.abspath('sphinxext'))
 
 # -- General configuration -----------------------------------------------------
 
@@ -33,9 +33,8 @@ extensions = ['sphinx.ext.mathjax',
               'matplotlib.sphinxext.plot_directive',
               'sphinx.ext.autodoc',
               'sphinx.ext.doctest',
-              'ipython_console_highlighting',
-              'numpydoc',
-              'plot2_directive']
+              'IPython.sphinxext.ipython_console_highlighting',
+              'numpydoc']
 
 mathjax_url = ('http://cdn.mathjax.org/mathjax/latest/MathJax.js?'
                    'config=TeX-AMS-MML_HTMLorMML')
