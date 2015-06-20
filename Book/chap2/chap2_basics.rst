@@ -12,6 +12,9 @@ Installing Python on your computer
 
 If you haven't already installed Python on your computer, see :ref:`apdx1`, which includes instructions for installing Python on Macs running under MacOSX and on PCs running under  Windows.
 
+.. index::
+   single: Canopy
+
 Once you have installed Python, find the Canopy icon on your computer and launch the application.  Wait for the Canopy welcome screen to appear, and then click on the ``Editor`` icon.  The Canopy window should appear, like the one shown below.  This is the window you will generally use to work with Python.
 
 .. _fig-CanopyWindow:
@@ -25,9 +28,6 @@ Once you have installed Python, find the Canopy icon on your computer and launch
 
 The Canopy window
 =================
-
-.. index::
-   single: Canopy; window
 
 .. index::
    single: Canopy; window
@@ -297,7 +297,7 @@ There are four different types of numbers in Python: plain integers, long intege
 
 For the binary operators ``+``, ``-``, ``*``, and ``//``, the output is an integer if the inputs are integers.  The only exception is if the result of the calculation is out of the bounds of Python integers, in which case Python automatically converts the result to a long integer.  The output of the division operator ``/`` is a floating point as of version 3 of Python.  If an integer output is desired when two integers are divided, the floor division operator ``//`` must be used.
 
-**Floating point** numbers are essentially rational numbers and can have a fractional part; integers, by their very nature, have no fractional part.  In most versions of Python running on PCs or Macs, floating point numbers go between approximately :math:`\pm 2 \times 10^{-308}` and :math:`\pm 2 \times 10^{308}`.    Here are some examples of integer arithmetic:
+**Floating point** numbers are essentially rational numbers and can have a fractional part; integers, by their very nature, have no fractional part.  In most versions of Python running on PCs or Macs, floating point numbers go between approximately :math:`\pm 2 \times 10^{-308}` and :math:`\pm 2 \times 10^{308}`.    Here are some examples of floating point arithmetic:
 
 .. sourcecode:: ipython
 
@@ -879,9 +879,9 @@ finds the height :math:`h` and velocity :math:`v` at a time :math:`t` after the 
 
 #.  Write a single Python script that calculates the following expressions:
 
-        (a) :math:`\displaystyle\frac{2 + e^{2.8}}{\sqrt{13}-2}`
-        (b) :math:`\displaystyle\frac{1-(1+\ln 2)^{-3.5}}{1+\sqrt{5}}`
-        (c) :math:`\displaystyle\sin\left( \frac{2-\sqrt{2}}{2+\sqrt{2}} \right)`
+        (a) :math:`\displaystyle a = \frac{2 + e^{2.8}}{\sqrt{13}-2}`
+        (b) :math:`\displaystyle b = \frac{1-(1+\ln 2)^{-3.5}}{1+\sqrt{5}}`
+        (c) :math:`\displaystyle c = \sin\left( \frac{2-\sqrt{2}}{2+\sqrt{2}} \right)`
     
     After running your script in the IPython shell, typing ``a``, ``b``, or ``c`` at the IPython prompt should yield the value of the expressions in (a), (b), or (c), respectively.
 

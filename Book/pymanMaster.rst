@@ -3,15 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-D. J. Pine's PyMan book
-=======================
-
-This is a local fork of David Pine's `Introduction to Python for Science <https://github.com/djpine/pyman>`_
+Introduction to Python for Science
+==================================
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    
    chap1/chap1_intro.rst
    chap2/chap2_basics.rst
