@@ -1,0 +1,1 @@
+.. _David Pine's Introduction to Python for Science: https://github.com/a301-teaching/pyman/tree/python3

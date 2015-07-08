@@ -3,8 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. include:: refs.txt
+   
 Introduction to Python for Science
 ==================================
+
+This is a local fork of `David Pine's Introduction to Python for Science`_.  This branch makes a couple of changes:
+
+* All code works with Python 3.4
+
+* The installation guide covers `Anaconda Python <https://store.continuum.io/cshop/anaconda/>`_
+
+* There are several short sreencasts linked from YouTube.
 
 Contents:
 

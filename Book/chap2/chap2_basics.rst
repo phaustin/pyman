@@ -3,9 +3,9 @@
 
 .. _chap2:
 
-****************
-Launching Python
-****************
+***********
+First Steps
+***********
 
 Installing Python on your computer
 ==================================
@@ -13,49 +13,92 @@ Installing Python on your computer
 If you haven't already installed Python on your computer, see :ref:`apdx1`, which includes instructions for installing Python on Macs running under MacOSX and on PCs running under  Windows.
 
 .. index::
-   single: Canopy
+   single: Anaconda
 
-Once you have installed Python, find the Canopy icon on your computer and launch the application.  Wait for the Canopy welcome screen to appear, and then click on the ``Editor`` icon.  The Canopy window should appear, like the one shown below.  This is the window you will generally use to work with Python.
 
-.. _fig-CanopyWindow:
+.. _launching spyder:   
 
-.. figure:: /chap2/CanopyWindow.png
-   :scale: 90 %
-   :align: center
-   :alt: Canopy window
-   
-   Canopy window
+Launching Spyder
+----------------
 
-The Canopy window
-=================
+Once you have installed Python, take a look at one of the following screencasts:
 
-.. index::
-   single: Canopy; window
+* Launching Spyder on a Mac: https://youtu.be/7VqmZ5-qp-k
 
-The default Canopy window has three panes: the code editor, the interactive Python pane, and the file browser pane.  The **interactive Python pane** is the primary way that you interact with Python.  You can use it to run Python computer programs, test snippets of Python code, navigate your computer file directories, and perform system tasks like creating, moving, and deleting files and directories.  You will use the **code editor** to write and edit Python programs (or scripts), which are simply sequences of Python commands (code) stored in a file on your computer.  The **file browser pane** allows you to navigate your computer's file directory system in order to view and retrieve files on your computer.  
+* Launching Spyder on Windows:  https://youtu.be/BghCLnNhxFw
 
-The individual panes in the Canopy window are reconfigurable and detachable but we will leave them pretty much as they are for now.  However, you may want to adjust the overall size of the window to suit your computer screen.  You can find more information about Canopy in the *Documentation Browser*, which you can access through the *Welcome to Canopy* window.
-
-.. index::
-   single: Canopy; IPython pane
-
-The Interactive Python Pane
-===========================
-
-The default input prompt of the interactive Python pane looks like this:
-
-.. sourcecode:: ipython
-
-    In [1]:
-
-.. index::
-   single: IPython; Canopy IPython pane
-    
-This means that Canopy is running a particular version or "shell" of interactive Python called **IPython**. The IPython shell has been specifically designed for scientific and engineering use.  The standard Python interactive shell uses the prompt ``>>>``.  You can pretty much do everything you want to do with either shell, but we will be using the IPython shell as we want to take advantage of some of its special features for scientific computing.
+and this 2 minute walk-through of Spyder:
+  
+* https://youtu.be/NQDtTECWwks
 
 By typing short commands at the prompt, IPython can be used to perform various system tasks, such as running programs and creating and moving files around on your computer.  This is a different kind of computer interface than the icon-based interface (or "graphical user interface" GUI) that you usually use to communicate with your computer.  While it may seem more cumbersome for some tasks, it can be more powerful for other tasks, particularly those associated with programming.
 
 Before getting started, we point out that like most modern computer languages, Python is *case sensitive*.  That is, Python distinguishes between upper and lower case letters.  Thus, two words spelled the same but having different letters capitalized are treated as different names in Python.  Keep that in mind as we introduce different commands.
+
+.. _install_test:
+
+Testing your installation of Python
+-----------------------------------
+
+Running the Python program below tests your installation of Python to verify that the installation was successful.  In particular, it tests that the NumPy, SciPy, and MatPlotLib libraries that are needed for this manual are properly installed.   Give this a try in Spyder.  If you get stuck, check this screencast which goes through the procedure: https://youtu.be/bk71uLHJiEk
+
+If you are a student, you should input your first and last names inside the single quotes on lines 15 and 16, respectively.
+
+.. sourcecode:: python
+    :linenos:
+
+    # This code tests that your Python installation worked.
+    # It generates a png image file that you should e-mail 
+    # to the address shown on the plot
+    import scipy 
+    import numpy 
+    import matplotlib 
+    import matplotlib.pyplot as plt 
+    import platform 
+    import socket
+
+    # If you are a student, please fill in your first and last
+    # names inside the quotes in the two lines below.  Do not
+    # modify anything else in this file
+
+    your_first_name = 'First' 
+    your_last_name = 'Last'
+
+    # If you are an instructor, modify the next 3 lines.
+    # You do not need to modify anything else in this file.
+
+    classname = 'ATSC 409'
+    term = 'Fall_2015'      # must contain no spaces
+    email = 'paustin@eos.ubc.ca'
+
+    plt.plot([0,1], 'r', [1,0], 'b')
+    plt.text( 0.5, 0.8, '{0:s} {1:s}'
+            .format(your_first_name, your_last_name), 
+            horizontalalignment='center',
+            size = 'x-large',
+            bbox=dict(facecolor='purple', alpha=0.4))
+    plt.text( 0.5, 0.1,
+        '{1:s}\nscipy {2:s}\nnumpy {3:s}\nmatplotlib {4:s}\non {5:s}\n{6:s}'
+            .format( 
+            classname,
+            term,
+            scipy.__version__, 
+            numpy.__version__, 
+            matplotlib.__version__, 
+            platform.platform(), 
+            socket.gethostname() 
+            ) ,
+        horizontalalignment='center'
+        )
+    filename = your_last_name + '_' + your_first_name + '_' + term + '.png'
+    plt.title('*** E-mail the saved version of this plot, ***\n' +
+        '"{0:s}" to {1:s}'.format(filename, email), fontsize=12)
+    plt.savefig(filename)
+    plt.show()
+
+
+IPython Basics
+==============
 
 Magic Functions
 ---------------
@@ -73,7 +116,7 @@ In what follows below, we assume that the ``Automagic`` switch is set to ``ON`` 
    single: IPython; navigation commands
 
 Navigation Commands
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 IPython recognizes several common navigation commands that are used under the Unix/Linux operating systems.  In the IPython shell, these few commands work on Macs, PCs, and Linux machines.
 
@@ -82,17 +125,17 @@ At the IPython prompt, type ``cd ~`` (*i.e.* "``cd``" -- "space" -- "tilde" , wh
 .. sourcecode:: ipython
 
     In [2]: pwd
-    Out[2]: u'/Users/pine'
+    Out[2]: u'/Users/phil'
 
 or this on a PC:
 
 .. sourcecode:: ipython
     
     In [3]: pwd
-    Out[3]: C:\\Users\\pine
+    Out[3]: C:\\Users\\phil
 
-The responses ``Out[2]: u'/Users/pine'`` for the Mac and ``Out[3]: C:\\Users\\pine`` for the PC mean the the current directory is ``pine``, which is a subdirectory of ``Users``.
-Taken together ``/Users/pine`` on a Mac or ``C:\\Users\\pine`` on a PC is known as the *path* of the current directory.
+The responses ``Out[2]: u'/Users/phil'`` for the Mac and ``Out[3]: C:\\Users\\phil`` for the PC mean the the current directory is ``phil``, which is a subdirectory of ``Users``.
+Taken together ``/Users/phil`` on a Mac or ``C:\\Users\\phil`` on a PC is known as the *path* of the current directory.
 The path is just the name of a directory and the sequence of subdirectories in which it resides up to the *root* directory.
 
 Typing ``cd ..`` ("``cd``" -- "space" -- two periods) moves the IPython shell up one directory in the directory tree, as illustrated by the set of commands below.
@@ -105,12 +148,12 @@ Typing ``cd ..`` ("``cd``" -- "space" -- two periods) moves the IPython shell up
 	In [5]: pwd
 	Out[5]: u'/Users'
 
-The directory moved up one from ``/Users/pine`` to ``/Users``.  Now type ``ls`` (**l**\ i\ **s**\ t) and press ``RETURN``.  The console should list the names of the files and subdirectories in the current directory.
+The directory moved up one from ``/Users/phil`` to ``/Users``.  Now type ``ls`` (**l**\ i\ **s**\ t) and press ``RETURN``.  The console should list the names of the files and subdirectories in the current directory.
 
 .. sourcecode:: ipython
 	
 	In [6]: ls
-	Shared/    pine/
+	Shared/    phil/
     
 In this case, there are only two directories (indicated by the slash) and not files.  Type ``cd ~`` again to return to your home directory and then type ``pwd`` to verify where you are in your directory tree.  [Technically, ``ls`` isn't a magic command, but typing it without the ``%`` sign lists the contents of the current directory, irrespective of whether ``Automagic`` is ``ON`` or ``OFF``.]
 
@@ -119,7 +162,7 @@ Let's create a directory within your documents directory that you can use to sto
 Now let's say you want to return to the previous subdirectory, ``Documents`` or ``My Documents``, which should be one up in the directory tree if you have followed along.  Type ``cd ..`` and then type ``pwd``.  You should find that you are back in the previous directory, ``Documents`` or ``My Documents``.  If you type ``ls``, you should see the new directory ``PyProgs`` that you just created.
 
 More Magic Commands
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 .. index::
    single: IPython; magic commands
@@ -603,10 +646,10 @@ Performing calculations in the IPython shell is handy if the calculations are sh
 When we save code in a computer file, we call the sequence of commands stored in the file a *script* or a *program* or sometimes a *routine*.  Programs can become quite sophisticated and complex.  Here we are only going to introduce the simplest features of programming by writing a very simple script.  Much later, we will introduce some of the more advanced features of programming.
 
 .. index::
-   single: Canopy; Code Editor
-   pair: Canopy; tab completion
+   single: Anaconda; Code Editor
+   pair: Anaconda; tab completion
 
-To write a script you need a text editor.  In principle, any text editor will do, but it's more convenient to use an editor that was designed for the task.  We are going to use the **Code Editor** in the Canopy window that appears when you launch the Canopy application (see  :ref:`fig-CanopyWindow`).  This editor, like most good programming editors, provides syntax highlighting, which color codes key words, comments, and other features of the Python syntax according to their function, and thus makes it easier to read the code and easier to spot programming mistakes.  The Canopy code editor also provides syntax checking, much like a spell-checker in a word processing program, that identifies many coding errors.  This can greatly speed the coding process.  Tab completion also works in the Canopy Code Editor.
+To write a script you need a text editor.  In principle, any text editor will do, but it's more convenient to use an editor that was designed for the task.  We are going to use the **Code Editor** in the Spyder window that appears when you launch Spyder.  This editor, like most good programming editors, provides syntax highlighting, which color codes key words, comments, and other features of the Python syntax according to their function, and thus makes it easier to read the code and easier to spot programming mistakes.  The Canopy code editor also provides syntax checking, much like a spell-checker in a word processing program, that identifies many coding errors.  This can greatly speed the coding process.  Tab completion also work.
 
 .. _chap2:ScriptExmp1:
 
@@ -615,7 +658,7 @@ Scripting Example 1
 
 Let's work through an example to see how scripting works.  Suppose you are going on a road trip and you would like to estimate how long the drive will take, how much gas you will need, and the cost of the gas.  It's a simple calculation.  As inputs, you will need the distance of the trip, your average speed, the cost of gasoline, and the mileage of your car.
 
-Writing a script to do these calculations is straightforward.  First, launch Canopy and open the code editor.  You should see a tab with the word ``untitled`` at the top left of the code editor pane (see :ref:`fig-CanopyWindow`).  If you don't, go to the ``File`` menu and select ``New File``.  Use the mouse to place your cursor at the top of the code editor pane.  Enter the following code and *save the code* in a file called ``myTrip.py`` in the ``PyProgs`` folder you created earlier.  This stores your script (or program) on your computer's disk.  The exact name of the file is not important but the extension ``.py`` is essential.  It tells the computer, and more importantly Python, that this is a Python program.
+Writing a script to do these calculations is straightforward.  First, launch Spyder and open the code editor.  Enter the following in the editor pane:
 
 .. sourcecode:: python
 
@@ -634,7 +677,7 @@ The number (or hash) symbol ``#`` is the "comment" character in Python; anything
 
 Python ignores blank spaces or "white space" as it is sometimes called. The statement ``costPerGallon = 4.10`` in the above program could equally well be written as ``costPerGallon=4.10`` without the spaces before and after the ``=`` assignment operator; either way the statement means the same thing.  Similarly, the white space after ``costPerGallon = 4.10`` but before the comment (hash) symbol is also ignored by Python.  The idea is that you should use white space to make your program more readable.
 
-Now you are ready to run the code.  Before doing so, you first need to use the IPython console to move to the ``PyProgs`` directory where the file containing the code resides.  From the IPython console, use the ``cd`` command to move to the ``PyProgs`` directory.  For example, you might type
+Now you are ready to run the code.  
 
 .. sourcecode:: ipython
 
@@ -866,8 +909,7 @@ Exercises
         h &= h_0 + v_0t - \tfrac{1}{2}gt^2 \\
         v &= v_0 - gt
 
-    where :math:`g = 9.8` is the acceleration due to gravity in :math:`\mathrm{m/s^2}`. Write a script that 
-finds the height :math:`h` and velocity :math:`v` at a time :math:`t` after the ball is thrown. Start the script by setting :math:`h_0 = 1.2` (meters) and :math:`v_0 = 5.4` (m/s) and have your script print out the values of height and velocity (see :ref:`printNote`). Then use the script to find the height and velocity after 0.5 seconds. Then modify your script to find them after 2.0 seconds.
+    where :math:`g = 9.8` is the acceleration due to gravity in :math:`\mathrm{m/s^2}`. Write a script that finds the height :math:`h` and velocity :math:`v` at a time :math:`t` after the ball is thrown. Start the script by setting :math:`h_0 = 1.2` (meters) and :math:`v_0 = 5.4` (m/s) and have your script print out the values of height and velocity (see :ref:`printNote`). Then use the script to find the height and velocity after 0.5 seconds. Then modify your script to find them after 2.0 seconds.
 
 #.  Write a script that defines the variables :math:`V_0 = 10`, :math:`a = 2.5`, and :math:`z = 4\tfrac{1}{3}`, and then evaluates the expression
 
