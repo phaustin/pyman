@@ -1,0 +1,11 @@
+git rm /Untitled.ipynb
+git rm Book/apdx2/mileageNBold.jpg
+git rm Book/PyMan.log
+git rm Book/chap5/chap5_plot.rst.orig
+git rm Book/chap5/zigzagPlotDemo.png.orig
+git rm Book/chap8/Mass.pdf
+git rm Book/apdx2/firstIPyNBcells.png
+git rm Book/apdx2/ipyNotebook.png
+git rm Book/apdx2/mileageNB.png
+git rm Book/apdx2/nbDashboard.png
+git rm Book/Readme_install.rst
