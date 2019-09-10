@@ -7,23 +7,15 @@
 Strings, Lists, Arrays, and Dictionaries
 ****************************************
 
-.. index::
-   single: array (NumPy)
 
 The most import data structure for scientific computing in Python is the **NumPy array**.  NumPy arrays are used to store lists of numerical data and to represent vectors, matrices, and even tensors.  NumPy arrays are designed to handle large data sets efficiently and with a minimum of fuss.  The NumPy library has a large set of routines for creating, manipulating, and transforming NumPy arrays.  NumPy functions, like ``sqrt`` and ``sin``, are designed specifically to work with NumPy arrays.  Core Python has an array data structure, but it's not nearly as versatile, efficient, or useful as the NumPy array.  We will not be using Python arrays at all.  Therefore, whenever we refer to an "array," we mean a "NumPy array."
 
-.. index::
-   single: list
 
 **Lists** are another data structure, similar to NumPy arrays, but unlike NumPy arrays, lists are a part of core Python.  Lists have a variety of uses.  They are useful, for example, in various bookkeeping tasks that arise in computer programming.  Like arrays, they are sometimes used to store data.  However, lists do not have the specialized properties and tools that make arrays so powerful for scientific computing.   So in general, we prefer arrays to lists for working with scientific data. For other tasks, lists work just fine and can even be preferable to arrays.
 
-.. index::
-   single: string
 
 **Strings** are lists of keyboard characters as well as other characters not on your keyboard.  They are not particularly interesting in scientific computing, but they are nevertheless necessary and useful.  Texts on programming with Python typically devote a good deal of time and space to learning about strings and how to manipulate them.  Our uses of them are rather modest, however, so we take a minimalist's approach and only introduce a few of their features.
 
-.. index::
-   single: dictionary
 
 **Dictionaries** are like lists, but the elements of dictionaries are accessed in a different way than for lists.  The elements of lists and arrays are numbered consecutively, and to access an element of a list or an array, you simply refer to the number corresponding to its position in the sequence.  The elements of dictionaries are accessed by "keys", which can be either strings or (arbitrary) integers (in no particular order).  Dictionaries are an important part of core Python.  However, we do not make much use of them in this introduction to scientific Python, so our discussion of them is limited.
 
@@ -837,7 +829,7 @@ The figure below shows histograms for the distributions of 10,000 random numbers
 
 .. _fig-randhistos:
 
-.. figure:: /chap3/randhistos.*
+.. figure:: randhistos.png
    :scale: 80 %
    :align: center
    :alt: Histograms of random numbers.

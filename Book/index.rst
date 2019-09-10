@@ -10,11 +10,9 @@ Introduction to Python for Science
 
 This is a local fork of `David Pine's Introduction to Python for Science`_.  This branch makes a couple of changes:
 
-* All code works with Python 3.4
+* All code works with Python 3.5
 
-* The installation guide covers `Anaconda Python <https://store.continuum.io/cshop/anaconda/>`_
-
-* There are several short sreencasts linked from YouTube.
+* The installation guide covers `miniconda python <http://conda.pydata.org/miniconda.html>`_
 
 Contents:
 

@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import sphinx_bootstrap_theme
 print('do i see this')
+import IPython.sphinxext.ipython_console_highlighting 
+import IPython.sphinxext.ipython_directive 
+
 #
 # curric documentation build configuration file, created by
 # sphinx-quickstart on Sat Aug  8 10:48:29 2015.
@@ -37,6 +39,8 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinxcontrib.fulltoc',
+    'IPython.sphinxext.ipython_console_highlighting',
+    'IPython.sphinxext.ipython_directive'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -117,9 +121,9 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #html_theme = 'alabaster'
-import phil_bootstrap_theme
-html_theme_path = phil_bootstrap_theme.get_html_theme_path()
-print(html_theme_path)
+import sphinx_bootstrap_theme
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+print('using: ',html_theme_path)
 html_theme = 'bootstrap'
 
 # Theme options are theme-specific and customize the look and feel of a theme

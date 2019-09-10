@@ -3,33 +3,36 @@
 
 .. _chap2:
 
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+
+
 ***********
 First Steps
 ***********
 
+
+
 Installing Python on your computer
 ==================================
 
-If you haven't already installed Python on your computer, see :ref:`apdx1`, which includes instructions for installing Python on Macs running under MacOSX and on PCs running under  Windows.
+If you haven't already installed Python on your computer, see :ref:`apdx1` , which includes instructions for installing Python on Macs running under MacOSX and on PCs running under  Windows.
 
 .. index::
-   single: Anaconda
+   single: miniconda
 
+Launching IPython
+-----------------
 
-.. _launching spyder:   
+Once you have installed Python, open a shell and at the prompt type::
 
-Launching Spyder
-----------------
+  $ cd ~
+  $ mkdir testfold
+  $ cd testfold
 
-Once you have installed Python, take a look at one of the following screencasts:
+which will make a new directory called testfold and change into it.  
 
-* Launching Spyder on a Mac: https://youtu.be/7VqmZ5-qp-k
-
-* Launching Spyder on Windows:  https://youtu.be/BghCLnNhxFw
-
-and this 2 minute walk-through of Spyder:
-  
-* https://youtu.be/NQDtTECWwks
 
 By typing short commands at the prompt, IPython can be used to perform various system tasks, such as running programs and creating and moving files around on your computer.  This is a different kind of computer interface than the icon-based interface (or "graphical user interface" GUI) that you usually use to communicate with your computer.  While it may seem more cumbersome for some tasks, it can be more powerful for other tasks, particularly those associated with programming.
 
@@ -40,9 +43,19 @@ Before getting started, we point out that like most modern computer languages, P
 Testing your installation of Python
 -----------------------------------
 
-Running the Python program below tests your installation of Python to verify that the installation was successful.  In particular, it tests that the NumPy, SciPy, and MatPlotLib libraries that are needed for this manual are properly installed.   Give this a try in Spyder.  If you get stuck, check this screencast which goes through the procedure: https://youtu.be/bk71uLHJiEk
+Running the Python program below tests your installation of Python to verify that the installation was successful.  In particular, it tests that the NumPy, SciPy, and MatPlotLib libraries that are needed for this manual are properly installed.   Now that you are in directory testfold, start a python session with::
+  
+  $jupyter  qtconsole &
 
-If you are a student, you should input your first and last names inside the single quotes on lines 15 and 16, respectively.
+The '&' at the end 'backgrounds' the session and gives you back the bash prompt so
+you can type further commands.
+
+Launch atom from the command line with the empty file name test_python.py::
+
+  $ atom test_python.py
+  
+
+Copy these lines into test_python.py  You should input your first and last names inside the single quotes on lines 15 and 16, respectively.  Save this file in atom.
 
 .. sourcecode:: python
     :linenos:
@@ -67,8 +80,8 @@ If you are a student, you should input your first and last names inside the sing
     # If you are an instructor, modify the next 3 lines.
     # You do not need to modify anything else in this file.
 
-    classname = 'ATSC 409'
-    term = 'Fall_2015'      # must contain no spaces
+    classname = 'ATSC 301'
+    term = 'Fall_2016'      # must contain no spaces
     email = 'paustin@eos.ubc.ca'
 
     plt.plot([0,1], 'r', [1,0], 'b')
@@ -96,7 +109,31 @@ If you are a student, you should input your first and last names inside the sing
     plt.savefig(filename)
     plt.show()
 
+    
+To run your saved file go to the IPython window and at the prompt type::
 
+  run test_python
+
+which should produce a plot that looks something like this:
+
+.. image:: screenshots/inline_plot.png
+   :scale: 50
+
+To  save this as a png file,  type::
+
+  %matplotlib qt4
+
+which switches from inline graphics to graphics that appear in a separate window. Type::
+
+  run test_python
+
+again to get a windowed plot
+
+.. image:: screenshots/qt4_window.png
+   :scale: 50
+
+Clicking on the floppy disk icon should prompt you for a file name to save the figure into.
+    
 IPython Basics
 ==============
 
@@ -941,42 +978,4 @@ Exercises
     
     (a) Given :math:`a`, :math:`b`, and :math:`c` as inputs, write a script that gives the numerical values of the two solutions.  Write the constants :math:`a`, :math:`b`, and :math:`c` as floats, and show that your script gives the correct solutions for a few test cases when the solutions are real numbers, that is, when the discriminant :math:`b^2-4ac \ge 0`.  Use the ``print`` function in your script, discussed at the end of Section 2.8.1 :ref:`chap2:ScriptExmp1`, to print out your two solutions.
     (b) Written this way, however, your script gives an error message when the solutions are complex.  For example, see what happens when :math:`a=1`, :math:`b=2`, and :math:`c=3`.  You can fix this using statements in your script like ``a = a+0j`` after setting ``a`` to some float value.  Thus, you can make the script work for any set of real inputs for :math:`a`, :math:`b`, and :math:`c`.  Again, use the ``print`` function to print out your two solutions.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
