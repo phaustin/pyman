@@ -2,7 +2,8 @@
 # jupyter:
 #   jupytext:
 #     cell_metadata_filter: all
-#     notebook_metadata_filter: all,-language_info
+#     formats: ipynb,py:percent
+#     notebook_metadata_filter: all,-language_info,-toc,-latex_envs
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -12,18 +13,6 @@
 #     display_name: Python 3
 #     language: python
 #     name: python3
-#   toc:
-#     base_numbering: 1
-#     nav_menu: {}
-#     number_sections: true
-#     sideBar: true
-#     skip_h1_title: false
-#     title_cell: Table of Contents
-#     title_sidebar: Contents
-#     toc_cell: false
-#     toc_position: {}
-#     toc_section_display: true
-#     toc_window_display: true
 # ---
 
 # %% [markdown]
