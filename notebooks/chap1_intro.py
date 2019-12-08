@@ -15,18 +15,11 @@
 #     name: python3
 # ---
 
-# %% [markdown] toc=true
-# <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Introduction</a></span><ul class="toc-item"><li><span><a href="#Introduction-to-Python-and-its-use-in-science" data-toc-modified-id="Introduction-to-Python-and-its-use-in-science-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Introduction to Python and its use in science</a></span></li></ul></li></ul></div>
-
 # %% [markdown]
-# Introduction
-# ============
+# # Getting started with Jupyter and Python
 #
-# latex
 #
-# Introduction to Python and its use in science
-# ---------------------------------------------
+# ## Introduction to Python and its use in science
 #
 # This manual is meant to serve as an introduction to the Python
 # programming language and its use for scientific computing. It's ok if

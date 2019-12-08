@@ -13,8 +13,7 @@
 # %% [markdown]
 # python
 #
-# Strings, Lists, Arrays, and Dictionaries
-# ========================================
+# # Strings, Lists, Arrays, and Dictionaries
 #
 # The most import data structure for scientific computing in Python is the
 # **NumPy array**. NumPy arrays are used to store lists of numerical data

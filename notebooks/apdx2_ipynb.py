@@ -16,12 +16,8 @@
 # ---
 
 # %% [markdown]
-# python
 #
-# single: IPython; IPython Notebook
-#
-# IPython Notebooks
-# =================
+# # Jupyter Notebooks
 #
 # IPython notebooks are useful for logging your work. Here we suggest that
 # you use them for logging and turning in homework assignments. You may

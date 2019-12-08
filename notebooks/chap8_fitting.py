@@ -15,17 +15,10 @@
 #     name: python3
 # ---
 
-# %% [markdown] toc=true
-# <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Curve-Fitting" data-toc-modified-id="Curve-Fitting-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Curve Fitting</a></span><ul class="toc-item"><li><span><a href="#Using-linear-regression-for-fitting-non-linear-functions" data-toc-modified-id="Using-linear-regression-for-fitting-non-linear-functions-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Using linear regression for fitting non-linear functions</a></span><ul class="toc-item"><li><span><a href="#Linear-regression-for-fitting-an-exponential-function" data-toc-modified-id="Linear-regression-for-fitting-an-exponential-function-1.1.1"><span class="toc-item-num">1.1.1&nbsp;&nbsp;</span>Linear regression for fitting an exponential function</a></span></li><li><span><a href="#Linear-regression-for-fitting-a-power-law-function" data-toc-modified-id="Linear-regression-for-fitting-a-power-law-function-1.1.2"><span class="toc-item-num">1.1.2&nbsp;&nbsp;</span>Linear regression for fitting a power-law function</a></span></li></ul></li><li><span><a href="#Nonlinear-fitting" data-toc-modified-id="Nonlinear-fitting-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Nonlinear fitting</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Exercises</a></span></li></ul></li></ul></div>
-
 # %% [markdown]
-# python
 #
-# single: curve fitting
 #
-# Curve Fitting
-# =============
+# # Curve Fitting
 #
 # One of the most important tasks in any experimental science is modeling
 # data and determining how well some theoretical function describes
@@ -501,7 +494,7 @@
 # any long wavelength oscillations, the fit would seem to be a good fit.
 #
 # <figure>
-# <img src="attachment:FitSpectrum.png" class="align-center" alt="" /><figcaption>Fit to Gaussian with quadratic polynomial background.</figcaption>
+# <img src="imagesFitSpectrum.png" class="align-center" alt="" /><figcaption>Fit to Gaussian with quadratic polynomial background.</figcaption>
 # </figure>
 #
 # Finally, we note that we have used the MatPlotLib package `gridspec` to

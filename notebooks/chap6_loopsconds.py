@@ -15,15 +15,9 @@
 #     name: python3
 # ---
 
-# %% [markdown] toc=true
-# <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Conditionals-and-Loops" data-toc-modified-id="Conditionals-and-Loops-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Conditionals and Loops</a></span><ul class="toc-item"><li><span><a href="#Conditionals" data-toc-modified-id="Conditionals-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Conditionals</a></span><ul class="toc-item"><li><span><a href="#if,-elif,-and-else-statements" data-toc-modified-id="if,-elif,-and-else-statements-1.1.1"><span class="toc-item-num">1.1.1&nbsp;&nbsp;</span><code>if</code>, <code>elif</code>, and <code>else</code> statements</a></span></li><li><span><a href="#Logical-operators" data-toc-modified-id="Logical-operators-1.1.2"><span class="toc-item-num">1.1.2&nbsp;&nbsp;</span>Logical operators</a></span></li></ul></li><li><span><a href="#Loops" data-toc-modified-id="Loops-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Loops</a></span><ul class="toc-item"><li><span><a href="#for-loops" data-toc-modified-id="for-loops-1.2.1"><span class="toc-item-num">1.2.1&nbsp;&nbsp;</span><code>for</code> loops</a></span></li><li><span><a href="#Accumulators" data-toc-modified-id="Accumulators-1.2.2"><span class="toc-item-num">1.2.2&nbsp;&nbsp;</span>Accumulators</a></span></li><li><span><a href="#while-loops" data-toc-modified-id="while-loops-1.2.3"><span class="toc-item-num">1.2.3&nbsp;&nbsp;</span><code>while</code> loops</a></span></li><li><span><a href="#Loops-and-array-operations" data-toc-modified-id="Loops-and-array-operations-1.2.4"><span class="toc-item-num">1.2.4&nbsp;&nbsp;</span>Loops and array operations</a></span></li></ul></li><li><span><a href="#List-Comprehensions" data-toc-modified-id="List-Comprehensions-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>List Comprehensions</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>Exercises</a></span></li></ul></li></ul></div>
-
 # %% [markdown]
-# python
 #
-# Conditionals and Loops
-# ======================
+# # Conditionals and Loops
 #
 # Computer programs are useful for performing repetitive tasks. Without
 # complaining, getting bored, or growing tired, they can repetitively

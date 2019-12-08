@@ -15,15 +15,8 @@
 #     name: python3
 # ---
 
-# %% [markdown] toc=true
-# <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Python-Resources" data-toc-modified-id="Python-Resources-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Python Resources</a></span><ul class="toc-item"><li><span><a href="#Web-resources" data-toc-modified-id="Web-resources-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Web resources</a></span></li><li><span><a href="#Books" data-toc-modified-id="Books-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Books</a></span></li></ul></li></ul></div>
-
-# %% [markdown]
-# python
-#
-# Python Resources
-# ================
+# %%
+# # Python Resources
 #
 # This text provides an introduction to Python for science and engineering
 # applications but is hardly exhaustive. There are many other resources

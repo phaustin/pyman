@@ -15,15 +15,8 @@
 #     name: python3
 # ---
 
-# %% [markdown] toc=true
-# <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Input-and-Output" data-toc-modified-id="Input-and-Output-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Input and Output</a></span><ul class="toc-item"><li><span><a href="#Keyboard-input" data-toc-modified-id="Keyboard-input-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Keyboard input</a></span></li><li><span><a href="#Screen-output" data-toc-modified-id="Screen-output-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Screen output</a></span><ul class="toc-item"><li><span><a href="#Formatting-output-with-str.format()" data-toc-modified-id="Formatting-output-with-str.format()-1.2.1"><span class="toc-item-num">1.2.1&nbsp;&nbsp;</span>Formatting output with <code>str.format()</code></a></span></li><li><span><a href="#Printing-arrays" data-toc-modified-id="Printing-arrays-1.2.2"><span class="toc-item-num">1.2.2&nbsp;&nbsp;</span>Printing arrays</a></span></li></ul></li><li><span><a href="#File-input" data-toc-modified-id="File-input-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>File input</a></span><ul class="toc-item"><li><span><a href="#Reading-data-from-a-text-file" data-toc-modified-id="Reading-data-from-a-text-file-1.3.1"><span class="toc-item-num">1.3.1&nbsp;&nbsp;</span>Reading data from a text file</a></span></li><li><span><a href="#Reading-data-from-a-CSV-file" data-toc-modified-id="Reading-data-from-a-CSV-file-1.3.2"><span class="toc-item-num">1.3.2&nbsp;&nbsp;</span>Reading data from a CSV file</a></span></li></ul></li><li><span><a href="#File-output" data-toc-modified-id="File-output-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>File output</a></span><ul class="toc-item"><li><span><a href="#Writing-data-to-a-text-file" data-toc-modified-id="Writing-data-to-a-text-file-1.4.1"><span class="toc-item-num">1.4.1&nbsp;&nbsp;</span>Writing data to a text file</a></span></li><li><span><a href="#Writing-data-to-a-CSV-file" data-toc-modified-id="Writing-data-to-a-CSV-file-1.4.2"><span class="toc-item-num">1.4.2&nbsp;&nbsp;</span>Writing data to a CSV file</a></span></li></ul></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-1.5"><span class="toc-item-num">1.5&nbsp;&nbsp;</span>Exercises</a></span></li></ul></li></ul></div>
-
-# %% [markdown]
-# python
-#
-# Input and Output
-# ================
+# %%
+# # Input and Output
 #
 # single: input single: output
 #

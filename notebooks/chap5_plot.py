@@ -17,14 +17,8 @@
 # ---
 
 # %% [markdown] toc=true
-# <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Plotting" data-toc-modified-id="Plotting-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Plotting</a></span><ul class="toc-item"><li><span><a href="#An-interactive-session-with-pyplot" data-toc-modified-id="An-interactive-session-with-pyplot-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>An interactive session with <code>pyplot</code></a></span></li><li><span><a href="#Basic-plotting" data-toc-modified-id="Basic-plotting-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Basic plotting</a></span><ul class="toc-item"><li><span><a href="#Specifying-line-and-symbol-types-and-colors" data-toc-modified-id="Specifying-line-and-symbol-types-and-colors-1.2.1"><span class="toc-item-num">1.2.1&nbsp;&nbsp;</span>Specifying line and symbol types and colors</a></span></li><li><span><a href="#Error-bars" data-toc-modified-id="Error-bars-1.2.2"><span class="toc-item-num">1.2.2&nbsp;&nbsp;</span>Error bars</a></span></li><li><span><a href="#Setting-plotting-limits-and-excluding-data" data-toc-modified-id="Setting-plotting-limits-and-excluding-data-1.2.3"><span class="toc-item-num">1.2.3&nbsp;&nbsp;</span>Setting plotting limits and excluding data</a></span></li><li><span><a href="#Subplots" data-toc-modified-id="Subplots-1.2.4"><span class="toc-item-num">1.2.4&nbsp;&nbsp;</span>Subplots</a></span></li></ul></li><li><span><a href="#Logarithmic-plots" data-toc-modified-id="Logarithmic-plots-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Logarithmic plots</a></span><ul class="toc-item"><li><span><a href="#Semi-log-plots" data-toc-modified-id="Semi-log-plots-1.3.1"><span class="toc-item-num">1.3.1&nbsp;&nbsp;</span>Semi-log plots</a></span></li><li><span><a href="#Log-log-plots" data-toc-modified-id="Log-log-plots-1.3.2"><span class="toc-item-num">1.3.2&nbsp;&nbsp;</span>Log-log plots</a></span></li></ul></li><li><span><a href="#More-advanced-graphical-output" data-toc-modified-id="More-advanced-graphical-output-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>More advanced graphical output</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-1.5"><span class="toc-item-num">1.5&nbsp;&nbsp;</span>Exercises</a></span></li></ul></li></ul></div>
-
-# %% [markdown]
-# python
 #
-# Plotting
-# ========
+# # Plotting
 #
 # single: MatPlotLib single: plots
 #

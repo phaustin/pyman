@@ -17,14 +17,8 @@
 # ---
 
 # %% [markdown] toc=true
-# <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Getting-started" data-toc-modified-id="Getting-started-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Getting started</a></span><ul class="toc-item"><li><span><a href="#The-bash-command-shell" data-toc-modified-id="The-bash-command-shell-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>The bash command shell</a></span><ul class="toc-item"><li><span><a href="#1.-Installing-the-bash-shell" data-toc-modified-id="1.-Installing-the-bash-shell-1.1.1"><span class="toc-item-num">1.1.1&nbsp;&nbsp;</span>1. Installing the bash shell</a></span></li><li><span><a href="#2.-Working-with-the-shell" data-toc-modified-id="2.-Working-with-the-shell-1.1.2"><span class="toc-item-num">1.1.2&nbsp;&nbsp;</span>2. Working with the shell</a></span></li></ul></li><li><span><a href="#Installing-the-atom-file-editor" data-toc-modified-id="Installing-the-atom-file-editor-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Installing the atom file editor</a></span></li><li><span><a href="#Installing-python" data-toc-modified-id="Installing-python-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Installing python</a></span></li><li><span><a href="#Installing-python-modules" data-toc-modified-id="Installing-python-modules-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>Installing python modules</a></span></li><li><span><a href="#Running-Python" data-toc-modified-id="Running-Python-1.5"><span class="toc-item-num">1.5&nbsp;&nbsp;</span>Running Python</a></span></li></ul></li></ul></div>
-
-# %% [markdown]
-# python
 #
-# Getting started
-# ===============
+# # Getting started
 #
 # We are going to be writing our own programs, which means we need some
 # way to run code that takes in data and produces some kind of output. To
