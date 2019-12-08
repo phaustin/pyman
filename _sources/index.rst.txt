@@ -1,9 +1,13 @@
-Introduction to python for science
-==================================
+Scientific python basics
+========================
+
+This is a lightly edited version of a set of restructured
+text files by D. J. Pine, converted to jupyter notebooks
+and rendered using nbsphinx
 
 All notebooks and exercises are available at the `GitHub Repository <https://github.com/phaustin/pyman.git>`_.
 
-Lecture notebooks
+
 =================
 
 .. toctree::
