@@ -1,5 +1,5 @@
 #!/bin/bash -v
-python $sphinxlib/check_rendered.py .
+python $sphinxlib/check_rendered.py notebooks
 sphinx-build -N -v -b html . _build
 # mkdir -p _build/docs
 # rsync docs/*pdf _build/docs/

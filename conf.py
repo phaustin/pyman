@@ -50,8 +50,8 @@ templates_path = ["_templates"]
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = ".rst"
+source_suffix = ['.rst', '.md']
+# source_suffix = ".rst"
 
 # The master toctree document.
 master_doc = "index"
@@ -91,9 +91,9 @@ html_theme_options = {"collapse_navigation": True}
 using_rtd_theme = True
 
 
-nbsphinx_custom_formats = {
-    ".py": lambda s: jupytext.reads(s, ".py"),
-}
+# nbsphinx_custom_formats = {
+#     ".py": lambda s: jupytext.reads(s, ".py"),
+# }
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
