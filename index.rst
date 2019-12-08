@@ -1,7 +1,7 @@
-STA 663: Computational Statistics and Statistical Computing (2018)
-==================================================================
+Introduction to python for science
+==================================
 
-All notebooks and exercises are available at the `GitHub Repository <https://github.com/cliburn/sta-663-2018>`_.
+All notebooks and exercises are available at the `GitHub Repository <https://github.com/phaustin/pyman.git>`_.
 
 Lecture notebooks
 =================
