@@ -1,0 +1,551 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; Introduction to Python for Science 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="12. Jupyter Notebooks" href="apdx2_ipynb.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Introduction to Python for Science
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="FirstNotebook.html">1. Demo of IPython Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap1_intro.html">2. Getting started with Jupyter and Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap2_basics.html">3. First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap3_arrays.html">4. Strings, Lists, Arrays, and Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap5_plot.html">5. Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap6_loopsconds.html">6. Conditionals and Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap7_funcs.html">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap8_fitting.html">8. Curve Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap08PineSolns.html">9. Chapter 8 (Pine): Curve Fitting Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap9_scipy.html">10. Numerical Routines: SciPy and NumPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apdx1_install.html">11. Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apdx2_ipynb.html">12. Jupyter Notebooks</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Introduction to Python for Science</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rendered/apdx3_resources.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    min-width: 5ex;
+    padding-top: 0.4em;
+    padding-right: 0.4em;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    padding: 0.4em;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># # Python Resources</span>
+<span class="c1">#</span>
+<span class="c1"># This text provides an introduction to Python for science and engineering</span>
+<span class="c1"># applications but is hardly exhaustive. There are many other resources</span>
+<span class="c1"># that you will want to tap. Here I point out several that you may find</span>
+<span class="c1"># useful.</span>
+<span class="c1">#</span>
+<span class="c1"># Web resources</span>
+<span class="c1"># -------------</span>
+<span class="c1">#</span>
+<span class="c1"># The best web resource for Python is a good search engine like Google.</span>
+<span class="c1"># Nevertheless, I list a few web sites here that you might find useful. I</span>
+<span class="c1"># have successfully resisted any attempt to be exhaustive so that the list</span>
+<span class="c1"># is actually useful. Nevertheless, if you find a really cool site that</span>
+<span class="c1"># you think should be on this list, please let me know.</span>
+<span class="c1">#</span>
+<span class="c1"># &gt; &lt;http://www.python.org/&gt;</span>
+<span class="c1"># &gt; The official Python web site. I almost never look here.</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; &lt;http://docs.python.org/3/reference/&gt;</span>
+<span class="c1"># &gt; Sometimes I look here for detailed information about Python 3, which</span>
+<span class="c1"># &gt; is the version used in this manual. Documentation for the previous</span>
+<span class="c1"># &gt; version, Python 2, is available at</span>
+<span class="c1"># &gt; &lt;http://docs.python.org/2/reference/&gt;</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; &lt;http://docs.scipy.org/doc/numpy/reference/&gt;</span>
+<span class="c1"># &gt; I usually start here when I need information about NumPy. It has links</span>
+<span class="c1"># &gt; to just about all the NumPy documentation I need. By the way, I say</span>
+<span class="c1"># &gt; &quot;num-pee&quot;, which rhymes with &quot;bumpy&quot;---a lot of people say &quot;num-pie&quot;,</span>
+<span class="c1"># &gt; which doesn&#39;t sound like English to me.</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; &lt;http://docs.scipy.org/doc/scipy/reference/&gt;</span>
+<span class="c1"># &gt; I start here when I need information about SciPy, its various packages</span>
+<span class="c1"># &gt; and their functions. I say &quot;psy-pi&quot; for SciPy, like everyone else. Who</span>
+<span class="c1"># &gt; says I have to be consistent? (see Emerson)</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; &lt;http://matplotlib.org/api/pyplot_summary.html&gt;</span>
+<span class="c1"># &gt; The *Plotting Commands Summary* page for MatPlotLib. It has a search</span>
+<span class="c1"># &gt; feature and links to all the MatPlotLib documentation, which I use a</span>
+<span class="c1"># &gt; lot. You can go the the main MatPlotLib page,</span>
+<span class="c1"># &gt; &lt;http://matplotlib.org/&gt;, but frankly, it&#39;s less useful. The site</span>
+<span class="c1"># &gt; &lt;http://www.loria.fr/~rougier/teaching/matplotlib/&gt; is also useful for</span>
+<span class="c1"># &gt; learning some MatPlotLib tricks.</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; &lt;http://ipython.org/&gt;</span>
+<span class="c1"># &gt; I go to this page mostly to learn about IPython Notebook</span>
+<span class="c1"># &gt; (&lt;http://ipython.org/notebook.html&gt;) but it&#39;s also useful if you need</span>
+<span class="c1"># &gt; information about the IPython interpreter, especially if you want to</span>
+<span class="c1"># &gt; find out more about IPython magic commands.</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; &lt;http://scipy-lectures.github.io/&gt;</span>
+<span class="c1"># &gt; This link provides a web-based quick introduction to scientific Python</span>
+<span class="c1"># &gt; that assumes you have some experience programming (not necessarily in</span>
+<span class="c1"># &gt; Python). It&#39;s terser than my introduction, but covers some useful</span>
+<span class="c1"># &gt; topics that I do not cover.</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; single: Anaconda; resources</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; &lt;http://docs.continuum.io/anaconda/index&gt; is the location for</span>
+<span class="c1"># &gt; documentation for Anaconda python</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; single: Spyder; resources</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; &lt;https://pythonhosted.org/spyder/index.html&gt;</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; &gt; Doucumentation for Spyder, the Integrated Development Environment</span>
+<span class="c1"># &gt; &gt; provided with with Anaconda.</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; single: Anaconda; resources</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; &lt;http://continuum.io/&gt;</span>
+<span class="c1"># &gt; Anaconda provides a free distribution of Spyder with a comprehensive</span>
+<span class="c1"># &gt; package manager, and may be the best choice for power users of Python</span>
+<span class="c1"># &gt; for scientific programming. The package manager is run by line</span>
+<span class="c1"># &gt; commands from a terminal window, which may put off beginners. Anaconda</span>
+<span class="c1"># &gt; can be downloaded from &lt;https://store.continuum.io/cshop/anaconda/&gt;.</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; &lt;http://www.scipy.org/Mailing_Lists&gt;</span>
+<span class="c1"># &gt; Go here if you want to sign up for a mailing list for NumPy or SciPy,</span>
+<span class="c1"># &gt; or if you want to report a bug. Mailing lists give you access to a</span>
+<span class="c1"># &gt; community of developers and users that can often provide expert help.</span>
+<span class="c1"># &gt; Just remember to be polite and respectful of those helping you and</span>
+<span class="c1"># &gt; also to those posting questions.</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; &lt;https://lists.sourceforge.net/lists/listinfo/matplotlib-users&gt;</span>
+<span class="c1"># &gt; The mailing list for MatPlotLib. See paragraph immediately above.</span>
+<span class="c1"># &gt;</span>
+<span class="c1"># &gt; &lt;http://stackoverflow.com/&gt;</span>
+<span class="c1"># &gt; StackOverflow may just be your best friend when it comes to solving</span>
+<span class="c1"># &gt; problems using Python. You pose your question about whatever problem</span>
+<span class="c1"># &gt; you are having with Python and other people write answers. The answers</span>
+<span class="c1"># &gt; are monitored and the best survive. In fact, most of the questions you</span>
+<span class="c1"># &gt; will pose have already been posed by someone else and answered. So you</span>
+<span class="c1"># &gt; can just look up the answer to most of your questions. StackOverflow</span>
+<span class="c1"># &gt; is a wonderful resource.</span>
+<span class="c1">#</span>
+<span class="c1"># Books</span>
+<span class="c1"># -----</span>
+<span class="c1">#</span>
+<span class="c1"># There are a lot of books on Python and there is no way I can provide</span>
+<span class="c1"># reviews for all of them. I have found that the book by Mark Lutz,</span>
+<span class="c1"># *Learning Python*, published by O&#39;Reilly Media does the trick for most</span>
+<span class="c1"># people. It doesn&#39;t have anything special for scientific programming, and</span>
+<span class="c1"># thus does not cover the NumPy, SciPy, or MatPlotLib packages, but for</span>
+<span class="c1"># just about everything else, it&#39;s an excellent resource. It gives a good</span>
+<span class="c1"># introduction to object oriented programming, or OOP, which I say little</span>
+<span class="c1"># about in this text. The 3rd edition of the book covers Python 2 while</span>
+<span class="c1"># the 4th and 5th (current) editions cover Python 3. You are probably</span>
+<span class="c1"># better off getting the latest edition as everybody will soon be using</span>
+<span class="c1"># Python 3. If you are using Python 2, as we do in this text, you can</span>
+<span class="c1"># easily enough figure out the differences between Python 3 and 2.</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="apdx2_ipynb.html" class="btn btn-neutral float-left" title="12. Jupyter Notebooks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright David J Pine
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

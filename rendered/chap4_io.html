@@ -1,0 +1,1259 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; Introduction to Python for Science 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Plotting" href="chap5_plot.html" />
+    <link rel="prev" title="4. Strings, Lists, Arrays, and Dictionaries" href="chap3_arrays.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Introduction to Python for Science
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="FirstNotebook.html">1. Demo of IPython Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap1_intro.html">2. Getting started with Jupyter and Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap2_basics.html">3. First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap3_arrays.html">4. Strings, Lists, Arrays, and Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap5_plot.html">5. Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap6_loopsconds.html">6. Conditionals and Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap7_funcs.html">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap8_fitting.html">8. Curve Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap08PineSolns.html">9. Chapter 8 (Pine): Curve Fitting Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap9_scipy.html">10. Numerical Routines: SciPy and NumPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apdx1_install.html">11. Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apdx2_ipynb.html">12. Jupyter Notebooks</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Introduction to Python for Science</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rendered/chap4_io.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    min-width: 5ex;
+    padding-top: 0.4em;
+    padding-right: 0.4em;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    padding: 0.4em;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># # Input and Output</span>
+<span class="c1">#</span>
+<span class="c1"># single: input single: output</span>
+<span class="c1">#</span>
+<span class="c1"># A good relationship depends on good communication. In this chapter you</span>
+<span class="c1"># learn how to communicate with Python. Of course, communicating is a</span>
+<span class="c1"># two-way street: input and output. Generally, when you have Python</span>
+<span class="c1"># perform some task, you need to feed it information---input. When it is</span>
+<span class="c1"># done with that task, it reports back to you the results of its</span>
+<span class="c1"># calculations---output.</span>
+<span class="c1">#</span>
+<span class="c1"># There are two venues for input that concern us: the computer keyboard</span>
+<span class="c1"># and the input data file. Similarly, there are two venues for output: the</span>
+<span class="c1"># computer screen and the output data file. We start with input from the</span>
+<span class="c1"># keyboard and output to the computer screen. Then we deal with data file</span>
+<span class="c1"># input and output---or &quot;io.&quot;</span>
+<span class="c1">#</span>
+<span class="c1"># single: input; keyboard</span>
+<span class="c1">#</span>
+<span class="c1"># Keyboard input</span>
+<span class="c1"># --------------</span>
+<span class="c1">#</span>
+<span class="c1"># Many computer programs need input from the user. In `chap2:ScriptExmp1`,</span>
+<span class="c1"># the program needed the distance traveled as an input in order to</span>
+<span class="c1"># determine the duration of the trip and the cost of the gasoline. As you</span>
+<span class="c1"># might like to use this same script to determine the cost of several</span>
+<span class="c1"># different trips, it would be useful if the program requested that input</span>
+<span class="c1"># when it was run from the IPython shell.</span>
+<span class="c1">#</span>
+<span class="c1"># Python has a function called `raw_input` (renamed `input` in Python 3)</span>
+<span class="c1"># for getting input from the user and assigning it a variable name. It has</span>
+<span class="c1"># the form</span>
+<span class="c1">#</span>
+<span class="c1"># ``` python</span>
+<span class="c1"># strname = raw_input(&quot;prompt to user&quot;)</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># When the `raw_input` statement is executed, it prints the text in the</span>
+<span class="c1"># quotes to the computer screen and waits for input from the user. The</span>
+<span class="c1"># user types a string of characters and presses the return key. The</span>
+<span class="c1"># `raw_input` function then assigns that string to the variable name on</span>
+<span class="c1"># the right of the assignment operator `=`.</span>
+<span class="c1">#</span>
+<span class="c1"># Let&#39;s try it out this snippet of code in the IPython shell.</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [1]: distance = raw_input(&quot;Input distance of trip in miles: &quot;)</span>
+<span class="c1">#</span>
+<span class="c1"># Input distance of trip in miles:</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># Python prints out the string argument of the `raw_input` function and</span>
+<span class="c1"># waits for a response from you. Let&#39;s go ahead and type `450` for &quot;450</span>
+<span class="c1"># miles&quot; and press return. Now type the variable name `distance` to see</span>
+<span class="c1"># its value</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [2]: distance</span>
+<span class="c1"># Out[2]: u&#39;450&#39;</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># The value of the `distance` is `450` as expected, but it is a string</span>
+<span class="c1"># (the `u` stands for &quot;unicode&quot; which refers to the string coding system</span>
+<span class="c1"># Python uses). Because we want to use `450` as a number and not a</span>
+<span class="c1"># distance, we need to convert it from a string to a number. We can do</span>
+<span class="c1"># that with the `eval` function by writing</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [3]: distance = eval(distance)</span>
+<span class="c1">#</span>
+<span class="c1"># In [4]: distance</span>
+<span class="c1"># Out[4]: 450</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># The `eval` function has converted `distance` to an integer. This is fine</span>
+<span class="c1"># and we are ready to move on. However, we might prefer that `distance` be</span>
+<span class="c1"># a float instead of an integer. There are two ways to do this. We could</span>
+<span class="c1"># assume the user is very smart and will type &quot;`450.`&quot; instead of &quot;`450`&quot;,</span>
+<span class="c1"># which will cause distance to be a float when `eval` does the conversion.</span>
+<span class="c1"># That is, the number 450 is dynamically typed to be a float or an integer</span>
+<span class="c1"># depending on whether or not the user uses a decimal point.</span>
+<span class="c1"># Alternatively, we could use the function `float` in place of `eval`,</span>
+<span class="c1"># which would ensure that `distance` is a floating point variable. Thus,</span>
+<span class="c1"># our code would look like this (including the user response):</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [5]: distance = raw_input(&quot;Input distance of trip in miles: &quot;)</span>
+<span class="c1">#</span>
+<span class="c1"># Input distance of trip in miles: 450</span>
+<span class="c1">#</span>
+<span class="c1"># In [5]: distance</span>
+<span class="c1"># Out[5]: u&#39;450&#39;</span>
+<span class="c1">#</span>
+<span class="c1"># In [7]: distance = float(distance)</span>
+<span class="c1">#</span>
+<span class="c1"># In [8]: distance</span>
+<span class="c1"># Out[8]: 450.0</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># Now let&#39;s incorporate what we have learned into the code we wrote for</span>
+<span class="c1"># `chap2:ScriptExmp1`</span>
+<span class="c1">#</span>
+<span class="c1"># ``` python</span>
+<span class="c1"># # Calculates time, gallons of gas used, and cost of gasoline for</span>
+<span class="c1"># # a trip</span>
+<span class="c1">#</span>
+<span class="c1"># distance = raw_input(&quot;Input distance of trip in miles: &quot;)</span>
+<span class="c1"># distance = float(distance)</span>
+<span class="c1">#</span>
+<span class="c1"># mpg = 30.               # car mileage</span>
+<span class="c1"># speed = 60.             # average speed</span>
+<span class="c1"># costPerGallon = 4.10    # price of gas</span>
+<span class="c1">#</span>
+<span class="c1"># time = distance/speed</span>
+<span class="c1"># gallons = distance/mpg</span>
+<span class="c1"># cost = gallons*costPerGallon</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># Lines 4 and 5 can be combined into a single line, which is a little more</span>
+<span class="c1"># efficient:</span>
+<span class="c1">#</span>
+<span class="c1"># ``` python</span>
+<span class="c1"># distance = float(raw_input(&quot;Input distance of trip in miles: &quot;))</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># Whether you use `float` or `int` or `eval` depends on whether you want a</span>
+<span class="c1"># float, an integer, or a dynamically typed variable. In this program, it</span>
+<span class="c1"># doesn&#39;t matter.</span>
+<span class="c1">#</span>
+<span class="c1"># Now you can simply run the program and then type `time`, `gallons`, and</span>
+<span class="c1"># `cost` to view the results of the calculations done by the program.</span>
+<span class="c1">#</span>
+<span class="c1"># Before moving on to output, we note that sometimes you may want string</span>
+<span class="c1"># input rather that numerical input. For example, you might want the user</span>
+<span class="c1"># to input their name, in which case you would simply use the `raw_input`</span>
+<span class="c1"># function without converting its output.</span>
+<span class="c1">#</span>
+<span class="c1"># single: output; screen</span>
+<span class="c1">#</span>
+<span class="c1"># Screen output</span>
+<span class="c1"># -------------</span>
+<span class="c1">#</span>
+<span class="c1"># It would be much more convenient if the program in the previous section</span>
+<span class="c1"># would simply write its output to the computer screen, instead of</span>
+<span class="c1"># requiring the user to type `time`, `gallons`, and `cost` to view the</span>
+<span class="c1"># results. Fortunately, this can be accomplished very simply using</span>
+<span class="c1"># Python&#39;s `print` function. For example, simply including the statement</span>
+<span class="c1"># `print(time, gallons, cost)` after line 12, running the program would</span>
+<span class="c1"># give the following result:</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [1]: run myTripIO.py</span>
+<span class="c1">#</span>
+<span class="c1"># What is the distance of your trip in miles? 450</span>
+<span class="c1"># (7.5, 15.0, 61.49999999999999)</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># The program prints out the results as a tuple of time (in hours),</span>
+<span class="c1"># gasoline used (in gallons), and cost (in dollars). Of course, the</span>
+<span class="c1"># program doesn&#39;t give the user a clue as to which quantity is which. The</span>
+<span class="c1"># user has to know.</span>
+<span class="c1">#</span>
+<span class="c1"># ### Formatting output with `str.format()`</span>
+<span class="c1">#</span>
+<span class="c1"># We can clean up the output of the example above and make it considerably</span>
+<span class="c1"># more user friendly. The program below demonstrates how to do this.</span>
+<span class="c1">#</span>
+<span class="c1"># ``` python</span>
+<span class="c1"># # Calculates time, gallons of gas used, and cost of gasoline for</span>
+<span class="c1"># # a trip</span>
+<span class="c1">#</span>
+<span class="c1"># distance = float(raw_input(&quot;Input distance of trip in miles: &quot;))</span>
+<span class="c1"># mpg = 30.               # car mileage</span>
+<span class="c1"># speed = 60.             # average speed</span>
+<span class="c1"># costPerGallon = 4.10    # price of gas</span>
+<span class="c1">#</span>
+<span class="c1"># time = distance/speed</span>
+<span class="c1"># gallons = distance/mpg</span>
+<span class="c1"># cost = gallons*costPerGallon</span>
+<span class="c1">#</span>
+<span class="c1"># print(&quot;\nDuration of trip = {0:0.1f} hours&quot;.format(time))</span>
+<span class="c1"># print(&quot;Gasoline used = {0:0.1f} gallons (@ {1:0.0f} mpg)&quot;</span>
+<span class="c1">#       .format(gallons, mpg))</span>
+<span class="c1"># print(&quot;Cost of gasoline = ${0:0.2f} (@ ${1:0.2f}/gallon)&quot;</span>
+<span class="c1">#       .format(cost, costPerGallon))</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># The final two `print` function calls in this script are continued on a</span>
+<span class="c1"># second line in order to improve readability. Running this program, with</span>
+<span class="c1"># the distance provided by the user, gives</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [9]: run myTripNiceIO.py</span>
+<span class="c1">#</span>
+<span class="c1"># What is the trip distance in miles? 450</span>
+<span class="c1">#</span>
+<span class="c1"># Duration of trip = 7.5 hours</span>
+<span class="c1"># Gasoline used = 15.0 gallons (@ 30 mpg)</span>
+<span class="c1"># Cost of gasoline = $61.50 (@ $4.10/gallon)</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># Now the output is presented in a way that is immediately understandable</span>
+<span class="c1"># to the user. Moreover, the numerical output is formatted with an</span>
+<span class="c1"># appropriate number of digits to the right of the decimal point. For good</span>
+<span class="c1"># measure, we also included the assumed mileage (30 mpg) and the cost of</span>
+<span class="c1"># the gasoline. All of this is controlled by the `str.format()` function</span>
+<span class="c1"># within the `print` function.</span>
+<span class="c1">#</span>
+<span class="c1"># The argument of the `print` function is of the form `str.format()` where</span>
+<span class="c1"># `str` is a string that contains text that is written to be the screen,</span>
+<span class="c1"># as well as certain format specifiers contained in curly braces `{}`. The</span>
+<span class="c1"># `format` function contains the list of variables that are to be printed.</span>
+<span class="c1">#</span>
+<span class="c1"># &gt; -   The `\n` at the start of the string in the `print` statement on</span>
+<span class="c1"># &gt;     line 12 in the newline character. It creates the blank line before</span>
+<span class="c1"># &gt;     the output is printed.</span>
+<span class="c1"># &gt; -   The positions of the curly braces determine where the variables in</span>
+<span class="c1"># &gt;     the `format` function at the end of the statement are printed.</span>
+<span class="c1"># &gt; -   The format string inside the curly braces specifies how each</span>
+<span class="c1"># &gt;     variable in the `format` function is printed.</span>
+<span class="c1"># &gt; -   The number before the colon in the format string specifies which</span>
+<span class="c1"># &gt;     variable in the list in the `format` function is printed.</span>
+<span class="c1"># &gt;     Remember, Python is zero-indexed, so 0 means the first variable is</span>
+<span class="c1"># &gt;     printed, 1 means the second variable, *etc*.</span>
+<span class="c1"># &gt; -   The zero after the colon specifies the *minimum* number of spaces</span>
+<span class="c1"># &gt;     reserved for printing out the variable in the format function. A</span>
+<span class="c1"># &gt;     zero means that only as many spaces as needed will be used.</span>
+<span class="c1"># &gt; -   The number after the period specifies the number of digits to the</span>
+<span class="c1"># &gt;     right of the decimal point that will be printed: `1` for `time`</span>
+<span class="c1"># &gt;     and `gallons` and `2` for `cost`.</span>
+<span class="c1"># &gt; -   The `f` specifies that a number with a fixed number of decimal</span>
+<span class="c1"># &gt;     points. If the `f` format specifier is replaced with `e`, then the</span>
+<span class="c1"># &gt;     number is printed out in exponential format (scientific notation).</span>
+<span class="c1">#</span>
+<span class="c1"># In addition to `f` and `e` format types, there are two more that are</span>
+<span class="c1"># commonly used: `d` for integers (digits) and `s` for strings. There are,</span>
+<span class="c1"># in fact, many more formatting possibilities. Python has a whole &quot;Format</span>
+<span class="c1"># Specification Mini-Language&quot; that is documented at</span>
+<span class="c1"># &lt;http://docs.python.org/library/string.html#formatspec&gt;. It&#39;s very</span>
+<span class="c1"># flexible but arcane. You might find it simplest to look at the &quot;Format</span>
+<span class="c1"># examples&quot; section further down the same web page.</span>
+<span class="c1">#</span>
+<span class="c1"># The program below illustrates most of the formatting you will need for</span>
+<span class="c1"># writing a few variables, be they strings, integers, or floats, to screen</span>
+<span class="c1"># or to data files (which we discuss in the next section).</span>
+<span class="c1">#</span>
+<span class="c1"># ``` python</span>
+<span class="c1"># string1 = &quot;How&quot;</span>
+<span class="c1"># string2 = &quot;are you my friend?&quot;</span>
+<span class="c1"># int1 = 34</span>
+<span class="c1"># int2 = 942885</span>
+<span class="c1"># float1 = -3.0</span>
+<span class="c1"># float2 = 3.141592653589793e-14</span>
+<span class="c1">#</span>
+<span class="c1"># print(&#39; ***&#39;)</span>
+<span class="c1"># print(string1)</span>
+<span class="c1"># print(string1 + &#39; &#39; + string2)</span>
+<span class="c1"># print(&#39; 1. {} {}&#39;.format(string1, string2))</span>
+<span class="c1"># print(&#39; 2. {0:s} {1:s}&#39;.format(string1, string2))</span>
+<span class="c1"># print(&#39; 3. {0:s} {0:s} {1:s} - {0:s} {1:s}&#39;</span>
+<span class="c1">#       .format(string1, string2))</span>
+<span class="c1"># print(&#39; 4. {0:10s}{1:5s}&#39;</span>
+<span class="c1">#       .format(string1, string2))</span>
+<span class="c1"># print(&#39; ***&#39;)</span>
+<span class="c1"># print(int1, int2)</span>
+<span class="c1"># print(&#39; 6. {0:d} {1:d}&#39;.format(int1, int2))</span>
+<span class="c1"># print(&#39; 7. {0:8d} {1:10d}&#39;.format(int1, int2))</span>
+<span class="c1"># print(&#39; ***&#39;)</span>
+<span class="c1"># print(&#39; 8. {0:0.3f}&#39;.format(float1))</span>
+<span class="c1"># print(&#39; 9. {0:6.3f}&#39;.format(float1))</span>
+<span class="c1"># print(&#39;10. {0:8.3f}&#39;.format(float1))</span>
+<span class="c1"># print(2*&#39;11. {0:8.3f}&#39;.format(float1))</span>
+<span class="c1"># print(&#39; ***&#39;)</span>
+<span class="c1"># print(&#39;12. {0:0.3e}&#39;.format(float2))</span>
+<span class="c1"># print(&#39;13. {0:10.3e}&#39;.format(float2))</span>
+<span class="c1"># print(&#39;14. {0:10.3f}&#39;.format(float2))</span>
+<span class="c1"># print(&#39; ***&#39;)</span>
+<span class="c1"># print(&#39;15. 12345678901234567890&#39;)</span>
+<span class="c1"># print(&#39;16. {0:s}--{1:8d},{2:10.3e}&#39;</span>
+<span class="c1">#       .format(string2, int1, float2))</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># Here is the output:</span>
+<span class="c1">#</span>
+<span class="c1">#     ***</span>
+<span class="c1">#</span>
+<span class="c1"># &gt; How How are you my friend? 1. How are you my friend? 2. How are you my</span>
+<span class="c1"># &gt; friend? 3. How How are you my friend? - How are you my friend? 4. How</span>
+<span class="c1"># &gt; are you my friend? **\* (34, 942885) 6. 34 942885 7. 34 942885**\* 8.</span>
+<span class="c1"># &gt; -3.000 9. -3.000 10. -3.000 11. -3.00011. -3.000 **\* 12. 3.142e-14</span>
+<span class="c1"># &gt; 13. 3.142e-14 14. 0.000**\* 15. 12345678901234567890 16. are you my</span>
+<span class="c1"># &gt; friend?-- 34, 3.142e-14</span>
+<span class="c1">#</span>
+<span class="c1"># Successive empty brackets `{}` like those that appear in the statement</span>
+<span class="c1"># above `print(&#39; 1. {} {}&#39;.format(string1, string2))` are numbered</span>
+<span class="c1"># consecutively starting at 0 and will print out whatever variables appear</span>
+<span class="c1"># inside the `format()` method using their default format.</span>
+<span class="c1">#</span>
+<span class="c1"># Finally, note that the code starting on lines 14 and 16 each are split</span>
+<span class="c1"># into two lines. We have done this so that the lines fit on the page</span>
+<span class="c1"># without running off the edge. Python allows you to break lines up like</span>
+<span class="c1"># this to improve readability.</span>
+<span class="c1">#</span>
+<span class="c1"># ### Printing arrays</span>
+<span class="c1">#</span>
+<span class="c1"># single: array (NumPy); printing</span>
+<span class="c1">#</span>
+<span class="c1"># Formatting NumPy arrays for printing requires another approach. As an</span>
+<span class="c1"># example, let&#39;s create an array and then format it in various ways. From</span>
+<span class="c1"># the IPython terminal</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [10]: a = linspace(3, 19, 7)</span>
+<span class="c1"># In [11]: print(a)</span>
+<span class="c1"># [  3.           5.66666667   8.33333333  11.</span>
+<span class="c1">#    13.66666667  16.33333333  19.        ]</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># Simply using the `print` function does print out the array, but perhaps</span>
+<span class="c1"># not in the format you desire. To control the output format, you use the</span>
+<span class="c1"># NumPy function `set_printoptions`. For example, suppose you want to see</span>
+<span class="c1"># no more than two digits to the right of the decimal point. Then you</span>
+<span class="c1"># simply write</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [12]: set_printoptions(precision=2)</span>
+<span class="c1"># In [13]: print(a)</span>
+<span class="c1"># [  3.     5.67   8.33  11.    13.67  16.33  19.  ]</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># If you want to change the number of digits to the right of the decimal</span>
+<span class="c1"># point to 4, you set the keyword argument `precision` to 4</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [14]: set_printoptions(precision=4)</span>
+<span class="c1"># In [15]: print(a)</span>
+<span class="c1"># [  3.       5.6667   8.3333  11.      13.6667  16.3333  19.    ]</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># Suppose you want to use scientific notation. The method for doing it is</span>
+<span class="c1"># somewhat arcane, using something called a `lambda` function. For now,</span>
+<span class="c1"># you don&#39;t need to understand how it works to use it. Just follow the</span>
+<span class="c1"># examples shown below, which illustrate several different output formats</span>
+<span class="c1"># using the `print` function with NumPy arrays.</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [16]: set_printoptions(</span>
+<span class="c1">#     ...: formatter={&#39;float&#39;: lambda x: format(x, &#39;6.2e&#39;)})</span>
+<span class="c1">#</span>
+<span class="c1"># In [17]: print(a)</span>
+<span class="c1"># [3.00e+00 5.67e+00 8.33e+00 1.10e+01 1.37e+01 1.63e+01 1.90e+01]</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># To specify the format of the output, you use the `formatter` keyword</span>
+<span class="c1"># argument. The first entry to the right of the curly bracket is a string</span>
+<span class="c1"># that can be `&#39;float&#39;`, as it is above, or `&#39;int&#39;`, or `&#39;str&#39;`, or a</span>
+<span class="c1"># number of other data types that you can look up in the online NumPy</span>
+<span class="c1"># documentation. The only other thing you should change is the format</span>
+<span class="c1"># specifier string. In the above example, it is `&#39;6.2e&#39;`, specifying that</span>
+<span class="c1"># Python should allocate at least 6 spaces, with 2 digits to the right of</span>
+<span class="c1"># the decimal point in scientific (exponential) notation. For fixed width</span>
+<span class="c1"># floats with 3 digits to the right of the decimal point, use the `f` in</span>
+<span class="c1"># place of the `e` format specifier, as follows</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [18]: set_printoptions(</span>
+<span class="c1">#     ...: formatter={&#39;float&#39;: lambda x: format(x, &#39;6.3f&#39;)})</span>
+<span class="c1"># In [19]: print(a)</span>
+<span class="c1"># [ 3.000  5.667  8.333 11.000 13.667 16.333 19.000]</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># To return to the default format, type the following</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [20]: set_printoptions(precision=8)</span>
+<span class="c1"># In [21]: print(a)</span>
+<span class="c1"># [  3.           5.66666667   8.33333333  11.</span>
+<span class="c1">#    13.66666667  16.33333333  19.        ]</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># The `set_printoptions` is a NumPy function, so if you use it in a script</span>
+<span class="c1"># or program, you should call it by writing `np.set_printoptions`.</span>
+<span class="c1">#</span>
+<span class="c1"># single: input; reading data from a file</span>
+<span class="c1">#</span>
+<span class="c1"># File input</span>
+<span class="c1"># ----------</span>
+<span class="c1">#</span>
+<span class="c1"># ### Reading data from a text file</span>
+<span class="c1">#</span>
+<span class="c1"># Often you would like to analyze data that you have stored in a text</span>
+<span class="c1"># file. Consider, for example, the data file below for an experiment</span>
+<span class="c1"># measuring the free fall of a mass.</span>
+<span class="c1">#</span>
+<span class="c1">#     Data for falling mass experiment</span>
+<span class="c1">#     Date: 16-Aug-2013</span>
+<span class="c1">#     Data taken by Lauren and John</span>
+<span class="c1">#</span>
+<span class="c1">#     data point      time (sec)      height (mm)     uncertainty (mm)</span>
+<span class="c1">#         0               0.0             180             3.5</span>
+<span class="c1">#         1               0.5             182             4.5</span>
+<span class="c1">#         2               1.0             178             4.0</span>
+<span class="c1">#         3               1.5             165             5.5</span>
+<span class="c1">#         4               2.0             160             2.5</span>
+<span class="c1">#         5               2.5             148             3.0</span>
+<span class="c1">#         6               3.0             136             2.5</span>
+<span class="c1">#         7               3.5             120             3.0</span>
+<span class="c1">#         8               4.0              99             4.0</span>
+<span class="c1">#         9               4.5              83             2.5</span>
+<span class="c1">#        10               5.0              55             3.6</span>
+<span class="c1">#        11               5.5              35             1.75</span>
+<span class="c1">#        12               6.0               5             0.75</span>
+<span class="c1">#</span>
+<span class="c1"># We would like to read these data into a Python program, associating the</span>
+<span class="c1"># data in each column with an appropriately named array. While there are a</span>
+<span class="c1"># multitude of ways to do this in Python, the simplest by far is to use</span>
+<span class="c1"># the NumPy `loadtxt` function, whose use we illustrate here. Suppose that</span>
+<span class="c1"># the name of the text file is `MyData.txt`. Then we can read the data</span>
+<span class="c1"># into four different arrays with the following statement</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [1]: dataPt, time, height, error = np.loadtxt(&quot;MyData.txt&quot;,</span>
+<span class="c1">#       skiprows=5 , unpack=True)</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># In this case, the `loadtxt` function takes three arguments: the first is</span>
+<span class="c1"># a string that is the name of the file to be read, the second tells</span>
+<span class="c1"># `loadtxt` to skip the first 5 lines at the top of file, sometimes called</span>
+<span class="c1"># the *header*, and the third tells `loadtxt` to output the data (*unpack*</span>
+<span class="c1"># the data) so that it can be directly read into arrays. `loadtxt` reads</span>
+<span class="c1"># however many columns of data are present in the text file to the array</span>
+<span class="c1"># names listed to the left of the &quot;`=`&quot; sign. The names labeling the</span>
+<span class="c1"># columns in the text file are not used, but you are free to choose the</span>
+<span class="c1"># same or similar names, of course, as long as they are legal array names.</span>
+<span class="c1"># By the way, for the above `loadtxt` call to work, the file `MyData.txt`</span>
+<span class="c1"># should be in the current working directory of the IPython shell.</span>
+<span class="c1"># Otherwise, you need to specify the directory path with the file name.</span>
+<span class="c1">#</span>
+<span class="c1"># It is critically important that the data file be a *text* file. It</span>
+<span class="c1"># cannot be a MSWord file, for example, or an Excel file, or anything</span>
+<span class="c1"># other than a plain text file. Such files can be created by a text editor</span>
+<span class="c1"># programs like `Notepad` and `Notepad++` (for a PC) or `TextEdit` and</span>
+<span class="c1"># `TextWrangler` (for a Mac). They can also be created by MSWord and Excel</span>
+<span class="c1"># provided you explicitly save the files as text files. **Beware**: You</span>
+<span class="c1"># should exit any text file you make and save it with a program that</span>
+<span class="c1"># allows you to save the text file using **UNIX**-type formatting, which</span>
+<span class="c1"># uses a *line feed* (LF) to end a line. Some programs, like MSWord under</span>
+<span class="c1"># Windows, may include a carriage return (CR) character, which can confuse</span>
+<span class="c1"># `loadtxt`. Note that we give the file name a `.txt` *extension*, which</span>
+<span class="c1"># indicates to most operating systems that this is a *text* file, as</span>
+<span class="c1"># opposed to an Excel file, for example, which might have a `.xlsx` or</span>
+<span class="c1"># `.xls` extension.</span>
+<span class="c1">#</span>
+<span class="c1"># If you don&#39;t want to read in all the columns of data, you can specify</span>
+<span class="c1"># which columns to read in using the `usecols` key word. For example, the</span>
+<span class="c1"># call</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [2]: time, height = loadtxt(&#39;MyData.txt&#39;, skiprows=5 ,</span>
+<span class="c1">#                                  usecols = (1,2), unpack=True)</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># reads in only columns 1 and 2; columns 0 and 3 are skipped. As a</span>
+<span class="c1"># consequence, only two array names are included to the left of the &quot;`=`&quot;</span>
+<span class="c1"># sign, corresponding to the two column that are read. Writing</span>
+<span class="c1"># `usecols = (0,2,3)` would skip column 1 and read in only the data in</span>
+<span class="c1"># colums 0, 2, and 3. In this case, 3 array names would need to be</span>
+<span class="c1"># provided on the left hand side of the &quot;`=`&quot; sign.</span>
+<span class="c1">#</span>
+<span class="c1"># One convenient feature of the `loadtxt` function is that it recognizes</span>
+<span class="c1"># any *white space* as a column separator: spaces, tabs, *etc.*</span>
+<span class="c1">#</span>
+<span class="c1"># Finally you should remember that `loadtxt` is a NumPy function. So if</span>
+<span class="c1"># you are using it in a Python module, you must be sure to include an</span>
+<span class="c1"># &quot;`import numpy as np`&quot; statement before calling &quot;`np.loadtxt`&quot;.</span>
+<span class="c1">#</span>
+<span class="c1"># ### Reading data from a CSV file</span>
+<span class="c1">#</span>
+<span class="c1"># Sometimes you have data stored in a spreadsheet program like Excel that</span>
+<span class="c1"># you would like to read into a Python program. The `fig-ExcelWindow`</span>
+<span class="c1"># shown here contains the same data set we saw above in a text file.</span>
+<span class="c1">#</span>
+<span class="c1"># &lt;figure&gt;</span>
+<span class="c1"># &lt;img src=&quot;attachment:ExcelDataFile.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;Excel data sheet&lt;/figcaption&gt;</span>
+<span class="c1"># &lt;/figure&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># While there are a number of different approaches one can use to reading</span>
+<span class="c1"># such files, one of the simplest of most robust is to save the</span>
+<span class="c1"># spreadsheet as a CSV (&quot;comma separated value&quot;) file, a format which all</span>
+<span class="c1"># common spreadsheet programs can create and read. So, if your Excel</span>
+<span class="c1"># spreadsheet was called `MyData.xlsx`, the CSV file saved using Excel&#39;s</span>
+<span class="c1"># `Save As` command would by default be `MyData.csv`. It would look like</span>
+<span class="c1"># this</span>
+<span class="c1">#</span>
+<span class="c1">#     Data for falling mass experiment,,,</span>
+<span class="c1">#     Date: 16-Aug-2013,,,</span>
+<span class="c1">#     Data taken by Lauren and John,,,</span>
+<span class="c1">#     ,,,</span>
+<span class="c1">#     data point,time (sec),height (mm),uncertainty (mm)</span>
+<span class="c1">#     0,0,180,3.5</span>
+<span class="c1">#     1,0.5,182,4.5</span>
+<span class="c1">#     2,1,178,4</span>
+<span class="c1">#     3,1.5,165,5.5</span>
+<span class="c1">#     4,2,160,2.5</span>
+<span class="c1">#     5,2.5,148,3</span>
+<span class="c1">#     6,3,136,2.5</span>
+<span class="c1">#     7,3.5,120,3</span>
+<span class="c1">#     8,4,99,4</span>
+<span class="c1">#     9,4.5,83,2.5</span>
+<span class="c1">#     10,5,55,3.6</span>
+<span class="c1">#     11,5.5,35,1.75</span>
+<span class="c1">#     12,6,5,0.75</span>
+<span class="c1">#</span>
+<span class="c1"># As its name suggests, the CSV file is simply a text file with the data</span>
+<span class="c1"># that was formerly in spreadsheet columns now separated by commas. We can</span>
+<span class="c1"># read the data in this file into a Python program using the `loadtxt`</span>
+<span class="c1"># NumPy function once again. Here is the code</span>
+<span class="c1">#</span>
+<span class="c1"># ``` ipython</span>
+<span class="c1"># In [3]: dataPt, time, height, error = loadtxt(&quot;MyData.csv&quot;,</span>
+<span class="c1">#                       skiprows=5 , unpack=True, delimiter=&#39;,&#39;)</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># The form of the function is exactly the same as before except we have</span>
+<span class="c1"># added the argument `delimiter=&#39;,&#39;` that tells `loadtxt` that the columns</span>
+<span class="c1"># are separated by commas instead of white space (spaces or tabs), which</span>
+<span class="c1"># is the default. Once again, we set the `skiprows` argument to skip the</span>
+<span class="c1"># header at the beginning of the file and to start reading at the first</span>
+<span class="c1"># row of data. The data are output to the arrays to the right of the</span>
+<span class="c1"># assignment operator `=` exactly as in the previous example.</span>
+<span class="c1">#</span>
+<span class="c1"># single: output; writing data to a file</span>
+<span class="c1">#</span>
+<span class="c1"># File output</span>
+<span class="c1"># -----------</span>
+<span class="c1">#</span>
+<span class="c1"># ### Writing data to a text file</span>
+<span class="c1">#</span>
+<span class="c1"># There is a plethora of ways to write data to a data file in Python. We</span>
+<span class="c1"># will stick to one very simple one that&#39;s suitable for writing data files</span>
+<span class="c1"># in text format. It uses the NumPy `savetxt` routine, which is the</span>
+<span class="c1"># counterpart of the `loadtxt` routine introduced in the previous section.</span>
+<span class="c1"># The general form of the routine is</span>
+<span class="c1">#</span>
+<span class="c1"># ``` python</span>
+<span class="c1"># savetxt(filename, array, fmt=&quot;%0.18e&quot;, delimiter=&quot; &quot;, newline=&quot;\n&quot;,</span>
+<span class="c1">#     header=&quot;&quot;, footer=&quot;&quot;, comments=&quot;# &quot;)</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># We illustrate `savetext` below with a script that first creates four</span>
+<span class="c1"># arrays by reading in the data file `MyData.txt`, as discussed in the</span>
+<span class="c1"># previous section, and then writes that same data set to another file</span>
+<span class="c1"># `MyDataOut.txt`.</span>
+<span class="c1">#</span>
+<span class="c1"># ``` python</span>
+<span class="c1"># import numpy as np</span>
+<span class="c1">#</span>
+<span class="c1"># dataPt, time, height, error = np.loadtxt(&quot;MyData.txt&quot;,</span>
+<span class="c1">#                                  skiprows=5, unpack=True)</span>
+<span class="c1">#</span>
+<span class="c1"># np.savetxt(&#39;MyDataOut.txt&#39;,</span>
+<span class="c1">#     zip(dataPt, time, height, error), fmt=&quot;%12.1f&quot;)</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># The first argument of of `savetxt` is a string, the name of the data</span>
+<span class="c1"># file to be created. Here we have chosen the name `MyDataOut.txt`,</span>
+<span class="c1"># inserted with quotes, which designates it as a string literal. Beware,</span>
+<span class="c1"># if there is already a file of that name on your computer, it will be</span>
+<span class="c1"># overwritten---the old file will be destroyed and a new one will be</span>
+<span class="c1"># created.</span>
+<span class="c1">#</span>
+<span class="c1"># The second argument is the data array the is to be written to the data</span>
+<span class="c1"># file. Because we want to write not one but four data arrays to the file,</span>
+<span class="c1"># we have to package the four data arrays as one, which we do using the</span>
+<span class="c1"># `zip` function, a Python function that combines returns a list of</span>
+<span class="c1"># tuples, where the $i^\mathrm{th}$ tuple contains the $i^\mathrm{th}$</span>
+<span class="c1"># element from each of the arrays (or lists, or tuples) listed as its</span>
+<span class="c1"># arguments. Since there are four arrays, each row will be a tuple with</span>
+<span class="c1"># four entries, producing a table with four columns. Note that the first</span>
+<span class="c1"># two arguments, the filename and data array, are regular arguments and</span>
+<span class="c1"># thus must appear as the first and second arguments in the correct order.</span>
+<span class="c1"># The remaining arguments are all keyword arguments, meaning that they are</span>
+<span class="c1"># optional and can appear in any order, provided you use the keyword.</span>
+<span class="c1">#</span>
+<span class="c1"># The next argument is a format string that determines how the elements of</span>
+<span class="c1"># the array are displayed in the data file. The argument is optional and,</span>
+<span class="c1"># if left out, is the format `0.18e`, which displays numbers as 18 digit</span>
+<span class="c1"># floats in exponential (scientific) notation. Here we choose a different</span>
+<span class="c1"># format, `12.1f`, which is a float displayed with 1 digit to the right of</span>
+<span class="c1"># the decimal point and a minimum width of 12. By choosing 12, which is</span>
+<span class="c1"># more digits than any of the numbers in the various arrays have, we</span>
+<span class="c1"># ensure that all the columns will have the same width. It also ensures</span>
+<span class="c1"># that the decimal points in column of numbers are aligned. This is</span>
+<span class="c1"># evident in the data file below, &lt;span</span>
+<span class="c1"># class=&quot;title-ref&quot;&gt;MyDataOut.txt&lt;/span&gt;, which was produced by the above</span>
+<span class="c1"># script.</span>
+<span class="c1">#</span>
+<span class="c1"># ``` python</span>
+<span class="c1"># 0.0          0.0        180.0          3.5</span>
+<span class="c1"># 1.0          0.5        182.0          4.5</span>
+<span class="c1"># 2.0          1.0        178.0          4.0</span>
+<span class="c1"># 3.0          1.5        165.0          5.5</span>
+<span class="c1"># 4.0          2.0        160.0          2.5</span>
+<span class="c1"># 5.0          2.5        148.0          3.0</span>
+<span class="c1"># 6.0          3.0        136.0          2.5</span>
+<span class="c1"># 7.0          3.5        120.0          3.0</span>
+<span class="c1"># 8.0          4.0         99.0          4.0</span>
+<span class="c1"># 9.0          4.5         83.0          2.5</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># &gt; 10.0 5.0 55.0 3.6 11.0 5.5 35.0 1.8 12.0 6.0 5.0 0.8</span>
+<span class="c1">#</span>
+<span class="c1"># We omitted the optional `delimiter` keyword argument, which leaves the</span>
+<span class="c1"># delimiter as the default space.</span>
+<span class="c1">#</span>
+<span class="c1"># We also omitted the optional `header` keyword argument, which is a</span>
+<span class="c1"># string variable that allows you to write header text above the data. For</span>
+<span class="c1"># example, you might want to label the data columns and also include the</span>
+<span class="c1"># information that was in the header of the original data file. To do so,</span>
+<span class="c1"># you just need to create a string with the information you want to</span>
+<span class="c1"># include and then use the `header` keyword argument. The code below</span>
+<span class="c1"># illustrates how to do this.</span>
+<span class="c1">#</span>
+<span class="c1"># ``` python</span>
+<span class="c1"># import numpy as np</span>
+<span class="c1">#</span>
+<span class="c1"># dataPt, time, height, error = np.loadtxt(&quot;MyData.txt&quot;,</span>
+<span class="c1">#                                  skiprows=5, unpack=True)</span>
+<span class="c1">#</span>
+<span class="c1"># info = &#39;Data for falling mass experiment&#39;</span>
+<span class="c1"># info += &#39;\nDate: 16-Aug-2013&#39;</span>
+<span class="c1"># info += &#39;\nData taken by Lauren and John&#39;</span>
+<span class="c1"># info += &#39;\n\n   data point    time (sec) height (mm)  &#39;</span>
+<span class="c1"># info += &#39;uncertainty (mm)&#39;</span>
+<span class="c1">#</span>
+<span class="c1"># np.savetxt(&#39;MyDataOut.txt&#39;,</span>
+<span class="c1">#       zip(dataPt, time, height, error), header=info, fmt=&quot;%12.1f&quot;)</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># Now the data file produces has a header preceding the data. Notice that</span>
+<span class="c1"># the header rows all start with a `#` comment character, which is the</span>
+<span class="c1"># default setting for the `savetxt` function. This can be changed using</span>
+<span class="c1"># the keyword argument `comments`. You can find more information about</span>
+<span class="c1"># `savetxt` using the IPython `help` function or from the online NumPy</span>
+<span class="c1"># documentation.</span>
+<span class="c1">#</span>
+<span class="c1"># ``` python</span>
+<span class="c1"># # Data for falling mass experiment</span>
+<span class="c1"># # Date: 16-Aug-2013</span>
+<span class="c1"># # Data taken by Lauren and John</span>
+<span class="c1"># #</span>
+<span class="c1"># #    data point    time (sec) height (mm)  uncertainty (mm)</span>
+<span class="c1">#          0.0          0.0        180.0          3.5</span>
+<span class="c1">#          1.0          0.5        182.0          4.5</span>
+<span class="c1">#          2.0          1.0        178.0          4.0</span>
+<span class="c1">#          3.0          1.5        165.0          5.5</span>
+<span class="c1">#          4.0          2.0        160.0          2.5</span>
+<span class="c1">#          5.0          2.5        148.0          3.0</span>
+<span class="c1">#          6.0          3.0        136.0          2.5</span>
+<span class="c1">#          7.0          3.5        120.0          3.0</span>
+<span class="c1">#          8.0          4.0         99.0          4.0</span>
+<span class="c1">#          9.0          4.5         83.0          2.5</span>
+<span class="c1">#         10.0          5.0         55.0          3.6</span>
+<span class="c1">#         11.0          5.5         35.0          1.8</span>
+<span class="c1">#         12.0          6.0          5.0          0.8</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># ### Writing data to a CSV file</span>
+<span class="c1">#</span>
+<span class="c1"># To produce a CSV file, you would specify a comma as the delimiter. You</span>
+<span class="c1"># might use the `0.1f` format specifier, which leaves no extra spaces</span>
+<span class="c1"># between the comma data separators, as the file is to be read by a</span>
+<span class="c1"># spreadsheet program, which will determine how the numbers are displayed.</span>
+<span class="c1"># The code, which could be substituted for the `savetxt` line in the above</span>
+<span class="c1"># code reads</span>
+<span class="c1">#</span>
+<span class="c1"># ``` python</span>
+<span class="c1"># np.savetxt(&#39;MyDataOut.csv&#39;,</span>
+<span class="c1">#         zip(dataPt, time, height, error), fmt=&quot;%0.1f&quot;,</span>
+<span class="c1">#         delimiter=&quot;,&quot;)</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># and produces the following data file</span>
+<span class="c1">#</span>
+<span class="c1"># ``` python</span>
+<span class="c1"># 0.0,0.0,180.0,3.5</span>
+<span class="c1"># 1.0,0.5,182.0,4.5</span>
+<span class="c1"># 2.0,1.0,178.0,4.0</span>
+<span class="c1"># 3.0,1.5,165.0,5.5</span>
+<span class="c1"># 4.0,2.0,160.0,2.5</span>
+<span class="c1"># 5.0,2.5,148.0,3.0</span>
+<span class="c1"># 6.0,3.0,136.0,2.5</span>
+<span class="c1"># 7.0,3.5,120.0,3.0</span>
+<span class="c1"># 8.0,4.0,99.0,4.0</span>
+<span class="c1"># 9.0,4.5,83.0,2.5</span>
+<span class="c1"># 10.0,5.0,55.0,3.6</span>
+<span class="c1"># 11.0,5.5,35.0,1.8</span>
+<span class="c1"># 12.0,6.0,5.0,0.8</span>
+<span class="c1"># ```</span>
+<span class="c1">#</span>
+<span class="c1"># This data file, with a `csv` extension, can be directly read into a</span>
+<span class="c1"># spreadsheet program like Excel.</span>
+<span class="c1">#</span>
+<span class="c1"># Exercises</span>
+<span class="c1"># ---------</span>
+<span class="c1">#</span>
+<span class="c1"># 1.  Write a Python program that calculates how much money you can spend</span>
+<span class="c1">#     each day for lunch for the rest of the month based on today&#39;s date</span>
+<span class="c1">#     and how much money you currently have in your lunch account. The</span>
+<span class="c1">#     program should ask you: (1) how much money you have in your</span>
+<span class="c1">#     account, (2) what today&#39;s date is, and (3) how many days there are</span>
+<span class="c1">#     in month. The program should return your daily allowance. The</span>
+<span class="c1">#     results of running your program should look like this:</span>
+<span class="c1">#</span>
+<span class="c1">#     ``` python</span>
+<span class="c1">#     How much money (in dollars) in your lunch account? 118.39</span>
+<span class="c1">#</span>
+<span class="c1">#     What day of the month is today? 17</span>
+<span class="c1">#</span>
+<span class="c1">#     How many days in this month? 30</span>
+<span class="c1">#</span>
+<span class="c1">#     You can spend $8.46 each day for the rest of the month.</span>
+<span class="c1">#     ```</span>
+<span class="c1">#</span>
+<span class="c1">#     *Extra:* Create a dictionary (see `chap3dictionaries`) that stores</span>
+<span class="c1">#     the number of days in each month (forget about leap years) and have</span>
+<span class="c1">#     your program ask what month it is rather than the number of days in</span>
+<span class="c1">#     the month.</span>
+<span class="c1">#</span>
+<span class="c1"># 2.  From the IPython terminal, create the following three NumPy arrays:</span>
+<span class="c1">#</span>
+<span class="c1">#     ``` python</span>
+<span class="c1">#     a = array([1, 3, 5, 7])</span>
+<span class="c1">#     b = array([8, 7, 5, 4])</span>
+<span class="c1">#     c = array([0, 9,-6,-8])</span>
+<span class="c1">#     ```</span>
+<span class="c1">#</span>
+<span class="c1">#     Now use the `zip` function to create the object `d` defined as</span>
+<span class="c1">#</span>
+<span class="c1">#     ``` python</span>
+<span class="c1">#     d = zip(a, b, c)</span>
+<span class="c1">#     ```</span>
+<span class="c1">#</span>
+<span class="c1">#     Print `d` out at the terminal prompt. What kind of object is `d`?</span>
+<span class="c1">#     Hint: It is not a NumPy array. Convert `d` into a NumPy array and</span>
+<span class="c1">#     call that array `e`. Type `e` at the terminal prompt so that `e` is</span>
+<span class="c1">#     printed out on the IPython terminal. One of the elements of `e` is</span>
+<span class="c1">#     `-8`. Show how to address and print out just that element of `e`.</span>
+<span class="c1">#     Show how to address that same element of `d`. What has become of the</span>
+<span class="c1">#     three original arrays `a`, `b`, and `c`, that is, how do they appear</span>
+<span class="c1">#     in `e`?</span>
+<span class="c1">#</span>
+<span class="c1"># 3.  Create the following data file and then write a Python script to</span>
+<span class="c1">#     read it into a three NumPy arrays with the variable names `f`, `a`,</span>
+<span class="c1">#     `da` for the frequency, amplitude, and amplitude error.</span>
+<span class="c1">#</span>
+<span class="c1">#     ``` python</span>
+<span class="c1">#     Date: 2013-09-16</span>
+<span class="c1">#     Data taken by Liam and Selena</span>
+<span class="c1">#     frequency (Hz) amplitude (mm)  amp error (mm)</span>
+<span class="c1">#               0.7500        13.52         0.32</span>
+<span class="c1">#               1.7885        12.11         0.92</span>
+<span class="c1">#               2.8269        14.27         0.73</span>
+<span class="c1">#               3.8654        16.60         2.06</span>
+<span class="c1">#               4.9038        22.91         1.75</span>
+<span class="c1">#               5.9423        35.28         0.91</span>
+<span class="c1">#               6.9808        60.99         0.99</span>
+<span class="c1">#               8.0192        33.38         0.36</span>
+<span class="c1">#               9.0577        17.78         2.32</span>
+<span class="c1">#              10.0962        10.99         0.21</span>
+<span class="c1">#              11.1346         7.47         0.48</span>
+<span class="c1">#              12.1731         6.72         0.51</span>
+<span class="c1">#              13.2115         4.40         0.58</span>
+<span class="c1">#              14.2500         4.07         0.63</span>
+<span class="c1">#     ```</span>
+<span class="c1">#</span>
+<span class="c1">#     Show that you have correctly read in the data by having your script</span>
+<span class="c1">#     print out to your computer screen the three arrays. Format the</span>
+<span class="c1">#     printing so that it produces output like this:</span>
+<span class="c1">#</span>
+<span class="c1">#     ``` python</span>
+<span class="c1">#     f =</span>
+<span class="c1">#     [  0.75     1.7885   2.8269   3.8654   4.9038   5.9423</span>
+<span class="c1">#        6.9808   8.0192   9.0577  10.0962  11.1346  12.1731</span>
+<span class="c1">#        13.2115  14.25  ]</span>
+<span class="c1">#     a =</span>
+<span class="c1">#     [ 13.52  12.11  14.27  16.6   22.91  35.28  60.99  33.38</span>
+<span class="c1">#       17.78  10.99   7.47   6.72   4.4    4.07]</span>
+<span class="c1">#     da =</span>
+<span class="c1">#     [ 0.32  0.92  0.73  2.06  1.75  0.91  0.99  0.36  2.32</span>
+<span class="c1">#       0.21  0.48  0.51  0.58  0.63]</span>
+<span class="c1">#     ```</span>
+<span class="c1">#</span>
+<span class="c1">#     Note that the array `f` is displayed with four digits to the right</span>
+<span class="c1">#     of the decimal point while the arrays `a` and `da` are displayed</span>
+<span class="c1">#     with only two. The columns of the displayed arrays need not line up</span>
+<span class="c1">#     as they do above.</span>
+<span class="c1">#</span>
+<span class="c1"># 4.  Write a script to read the data from the previous problem into three</span>
+<span class="c1">#     NumPy arrays with the variable names `f`, `a`, `da` for the</span>
+<span class="c1">#     frequency, amplitude, and amplitude error and then, in the same</span>
+<span class="c1">#     script, write the data out to a data file, including the header,</span>
+<span class="c1">#     with the data displayed in three columns, just as its displayed in</span>
+<span class="c1">#     the problem above. It&#39;s ok if the header lines begin with the `#`</span>
+<span class="c1">#     comment character. Your data file should have the extension `.txt`.</span>
+<span class="c1">#</span>
+<span class="c1"># 5.  Write a script to read the data from the previous problem into three</span>
+<span class="c1">#     NumPy arrays with the variable names `f`, `a`, `da` for the</span>
+<span class="c1">#     frequency, amplitude, and amplitude error and then, in the same</span>
+<span class="c1">#     script, write the data out to a csv data file, without the header,</span>
+<span class="c1">#     to a data file with the data displayed in three columns. Use a</span>
+<span class="c1">#     single format specifier and set it to `&quot;%0.16e&quot;`. If you have access</span>
+<span class="c1">#     the spreadsheet program (like MS Excel), try opening the file you</span>
+<span class="c1">#     have created with your Python script and verify that the arrays are</span>
+<span class="c1">#     displayed in three columns. Note that your csv file should have the</span>
+<span class="c1">#     extension `.csv`.</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chap5_plot.html" class="btn btn-neutral float-right" title="5. Plotting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chap3_arrays.html" class="btn btn-neutral float-left" title="4. Strings, Lists, Arrays, and Dictionaries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright David J Pine
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
