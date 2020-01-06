@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7. Functions &mdash; Introduction to Python for Science 1.0 documentation</title>
+  <title>7. Functions &mdash; Scientific python tutorial 1.0 documentation</title>
   
 
   
@@ -53,7 +53,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Introduction to Python for Science
+            <a href="../index.html" class="icon icon-home"> Scientific python tutorial
           
 
           
@@ -84,13 +84,13 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="FirstNotebook.html">1. Demo of IPython Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap1_intro.html">2. Getting started with Jupyter and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap2_basics.html">3. First Steps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap3_arrays.html">4. Strings, Lists, Arrays, and Dictionaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap5_plot.html">5. Plotting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap6_loopsconds.html">6. Conditionals and Loops</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Functions</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="chap1_intro.html">1. Chapter 1: Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap2_jupyter.html">2. Chapter 2  Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap3_arrays.html">3. Chapter 3: Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap4_io.html">4. Chapter 4: Input output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap5_plot.html">5. Chapter 5: Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap6_loopsconds.html">6. Chapter 6: Flow control</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Chapter 7: Functions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#User-defined-functions">7.1. User-defined functions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Looping-over-arrays-in-user-defined-functions">7.1.1. Looping over arrays in user-defined functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Fast-array-processing-in-user-defined-functions">7.1.2. Fast array processing in user-defined functions</a><ul>
@@ -117,11 +117,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#Exercises">7.5. Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="chap8_fitting.html">8. Curve Fitting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chap08PineSolns.html">9. Chapter 8 (Pine): Curve Fitting Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap9_scipy.html">10. Numerical Routines: SciPy and NumPy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apdx1_install.html">11. Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apdx2_ipynb.html">12. Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap8_fitting.html">8. Chapter 8: Curve Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap08PineSolns.html">9. Chapter 8b: Curvefit Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap9_scipy.html">10. Chapter 9: Scipy</a></li>
 </ul>
 
             
@@ -136,7 +134,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Introduction to Python for Science</a>
+          <a href="../index.html">Scientific python tutorial</a>
         
       </nav>
 
@@ -167,13 +165,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>7. Functions</li>
+      <li><span class="section-number">7. </span>Functions</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/notebooks/chap7_funcs.py.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/notebooks/chap7_funcs.ipynb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -211,13 +209,13 @@
 }
 </style>
 <div class="section" id="Functions">
-<h1>7. Functions<a class="headerlink" href="#Functions" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7. </span>Functions<a class="headerlink" href="#Functions" title="Permalink to this headline">¶</a></h1>
 <p>As you develop more complex computer code, it becomes increasingly important to organize your code into modular blocks. One important means for doing so is <em>user-defined</em> Python functions. User-defined functions are a lot like built-in functions that we have encountered in core Python as well as in NumPy and Matplotlib. The main difference is that user-defined functions are written by you. The idea is to define functions to simplify your code and to allow you to reuse the same code in different
 contexts.</p>
 <p>The number of ways that functions are used in programming is so varied that we cannot possibly enumerate all the possibilities. As our use of Python functions in scientific program is somewhat specialized, we introduce only a few of the possible uses of Python functions, ones that are the most common in scientific programming.</p>
 <p>single: functions; user defined</p>
 <div class="section" id="User-defined-functions">
-<h2>7.1. User-defined functions<a class="headerlink" href="#User-defined-functions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1. </span>User-defined functions<a class="headerlink" href="#User-defined-functions" title="Permalink to this headline">¶</a></h2>
 <p>The NumPy package contains a plethora of mathematical functions. You can find a listing of the mathematical functions available through NumPy on the web page <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/routines.math.html">http://docs.scipy.org/doc/numpy/reference/routines.math.html</a>. While the list may seem pretty exhaustive, you may nevertheless find that you need a function that is not available in the NumPy Python library. In those cases, you will want to write your own function.</p>
 <p>In studies of optics and signal processing one often runs into the sinc function, which is defined as</p>
 <div class="math notranslate nohighlight">
@@ -278,7 +276,7 @@ contexts.</p>
 <p>Now our function gives the correct value for <code class="docutils literal notranslate"><span class="pre">x=0</span></code> as well as for values different from zero.</p>
 <p>single: functions; looping over arrays</p>
 <div class="section" id="Looping-over-arrays-in-user-defined-functions">
-<h3>7.1.1. Looping over arrays in user-defined functions<a class="headerlink" href="#Looping-over-arrays-in-user-defined-functions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.1. </span>Looping over arrays in user-defined functions<a class="headerlink" href="#Looping-over-arrays-in-user-defined-functions" title="Permalink to this headline">¶</a></h3>
 <p>The code for <span class="math notranslate nohighlight">\(\mathrm{sinc}\,x\)</span> works just fine when the argument is a single number or a variable that represents a single number. However, if the argument is a NumPy array, we run into a problem, as illustrated below.</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">x</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">5.</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 
@@ -331,7 +329,7 @@ process. That part of the code is just a definition. The first time the code for
 </figcaption></figure><p>single: functions; fast array processing single: conditionals; applied to arrays</p>
 </div>
 <div class="section" id="Fast-array-processing-in-user-defined-functions">
-<h3>7.1.2. Fast array processing in user-defined functions<a class="headerlink" href="#Fast-array-processing-in-user-defined-functions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.2. </span>Fast array processing in user-defined functions<a class="headerlink" href="#Fast-array-processing-in-user-defined-functions" title="Permalink to this headline">¶</a></h3>
 <p>While using loops to process arrays works just fine, it is usually not the best way to accomplish the task in Python. The reason is that loops in Python are executed rather slowly. To deal with this problem, the developers of NumPy introduced a number of functions designed to process arrays quickly and efficiently. For the present case, what we need is a conditional statement or function that can process arrays directly. The function we want is called <code class="docutils literal notranslate"><span class="pre">where</span></code> and it is a part of the NumPy
 library. There <code class="docutils literal notranslate"><span class="pre">where</span></code> function has the form</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">where</span><span class="p">(</span><span class="n">condition</span><span class="p">,</span> <span class="n">output</span> <span class="k">if</span> <span class="kc">True</span><span class="p">,</span> <span class="n">output</span> <span class="k">if</span> <span class="kc">False</span><span class="p">)</span>
@@ -346,14 +344,14 @@ library. There <code class="docutils literal notranslate"><span class="pre">wher
 <p>The <code class="docutils literal notranslate"><span class="pre">where</span></code> function creates the array <code class="docutils literal notranslate"><span class="pre">y</span></code> and sets the elements of <code class="docutils literal notranslate"><span class="pre">y</span></code> equal to 1.0 where the corresponding elements of <code class="docutils literal notranslate"><span class="pre">x</span></code> are zero, and otherwise sets the corresponding elements to <code class="docutils literal notranslate"><span class="pre">sin(x)/x</span></code>. This code executes much faster, 25 to 100 times, depending on the size of the array, than the code using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Moreover, the new code is much simpler to write and read. An additional benefit of the <code class="docutils literal notranslate"><span class="pre">where</span></code> function is that it can handle single variables and arrays equally well. The
 code we wrote for the sinc function with the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop cannot handle single variables. Of course we could rewrite the code so that it did, but the code becomes even more clunky. It’s better just to use NumPy’s <code class="docutils literal notranslate"><span class="pre">where</span></code> function.</p>
 <div class="section" id="The-moral-of-the-story">
-<h4>7.1.2.1. The moral of the story<a class="headerlink" href="#The-moral-of-the-story" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">7.1.2.1. </span>The moral of the story<a class="headerlink" href="#The-moral-of-the-story" title="Permalink to this headline">¶</a></h4>
 <p>The moral of the story is that you should avoid using <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> loops to process arrays in Python programs whenever an array-processing method is available. As a beginning Python programmer, you may not always see how to avoid loops, and indeed, avoiding them is not always possible, but you should look for ways to avoid loops, especially loops that iterate a large number of times. As you become more experienced, you will find that using array-processing methods in Python becomes more
 natural. Using them can greatly speed up the execution of your code, especially when working with large arrays.</p>
 <p>single: functions; multiple inputs and/or outputs</p>
 </div>
 </div>
 <div class="section" id="Functions-with-more-(or-less)-than-one-input-or-output">
-<h3>7.1.3. Functions with more (or less) than one input or output<a class="headerlink" href="#Functions-with-more-(or-less)-than-one-input-or-output" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.3. </span>Functions with more (or less) than one input or output<a class="headerlink" href="#Functions-with-more-(or-less)-than-one-input-or-output" title="Permalink to this headline">¶</a></h3>
 <p>Python functions can have any number of input arguments and can return any number of variables. For example, suppose you want a function that outputs <span class="math notranslate nohighlight">\(n\)</span> <span class="math notranslate nohighlight">\((x,y)\)</span> coordinates around a circle of radius <span class="math notranslate nohighlight">\(r\)</span> centered at the point <span class="math notranslate nohighlight">\((x_0,y_0)\)</span>. The inputs to the function would be <span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(x_0\)</span>, <span class="math notranslate nohighlight">\(y_0\)</span>, and <span class="math notranslate nohighlight">\(n\)</span>. The outputs would be the <span class="math notranslate nohighlight">\(n\)</span> <span class="math notranslate nohighlight">\((x,y)\)</span> coordinates. The following code implements this function.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">circle</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -376,7 +374,7 @@ natural. Using them can greatly speed up the execution of your code, especially 
 <p>single: functions; arguments; keyword single: functions; arguments; positional</p>
 </div>
 <div class="section" id="Positional-and-keyword-arguments">
-<h3>7.1.4. Positional and keyword arguments<a class="headerlink" href="#Positional-and-keyword-arguments" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.4. </span>Positional and keyword arguments<a class="headerlink" href="#Positional-and-keyword-arguments" title="Permalink to this headline">¶</a></h3>
 <p>It is often useful to have function arguments that have some default setting. This happens when you want an input to a function to have some standard value or setting most of the time, but you would like to reserve the possibility of giving it some value other than the default value.</p>
 <p>For example, in the program <code class="docutils literal notranslate"><span class="pre">circle</span></code> from the previous section, we might decide that under most circumstances, we want <code class="docutils literal notranslate"><span class="pre">n=12</span></code> points around the circle, like the points on a clock face, and we want the circle to be centered at the origin. In this case, we would rewrite the code to read</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">circle</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">y0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">12</span><span class="p">):</span>
@@ -409,7 +407,7 @@ to <code class="docutils literal notranslate"><span class="pre">circle</span></c
 <p>single: functions; arguments; variable number single: functions; arguments; *args</p>
 </div>
 <div class="section" id="Variable-number-of-arguments">
-<h3>7.1.5. Variable number of arguments<a class="headerlink" href="#Variable-number-of-arguments" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.5. </span>Variable number of arguments<a class="headerlink" href="#Variable-number-of-arguments" title="Permalink to this headline">¶</a></h3>
 <p>While it may seem odd, it is sometimes useful to leave the number of arguments unspecified. A simple example is a function that computes the product of an arbitrary number of numbers:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">product</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;args = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
@@ -469,11 +467,11 @@ program <code class="docutils literal notranslate"><span class="pre">deriv</span
 <p>Python also allows for a variable number of keyword arguments—<code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>—in a function call. While <code class="docutils literal notranslate"><span class="pre">*args</span></code> is a tuple, <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> is a dictionary, so that the value of an optional keyword argument is accessed through its dictionary key.</p>
 </div>
 <div class="section" id="Passing-data-to-and-from-functions">
-<h3>7.1.6. Passing data to and from functions<a class="headerlink" href="#Passing-data-to-and-from-functions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.6. </span>Passing data to and from functions<a class="headerlink" href="#Passing-data-to-and-from-functions" title="Permalink to this headline">¶</a></h3>
 <p>Functions are like mini-programs within the larger programs that call them. Each function has a set of variables with certain names that are to some degree or other isolated from the calling program. We shall get more specific about just how isolated those variables are below, but before we do, we introduce the concept of a <em>namespace</em>. Each function has its own namespace, which is essentially a mapping of variable names to objects, like numerics, strings, lists, and so forth. It’s a kind of
 dictionary. The calling program has its own namespace, distinct from that of any functions it calls. The distinctiveness of these namespaces plays an important role in how functions work, as we shall see below.</p>
 <div class="section" id="Variables-and-arrays-created-entirely-within-a-function">
-<h4>7.1.6.1. Variables and arrays created entirely within a function<a class="headerlink" href="#Variables-and-arrays-created-entirely-within-a-function" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">7.1.6.1. </span>Variables and arrays created entirely within a function<a class="headerlink" href="#Variables-and-arrays-created-entirely-within-a-function" title="Permalink to this headline">¶</a></h4>
 <p>An important feature of functions is that variables and arrays created <em>entirely within</em> a function cannot be seen by the program that calls the function unless the variable or array is explicitly passed to the calling program in the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement. This is important because it means you can create and manipulate variables and arrays, giving them any name you please, without affecting any variables or arrays outside the function, even if the variables and arrays inside and outside a
 function share the same name.</p>
 <p>To see what how this works, let’s rewrite our program to plot the sinc function using the sinc function definition that uses the <code class="docutils literal notranslate"><span class="pre">where</span></code> function.</p>
@@ -515,7 +513,7 @@ function share the same name.</p>
 IPython. This also means that when the sinc function ends with <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">z</span></code>, it doesn’t return the name <code class="docutils literal notranslate"><span class="pre">z</span></code>, but instead assigns the values in the array <code class="docutils literal notranslate"><span class="pre">z</span></code> to the array <code class="docutils literal notranslate"><span class="pre">y</span></code>, as directed by the main program in line 9.</p>
 </div>
 <div class="section" id="Passing-variables-and-arrays-to-functions:-mutable-and-immutable-objects">
-<h4>7.1.6.2. Passing variables and arrays to functions: mutable and immutable objects<a class="headerlink" href="#Passing-variables-and-arrays-to-functions:-mutable-and-immutable-objects" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">7.1.6.2. </span>Passing variables and arrays to functions: mutable and immutable objects<a class="headerlink" href="#Passing-variables-and-arrays-to-functions:-mutable-and-immutable-objects" title="Permalink to this headline">¶</a></h4>
 <p>What happens to a variable or an array passed to a function when the variable or array is <em>changed</em> within the function? It turns out that the answers are different depending on whether the variable passed is a simple numeric variable, string, or tuple, or whether it is an array or list. The program below illustrates the different ways that Python handles single variables <em>vs</em> the way it handles lists and arrays.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;I am doing fine&quot;</span>
@@ -602,7 +600,7 @@ the function are also changed in the calling program.</p>
 </div>
 </div>
 <div class="section" id="Methods-and-attributes">
-<h2>7.2. Methods and attributes<a class="headerlink" href="#Methods-and-attributes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.2. </span>Methods and attributes<a class="headerlink" href="#Methods-and-attributes" title="Permalink to this headline">¶</a></h2>
 <p>You have already encountered quite a number of functions that are part of either NumPy or Python or Matplotlib. But there is another way in which Python implements things that act like functions. To understand what they are, you need to understand that variables, strings, arrays, lists, and other such data structures in Python are not merely the numbers or strings we have defined them to be. They are <em>objects</em>. In general, an object in Python has associated with it a number of <em>attributes</em> and a
 number of specialized functions called <em>methods</em> that act on the object. How attributes and methods work with objects is best illustrated by example.</p>
 <p>Let’s start with the NumPy array. A NumPy array is a Python object and therefore has associated with it a number of attributes and methods. Suppose, for example, we write <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">random.random(10)</span></code>, which creates an array of 10 uniformly distributed random numbers between 0 and 1. An example of an attribute of an array is the size or number of elements in the array. An attribute of an object in Python is accessed by typing the object name followed by a period followed by the attribute name. The
@@ -656,7 +654,7 @@ as methods by default act on the object whose name they follow. In some cases. h
 <p>single: curve fitting; linear</p>
 </div>
 <div class="section" id="Example:-linear-least-squares-fitting">
-<h2>7.3. Example: linear least squares fitting<a class="headerlink" href="#Example:-linear-least-squares-fitting" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.3. </span>Example: linear least squares fitting<a class="headerlink" href="#Example:-linear-least-squares-fitting" title="Permalink to this headline">¶</a></h2>
 <p>In this section we illustrate how to use functions and methods in the context of modeling experimental data.</p>
 <p>In science and engineering we often have some theoretical curve or <em>fitting function</em> that we would like to fit to some experimental data. In general, the fitting function is of the form <span class="math notranslate nohighlight">\(f(x; a, b, c, ...)\)</span>, where <span class="math notranslate nohighlight">\(x\)</span> is the independent variable and <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(c\)</span>, … are parameters to be adjusted so that the function <span class="math notranslate nohighlight">\(f(x; a, b, c, ...)\)</span> best fits the experimental data. For example, suppose we had some data of the velocity <em>vs</em> time for a falling mass. If the
 mass falls only a short distance such that its velocity remains well below its terminal velocity, we can ignore air resistance. In this case, we expect the acceleration to be constant and the velocity to change linearly in time according to the equation</p>
@@ -683,7 +681,7 @@ f(x; a, b, c) &amp;= a \sin x + b e^x + c e^{-x^2} \;.
 <p>For fitting functions such as these, taking the partial derivatives with respect to the fitting parameters, as proposed in <code class="docutils literal notranslate"><span class="pre">eq:sysSzero</span></code>, results in a set of algebraic equations that are linear in the fitting paramters <span class="math notranslate nohighlight">\(a, b, ...\)</span> Because they are linear, these equations can be solved in a straightforward manner.</p>
 <p>For cases in which the fitting function is not linear in the fitting parameters, one can generally still find the values of the fitting parameters that minimize <span class="math notranslate nohighlight">\(S\)</span> but finding them requires more work, which goes beyond our immediate interests here.</p>
 <div class="section" id="Linear-regression">
-<h3>7.3.1. Linear regression<a class="headerlink" href="#Linear-regression" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.3.1. </span>Linear regression<a class="headerlink" href="#Linear-regression" title="Permalink to this headline">¶</a></h3>
 <p>We start by considering the simplest case, fitting a straight line to a data set, such as the one shown in Fig. <code class="docutils literal notranslate"><span class="pre">4.6</span> <span class="pre">&lt;fig:FallingMassDataPlot&gt;</span></code> above. Here the fitting function is <span class="math notranslate nohighlight">\(f(x) = a + bx\)</span>, which is linear in the fitting parameters <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. For a straight line, the sum in <code class="docutils literal notranslate"><span class="pre">eq:lsqrsum</span></code> becomes</p>
 <div class="math notranslate nohighlight">
 \[S(a,b) = \sum_{i} (y_{i} - a - bx_{i})^2 \;.\]</div>
@@ -731,7 +729,7 @@ a &amp;= \bar{y} - b\bar{x} \;.
 <p>single: curve fitting; linear; with weighting</p>
 </div>
 <div class="section" id="Linear-regression-with-weighting:-\chi^2">
-<h3>7.3.2. Linear regression with weighting: <span class="math notranslate nohighlight">\(\chi^2\)</span><a class="headerlink" href="#Linear-regression-with-weighting:-\chi^2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.3.2. </span>Linear regression with weighting: <span class="math notranslate nohighlight">\(\chi^2\)</span><a class="headerlink" href="#Linear-regression-with-weighting:-\chi^2" title="Permalink to this headline">¶</a></h3>
 <p>The linear regression routine of the previous section weights all data points equally. That is fine if the absolute uncertainty is the same for all data points. In many cases, however, the uncertainty is different for different points in a data set. In such cases, we would like to weight the data that has smaller uncertainty more heavily than those data that have greater uncertainty. For this case, there is a standard method of weighting and fitting data that is known as <span class="math notranslate nohighlight">\(\chi^2\)</span> (or
 <em>chi-squared</em>) fitting. In this method we suppose that associated with each <span class="math notranslate nohighlight">\((x_{i},y_{i})\)</span> data point is an uncertainty in the value of <span class="math notranslate nohighlight">\(y_{i}\)</span> of <span class="math notranslate nohighlight">\(\pm\sigma_{i}\)</span>. In this case, the “best fit” is defined as the the one with the set of fitting parameters that minimizes the sum</p>
 <div class="math notranslate nohighlight">
@@ -771,7 +769,7 @@ overestimated (the fit and fitting function may or may not be good).</p>
 </div>
 </div>
 <div class="section" id="Anonymous-functions-(lambda)">
-<h2>7.4. Anonymous functions (lambda)<a class="headerlink" href="#Anonymous-functions-(lambda)" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.4. </span>Anonymous functions (lambda)<a class="headerlink" href="#Anonymous-functions-(lambda)" title="Permalink to this headline">¶</a></h2>
 <p>Python provides another way to generate functions called <em>lambda</em> expressions. A lambda expression is a kind of in-line function that can be generated on the fly to accomplish some small task. You can assign lambda functions a name, but you don’t need to; hence, they are often called <em>anonymous</em> functions. A lambda uses the keyword <code class="docutils literal notranslate"><span class="pre">lambda</span></code> and has the general form</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">...</span> <span class="p">:</span> <span class="n">output</span>
 </pre></div>
@@ -798,7 +796,7 @@ section <code class="docutils literal notranslate"><span class="pre">numericalIn
 <p>There are also a number of nifty programming tricks that can be implemented using <code class="docutils literal notranslate"><span class="pre">lambda</span></code> expressions, but we will not go into them here. Look up <code class="docutils literal notranslate"><span class="pre">lambdas</span></code> on the web if you are curious about their more exotic uses.</p>
 </div>
 <div class="section" id="Exercises">
-<h2>7.5. Exercises<a class="headerlink" href="#Exercises" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.5. </span>Exercises<a class="headerlink" href="#Exercises" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p>Write a function that can return each of the first three spherical Bessel functions <span class="math notranslate nohighlight">\(j_n(x)\)</span>:</p>
 <div class="math notranslate nohighlight">

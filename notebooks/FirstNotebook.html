@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Demo of IPython Notebook &mdash; Introduction to Python for Science 1.0 documentation</title>
+  <title>Demo of IPython Notebook &mdash; Scientific python tutorial 1.0 documentation</title>
   
 
   
@@ -37,9 +37,7 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Getting started with Jupyter and Python" href="chap1_intro.html" />
-    <link rel="prev" title="Introduction to python for science" href="../index.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -53,7 +51,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Introduction to Python for Science
+            <a href="../index.html" class="icon icon-home"> Scientific python tutorial
           
 
           
@@ -83,22 +81,17 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Demo of IPython Notebook</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#David-Pine">1.1. David Pine</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="chap1_intro.html">2. Getting started with Jupyter and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap2_basics.html">3. First Steps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap3_arrays.html">4. Strings, Lists, Arrays, and Dictionaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap5_plot.html">5. Plotting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap6_loopsconds.html">6. Conditionals and Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap7_funcs.html">7. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap8_fitting.html">8. Curve Fitting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chap08PineSolns.html">9. Chapter 8 (Pine): Curve Fitting Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap9_scipy.html">10. Numerical Routines: SciPy and NumPy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apdx1_install.html">11. Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apdx2_ipynb.html">12. Jupyter Notebooks</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="chap1_intro.html">1. Chapter 1: Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap2_jupyter.html">2. Chapter 2  Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap3_arrays.html">3. Chapter 3: Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap4_io.html">4. Chapter 4: Input output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap5_plot.html">5. Chapter 5: Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap6_loopsconds.html">6. Chapter 6: Flow control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap7_funcs.html">7. Chapter 7: Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap8_fitting.html">8. Chapter 8: Curve Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap08PineSolns.html">9. Chapter 8b: Curvefit Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap9_scipy.html">10. Chapter 9: Scipy</a></li>
 </ul>
 
             
@@ -113,7 +106,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Introduction to Python for Science</a>
+          <a href="../index.html">Scientific python tutorial</a>
         
       </nav>
 
@@ -144,13 +137,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>1. Demo of IPython Notebook</li>
+      <li>Demo of IPython Notebook</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/notebooks/FirstNotebook.py.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/notebooks/FirstNotebook.ipynb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -386,15 +379,15 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="section" id="Demo-of-IPython-Notebook">
-<h1>1. Demo of IPython Notebook<a class="headerlink" href="#Demo-of-IPython-Notebook" title="Permalink to this headline">¶</a></h1>
+<h1>Demo of IPython Notebook<a class="headerlink" href="#Demo-of-IPython-Notebook" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="David-Pine">
-<h2>1.1. David Pine<a class="headerlink" href="#David-Pine" title="Permalink to this headline">¶</a></h2>
+<h2>David Pine<a class="headerlink" href="#David-Pine" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span>
+<span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
 </pre></div>
 </div>
 </div>
@@ -422,7 +415,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">6</span><span class="p">)</span>
+<span></span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">6</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -440,7 +433,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -450,7 +443,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x115b50b38&gt;]
+[&lt;matplotlib.lines.Line2D at 0x11bf343d0&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -477,20 +470,22 @@ div.rendered_html tbody tr:hover {
 <span></span><span class="c1"># Calculates time, gallons of gas used, and cost of gasoline for</span>
 <span class="c1"># a trip</span>
 
-<span class="n">distance</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">raw_input</span><span class="p">(</span><span class="s2">&quot;Input distance of trip in miles: &quot;</span><span class="p">))</span>
-<span class="n">mpg</span> <span class="o">=</span> <span class="mf">30.</span>               <span class="c1"># car mileage</span>
-<span class="n">speed</span> <span class="o">=</span> <span class="mf">60.</span>             <span class="c1"># average speed</span>
-<span class="n">costPerGallon</span> <span class="o">=</span> <span class="mf">4.10</span>    <span class="c1"># price of gas</span>
+<span class="n">interactive</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">if</span> <span class="n">interactive</span><span class="p">:</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Input distance of trip in miles: &quot;</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="mf">350.0</span>
+<span class="n">mpg</span> <span class="o">=</span> <span class="mf">30.0</span>  <span class="c1"># car mileage</span>
+<span class="n">speed</span> <span class="o">=</span> <span class="mf">60.0</span>  <span class="c1"># average speed</span>
+<span class="n">costPerGallon</span> <span class="o">=</span> <span class="mf">4.10</span>  <span class="c1"># price of gas</span>
 
-<span class="n">time</span> <span class="o">=</span> <span class="n">distance</span><span class="o">/</span><span class="n">speed</span>
-<span class="n">gallons</span> <span class="o">=</span> <span class="n">distance</span><span class="o">/</span><span class="n">mpg</span>
-<span class="n">cost</span> <span class="o">=</span> <span class="n">gallons</span><span class="o">*</span><span class="n">costPerGallon</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">distance</span> <span class="o">/</span> <span class="n">speed</span>
+<span class="n">gallons</span> <span class="o">=</span> <span class="n">distance</span> <span class="o">/</span> <span class="n">mpg</span>
+<span class="n">cost</span> <span class="o">=</span> <span class="n">gallons</span> <span class="o">*</span> <span class="n">costPerGallon</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Duration of trip = </span><span class="si">{0:0.1f}</span><span class="s2"> hours&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gasoline used = </span><span class="si">{0:0.1f}</span><span class="s2"> gallons (@ </span><span class="si">{1:0.0f}</span><span class="s2"> mpg)&quot;</span>
-      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gallons</span><span class="p">,</span> <span class="n">mpg</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cost of gasoline = $</span><span class="si">{0:0.2f}</span><span class="s2"> (@ $</span><span class="si">{1:0.2f}</span><span class="s2">/gallon)&quot;</span>
-      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cost</span><span class="p">,</span> <span class="n">costPerGallon</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gasoline used = </span><span class="si">{0:0.1f}</span><span class="s2"> gallons (@ </span><span class="si">{1:0.0f}</span><span class="s2"> mpg)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gallons</span><span class="p">,</span> <span class="n">mpg</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cost of gasoline = $</span><span class="si">{0:0.2f}</span><span class="s2"> (@ $</span><span class="si">{1:0.2f}</span><span class="s2">/gallon)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cost</span><span class="p">,</span> <span class="n">costPerGallon</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -499,16 +494,10 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-5-b9538a742ec0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># a trip</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span>
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>distance <span class="ansi-blue-fg">=</span> float<span class="ansi-blue-fg">(</span>raw_input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Input distance of trip in miles: &#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> mpg <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">30.</span>               <span class="ansi-red-fg"># car mileage</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> speed <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">60.</span>             <span class="ansi-red-fg"># average speed</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;raw_input&#39; is not defined
+Duration of trip = 5.8 hours
+Gasoline used = 11.7 gallons (@ 30 mpg)
+Cost of gasoline = $47.83 (@ $4.10/gallon)
 </pre></div></div>
 </div>
 <dl class="simple">
@@ -550,15 +539,6 @@ cat: LiamSelinaData.txt: No such file or directory
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="chap1_intro.html" class="btn btn-neutral float-right" title="2. Getting started with Jupyter and Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../index.html" class="btn btn-neutral float-left" title="Introduction to python for science" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

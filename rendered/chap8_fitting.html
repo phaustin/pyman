@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8. Curve Fitting &mdash; Scientific python tutorial 1.0 documentation</title>
+  <title>Curve Fitting &mdash; Scientific python tutorial 1.0 documentation</title>
   
 
   
@@ -37,9 +37,7 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="9. Chapter 8 (Pine): Curve Fitting Solutions" href="Chap08PineSolns.html" />
-    <link rel="prev" title="7. Functions" href="chap7_funcs.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,28 +81,19 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="FirstNotebook.html">1. Demo of IPython Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap1_intro.html">2. Getting started with Jupyter and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap2_basics.html">3. First Steps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap3_arrays.html">4. Strings, Lists, Arrays, and Dictionaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap5_plot.html">5. Plotting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap6_loopsconds.html">6. Conditionals and Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap7_funcs.html">7. Functions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Curve Fitting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Using-linear-regression-for-fitting-non-linear-functions">8.1. Using linear regression for fitting non-linear functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Linear-regression-for-fitting-an-exponential-function">8.1.1. Linear regression for fitting an exponential function</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Linear-regression-for-fitting-a-power-law-function">8.1.2. Linear regression for fitting a power-law function</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#Nonlinear-fitting">8.2. Nonlinear fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Exercises">8.3. Exercises</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Chap08PineSolns.html">9. Chapter 8 (Pine): Curve Fitting Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap9_scipy.html">10. Numerical Routines: SciPy and NumPy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apdx1_install.html">11. Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apdx2_ipynb.html">12. Jupyter Notebooks</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/FirstNotebook.html">1. First Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/chap1_intro.html">2. Chapter 1: Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/chap2_basics.html">3. Chapter 2: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/chap3_arrays.html">4. Chapter 3: Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/chap5_plot.html">5. Chapter 5: Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/chap6_loopsconds.html">6. Chapter 6: Flow control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/chap7_funcs.html">7. Chapter 7: Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/chap8_fitting.html">8. Chapter 8: Curve Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/Chap08PineSolns.html">9. Chapter 8b: Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/chap9_scipy.html">10. Chapter 9: Scipy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/apdx1_install.html">11. Appendix 1: installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/apdx2_ipynb.html">12. Appendix 2: Jupyter</a></li>
 </ul>
 
             
@@ -150,7 +139,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>8. Curve Fitting</li>
+      <li>Curve Fitting</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -194,14 +183,14 @@
 }
 </style>
 <div class="section" id="Curve-Fitting">
-<h1>8. Curve Fitting<a class="headerlink" href="#Curve-Fitting" title="Permalink to this headline">¶</a></h1>
+<h1>Curve Fitting<a class="headerlink" href="#Curve-Fitting" title="Permalink to this headline">¶</a></h1>
 <p>One of the most important tasks in any experimental science is modeling data and determining how well some theoretical function describes experimental data. In the last chapter, we illustrated how this can be done when the theoretical function is a simple straight line in the context of learning about Python functions and methods. Here we show how this can be done for a arbitrary fitting functions, including linear, exponential, power law, and other nonlinear fitting functions.</p>
 <div class="section" id="Using-linear-regression-for-fitting-non-linear-functions">
-<h2>8.1. Using linear regression for fitting non-linear functions<a class="headerlink" href="#Using-linear-regression-for-fitting-non-linear-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Using linear regression for fitting non-linear functions<a class="headerlink" href="#Using-linear-regression-for-fitting-non-linear-functions" title="Permalink to this headline">¶</a></h2>
 <p>We can use our results for linear regression with <span class="math notranslate nohighlight">\(\chi^2\)</span> weighting that we developed in Chapter 7 to fit functions that are nonlinear in the fitting parameters, <em>provided</em> we can transform the fitting function into one that is linear in the fitting parameters and in the independent variable (<span class="math notranslate nohighlight">\(x\)</span>).</p>
 <p>single: curve fitting; linear; exponential function</p>
 <div class="section" id="Linear-regression-for-fitting-an-exponential-function">
-<h3>8.1.1. Linear regression for fitting an exponential function<a class="headerlink" href="#Linear-regression-for-fitting-an-exponential-function" title="Permalink to this headline">¶</a></h3>
+<h3>Linear regression for fitting an exponential function<a class="headerlink" href="#Linear-regression-for-fitting-an-exponential-function" title="Permalink to this headline">¶</a></h3>
 <p>To illustrate this approach, let’s consider some experimental data taken from a radioactive source that was emitting beta particles (electrons). We notice that the number of electrons emitted per unit time is decreasing with time. Theory suggests that the number of electrons <span class="math notranslate nohighlight">\(N\)</span> emitted per unit time should decay exponentially according to the equation</p>
 <div class="math notranslate nohighlight">
 \[N(t) = N_0 e^{-t/\tau} \;.\]</div>
@@ -340,7 +329,7 @@ as well as the fitting parameters for the exponential fitting function.</p>
 <p>single: curve fitting; linear; power-law function</p>
 </div>
 <div class="section" id="Linear-regression-for-fitting-a-power-law-function">
-<h3>8.1.2. Linear regression for fitting a power-law function<a class="headerlink" href="#Linear-regression-for-fitting-a-power-law-function" title="Permalink to this headline">¶</a></h3>
+<h3>Linear regression for fitting a power-law function<a class="headerlink" href="#Linear-regression-for-fitting-a-power-law-function" title="Permalink to this headline">¶</a></h3>
 <p>You can use a similar approach to the one outlined above to fit experimental data to a power law fitting function of the form</p>
 <div class="math notranslate nohighlight">
 \[P(s) = P_0 s^\alpha \;.\]</div>
@@ -360,7 +349,7 @@ b &amp;= \alpha
 </div>
 </div>
 <div class="section" id="Nonlinear-fitting">
-<h2>8.2. Nonlinear fitting<a class="headerlink" href="#Nonlinear-fitting" title="Permalink to this headline">¶</a></h2>
+<h2>Nonlinear fitting<a class="headerlink" href="#Nonlinear-fitting" title="Permalink to this headline">¶</a></h2>
 <p>The method introduced in the previous section for fitting nonlinear fitting functions can be used only if the fitting function can be transformed into a fitting function that is linear in the fitting parameters <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(c\)</span>… When we have a nonlinear fitting function that cannot be transformed into a linear form, we need another approach.</p>
 <p>The problem of finding values of the fitting parameters that minimize <span class="math notranslate nohighlight">\(\chi^2\)</span> is a nonlinear optimization problem to which there is quite generally no analytical solution (in contrast to the linear optimization problem). We can gain some insight into this nonlinear optimization problem, namely the fitting of a nonlinear fitting function to a data set, by considering a fitting function with only two fitting parameters. That is, we are trying to fit some data set <span class="math notranslate nohighlight">\(\{x_{i},y_{i}\}\)</span>,
 with uncertainties in <span class="math notranslate nohighlight">\(\{y_{i}\}\)</span> of <span class="math notranslate nohighlight">\(\{\sigma_{i}\}\)</span>, to a fitting function is <span class="math notranslate nohighlight">\(f(x;a,b)\)</span> where <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are the two fitting parameters. To do so, we look for the minimum in</p>
@@ -483,7 +472,7 @@ a list comprehension.</p>
 </figcaption></figure><p>Finally, we note that we have used the MatPlotLib package <code class="docutils literal notranslate"><span class="pre">gridspec</span></code> to create the two subplots with different heights. The <code class="docutils literal notranslate"><span class="pre">gridspec</span></code> are made in lines 3 (where the package is imported), 36 (where 2 rows and 1 column are specified with relative heights of 6 to 2), 39 (where the first <code class="docutils literal notranslate"><span class="pre">gs[0]</span></code> height is specified), and 54 (where the second <code class="docutils literal notranslate"><span class="pre">gs[1]</span></code> height is specified). More details about the <code class="docutils literal notranslate"><span class="pre">gridspec</span></code> package can be found at the MatPlotLib web site.</p>
 </div>
 <div class="section" id="Exercises">
-<h2>8.3. Exercises<a class="headerlink" href="#Exercises" title="Permalink to this headline">¶</a></h2>
+<h2>Exercises<a class="headerlink" href="#Exercises" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p>When a voltage source is connected across a resistor and inductor in series, the voltage across the inductor <span class="math notranslate nohighlight">\(V_i(t)\)</span> is predicted to obey the equation</p>
 <div class="math notranslate nohighlight">
@@ -606,15 +595,6 @@ you did for part (a). The fit should be noticeably worse. What is the value of t
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="Chap08PineSolns.html" class="btn btn-neutral float-right" title="9. Chapter 8 (Pine): Curve Fitting Solutions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="chap7_funcs.html" class="btn btn-neutral float-left" title="7. Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
