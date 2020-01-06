@@ -15,7 +15,7 @@
 #     name: python3
 # ---
 
-# %%
+# %% [markdown]
 # # Python Resources
 #
 # This text provides an introduction to Python for science and engineering

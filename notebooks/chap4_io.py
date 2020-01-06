@@ -15,7 +15,7 @@
 #     name: python3
 # ---
 
-# %%
+# %% [markdown]
 # # Input and Output
 #
 # single: input single: output
