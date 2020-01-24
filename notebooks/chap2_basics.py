@@ -3,24 +3,41 @@
 # jupyter:
 #   jupytext:
 #     cell_metadata_filter: all
-#     formats: ipynb,py:percent
-#     notebook_metadata_filter: all,-language_info,-toc,-latex_envs
+#     formats: ipynb,..//..//notebooks//py
+#     notebook_metadata_filter: all,-language_info
 #     text_representation:
 #       extension: .py
-#       format_name: percent
-#       format_version: '1.3'
-#       jupytext_version: 1.3.0
+#       format_name: light
+#       format_version: '1.5'
+#       jupytext_version: 1.3.2
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
 #     name: python3
+#   toc:
+#     base_numbering: 1
+#     nav_menu: {}
+#     number_sections: true
+#     sideBar: true
+#     skip_h1_title: false
+#     title_cell: Table of Contents
+#     title_sidebar: Contents
+#     toc_cell: true
+#     toc_position: {}
+#     toc_section_display: true
+#     toc_window_display: true
 # ---
 
-# %% [markdown]
+# + [markdown] toc=true
+# <h1>Table of Contents<span class="tocSkip"></span></h1>
+# <div class="toc"><ul class="toc-item"><li><span><a href="#First-Steps" data-toc-modified-id="First-Steps-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>First Steps</a></span><ul class="toc-item"><li><span><a href="#Installing-Python-on-your-computer" data-toc-modified-id="Installing-Python-on-your-computer-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Installing Python on your computer</a></span><ul class="toc-item"><li><span><a href="#Launching-IPython" data-toc-modified-id="Launching-IPython-1.1.1"><span class="toc-item-num">1.1.1&nbsp;&nbsp;</span>Launching IPython</a></span></li><li><span><a href="#Testing-your-installation-of-Python" data-toc-modified-id="Testing-your-installation-of-Python-1.1.2"><span class="toc-item-num">1.1.2&nbsp;&nbsp;</span>Testing your installation of Python</a></span></li></ul></li><li><span><a href="#IPython-Basics" data-toc-modified-id="IPython-Basics-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>IPython Basics</a></span><ul class="toc-item"><li><span><a href="#Magic-Functions" data-toc-modified-id="Magic-Functions-1.2.1"><span class="toc-item-num">1.2.1&nbsp;&nbsp;</span>Magic Functions</a></span></li><li><span><a href="#Navigation-Commands" data-toc-modified-id="Navigation-Commands-1.2.2"><span class="toc-item-num">1.2.2&nbsp;&nbsp;</span>Navigation Commands</a></span></li><li><span><a href="#More-Magic-Commands" data-toc-modified-id="More-Magic-Commands-1.2.3"><span class="toc-item-num">1.2.3&nbsp;&nbsp;</span>More Magic Commands</a></span></li><li><span><a href="#System-shell-commands" data-toc-modified-id="System-shell-commands-1.2.4"><span class="toc-item-num">1.2.4&nbsp;&nbsp;</span>System shell commands</a></span></li><li><span><a href="#Tab-completion" data-toc-modified-id="Tab-completion-1.2.5"><span class="toc-item-num">1.2.5&nbsp;&nbsp;</span>Tab completion</a></span></li><li><span><a href="#Recap-of-commands" data-toc-modified-id="Recap-of-commands-1.2.6"><span class="toc-item-num">1.2.6&nbsp;&nbsp;</span>Recap of commands</a></span></li></ul></li><li><span><a href="#Interactive-Python-as-a-calculator" data-toc-modified-id="Interactive-Python-as-a-calculator-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Interactive Python as a calculator</a></span><ul class="toc-item"><li><span><a href="#Binary-arithmetic-operations-in-Python" data-toc-modified-id="Binary-arithmetic-operations-in-Python-1.3.1"><span class="toc-item-num">1.3.1&nbsp;&nbsp;</span>Binary arithmetic operations in Python</a></span></li><li><span><a href="#Types-of-numbers" data-toc-modified-id="Types-of-numbers-1.3.2"><span class="toc-item-num">1.3.2&nbsp;&nbsp;</span>Types of numbers</a></span></li></ul></li><li><span><a href="#Python-Modules" data-toc-modified-id="Python-Modules-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>Python Modules</a></span></li><li><span><a href="#Python-functions:-a-first-look" data-toc-modified-id="Python-functions:-a-first-look-1.5"><span class="toc-item-num">1.5&nbsp;&nbsp;</span>Python functions: a first look</a></span><ul class="toc-item"><li><span><a href="#Some-NumPy-functions" data-toc-modified-id="Some-NumPy-functions-1.5.1"><span class="toc-item-num">1.5.1&nbsp;&nbsp;</span>Some NumPy functions</a></span></li><li><span><a href="#Keyword-arguments" data-toc-modified-id="Keyword-arguments-1.5.2"><span class="toc-item-num">1.5.2&nbsp;&nbsp;</span>Keyword arguments</a></span></li></ul></li><li><span><a href="#Variables" data-toc-modified-id="Variables-1.6"><span class="toc-item-num">1.6&nbsp;&nbsp;</span>Variables</a></span><ul class="toc-item"><li><span><a href="#Names-and-the-assignment-operator" data-toc-modified-id="Names-and-the-assignment-operator-1.6.1"><span class="toc-item-num">1.6.1&nbsp;&nbsp;</span>Names and the assignment operator</a></span></li><li><span><a href="#Legal-and-recommended-variable-names" data-toc-modified-id="Legal-and-recommended-variable-names-1.6.2"><span class="toc-item-num">1.6.2&nbsp;&nbsp;</span>Legal and recommended variable names</a></span></li><li><span><a href="#Reserved-words-in-Python" data-toc-modified-id="Reserved-words-in-Python-1.6.3"><span class="toc-item-num">1.6.3&nbsp;&nbsp;</span>Reserved words in Python</a></span></li></ul></li><li><span><a href="#Script-files-and-programs" data-toc-modified-id="Script-files-and-programs-1.7"><span class="toc-item-num">1.7&nbsp;&nbsp;</span>Script files and programs</a></span><ul class="toc-item"><li><span><a href="#Scripting-Example-1" data-toc-modified-id="Scripting-Example-1-1.7.1"><span class="toc-item-num">1.7.1&nbsp;&nbsp;</span>Scripting Example 1</a></span></li><li><span><a href="#Scripting-Example-2" data-toc-modified-id="Scripting-Example-2-1.7.2"><span class="toc-item-num">1.7.2&nbsp;&nbsp;</span>Scripting Example 2</a></span></li></ul></li><li><span><a href="#Importing-Modules" data-toc-modified-id="Importing-Modules-1.8"><span class="toc-item-num">1.8&nbsp;&nbsp;</span>Importing Modules</a></span></li><li><span><a href="#Getting-help:-documentation-in-IPython-shell" data-toc-modified-id="Getting-help:-documentation-in-IPython-shell-1.9"><span class="toc-item-num">1.9&nbsp;&nbsp;</span>Getting help: documentation in IPython shell</a></span></li><li><span><a href="#Programming-is-a-detail-oriented-activity" data-toc-modified-id="Programming-is-a-detail-oriented-activity-1.10"><span class="toc-item-num">1.10&nbsp;&nbsp;</span>Programming is a detail-oriented activity</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-1.11"><span class="toc-item-num">1.11&nbsp;&nbsp;</span>Exercises</a></span></li></ul></li></ul></div>
+# -
+
+# First Steps
+# ===========
 #
-# # First Steps
-#
-# ## Installing Python on your computer
+# Installing Python on your computer
+# ----------------------------------
 #
 # If you haven't already installed Python on your computer, see `apdx1` ,
 # which includes instructions for installing Python on Macs running under
@@ -32,9 +49,11 @@
 #
 # Once you have installed Python, open a shell and at the prompt type:
 #
-#     $ cd ~
-#     $ mkdir testfold
-#     $ cd testfold
+# ```
+# $ cd ~
+# $ mkdir testfold
+# $ cd testfold
+# ```
 #
 # which will make a new directory called testfold and change into it.
 #
@@ -60,7 +79,9 @@
 # manual are properly installed. Now that you are in directory testfold,
 # start a python session with:
 #
-#     $jupyter  qtconsole &
+# ```
+# $ jupyter  qtconsole &
+# ```
 #
 # The '&' at the end 'backgrounds' the session and gives you back the bash
 # prompt so you can type further commands.
@@ -68,66 +89,69 @@
 # Launch atom from the command line with the empty file name
 # test\_python.py:
 #
-#     $ atom test_python.py
-#
+# ```
+# $ atom test_python.py
+# ```
 # Copy these lines into test\_python.py You should input your first and
 # last names inside the single quotes on lines 15 and 16, respectively.
 # Save this file in atom.
-#
-# ``` python
-# # This code tests that your Python installation worked.
-# # It generates a png image file that you should e-mail 
-# # to the address shown on the plot
-# import scipy 
-# import numpy 
-# import matplotlib 
-# import matplotlib.pyplot as plt 
-# import platform 
-# import socket
-#
-# # If you are a student, please fill in your first and last
-# # names inside the quotes in the two lines below.  Do not
-# # modify anything else in this file
-#
-# your_first_name = 'First' 
-# your_last_name = 'Last'
-#
-# # If you are an instructor, modify the next 3 lines.
-# # You do not need to modify anything else in this file.
-#
-# classname = 'ATSC 301'
-# term = 'Fall_2016'      # must contain no spaces
-# email = 'paustin@eos.ubc.ca'
-#
-# plt.plot([0,1], 'r', [1,0], 'b')
-# plt.text( 0.5, 0.8, '{0:s} {1:s}'
-#         .format(your_first_name, your_last_name), 
-#         horizontalalignment='center',
-#         size = 'x-large',
-#         bbox=dict(facecolor='purple', alpha=0.4))
-# plt.text( 0.5, 0.1,
-#     '{1:s}\nscipy {2:s}\nnumpy {3:s}\nmatplotlib {4:s}\non {5:s}\n{6:s}'
-#         .format( 
-#         classname,
-#         term,
-#         scipy.__version__, 
-#         numpy.__version__, 
-#         matplotlib.__version__, 
-#         platform.platform(), 
-#         socket.gethostname() 
-#         ) ,
-#     horizontalalignment='center'
-#     )
-# filename = your_last_name + '_' + your_first_name + '_' + term + '.png'
-# plt.title('*** E-mail the saved version of this plot, ***\n' +
-#     '"{0:s}" to {1:s}'.format(filename, email), fontsize=12)
-# plt.savefig(filename)
-# plt.show()
-# ```
-#
+
+# +
+# This code tests that your Python installation worked.
+# It generates a png image file that you should e-mail 
+# to the address shown on the plot
+import scipy as sp
+import numpy as np
+import matplotlib 
+import matplotlib.pyplot as plt 
+import platform 
+import socket
+
+# If you are a student, please fill in your first and last
+# names inside the quotes in the two lines below.  Do not
+# modify anything else in this file
+
+your_first_name = 'First' 
+your_last_name = 'Last'
+
+# If you are an instructor, modify the next 3 lines.
+# You do not need to modify anything else in this file.
+
+classname = 'ATSC 301'
+term = 'Fall_2016'      # must contain no spaces
+email = 'paustin@eos.ubc.ca'
+
+plt.plot([0,1], 'r', [1,0], 'b')
+plt.text( 0.5, 0.8, '{0:s} {1:s}'
+        .format(your_first_name, your_last_name), 
+        horizontalalignment='center',
+        size = 'x-large',
+        bbox=dict(facecolor='purple', alpha=0.4))
+plt.text( 0.5, 0.1,
+    '{1:s}\nscipy {2:s}\nnumpy {3:s}\nmatplotlib {4:s}\non {5:s}\n{6:s}'
+        .format( 
+        classname,
+        term,
+        sp.__version__, 
+        np.__version__, 
+        matplotlib.__version__, 
+        platform.platform(), 
+        socket.gethostname() 
+        ) ,
+    horizontalalignment='center'
+    )
+filename = your_last_name + '_' + your_first_name + '_' + term + '.png'
+plt.title('*** E-mail the saved version of this plot, ***\n' +
+    '"{0:s}" to {1:s}'.format(filename, email), fontsize=12)
+plt.savefig(filename)
+plt.show()
+# -
+
 # To run your saved file go to the IPython window and at the prompt type:
 #
-#     run test_python
+# ```
+# run test_python
+# ```
 #
 # which should produce a plot that looks something like this:
 #
@@ -135,12 +159,16 @@
 #
 # To save this as a png file, type:
 #
-#     %matplotlib qt4
+# ```
+# % matplotlib qt4
+# ```
 #
 # which switches from inline graphics to graphics that appear in a
 # separate window. Type:
 #
-#     run test_python
+# ```
+# run test_python
+# ```
 #
 # again to get a windowed plot
 #
@@ -148,7 +176,7 @@
 #
 # Clicking on the floppy disk icon should prompt you for a file name to
 # save the figure into.
-#
+
 # IPython Basics
 # --------------
 #
@@ -268,38 +296,13 @@
 #
 # There are a number of other magic commands. You can get a list of them
 # by typing `lsmagic`.
-#
-# ``` ipython
-# In [7]: lsmagic
-# Available line magics:
-# %alias  %alias_magic  %autocall  %automagic  %bookmark  %cd
-# %clear  %colors  %config  %connect_info  %debug  %dhist  %dirs
-# %doctest_mode  %ed  %edit  %env  %gui  %guiref  %hist  %history
-# %install_default_config  %install_ext  %install_profiles
-# %killbgscripts  %less  %load  %load_ext  %loadpy  %logoff  %logon
-# %logstart %logstate  %logstop  %lsmagic  %macro  %magic  %man
-# %more  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  %pfile
-# %pinfo  %pinfo2  %popd  %pprint  %precision  %profile  %prun
-# %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole
-# %quickref  %recall  %rehashx  %reload_ext  %rep  %rerun  %reset
-# %reset_selective  %run  %save  %sc  %store  %sx  %system  %tb
-# %time  %timeit  %unalias  %unload_ext  %who  %who_ls  %whos
-# %xdel  %xmode
-#
-# Available cell magics:
-# %%!  %%bash  %%capture  %%file  %%javascript  %%latex  %%perl
-# %%prun  %%pypy %%python  %%python3  %%ruby  %%script  %%sh  %%svg
-# %%sx  %%system  %%timeit
-#
-# Automagic is ON, % prefix IS NOT needed for line magics.
-# ```
-#
+
+# %lsmagic
+
 # There are a lot of magic commands, most of which we don't need right
 # now. We will introduce them in the text as needed.
 #
 # ### System shell commands
-#
-# single: IPython; system shell commands
 #
 # You can also run system shell commands from the IPython shell by typing
 # `!` followed by a system shell command. For Macs running OSX and for
@@ -310,8 +313,6 @@
 # the current directory on a Mac. Typing `!dir` on a PC does essentially
 # the same thing (note that system shell commands in Windows are *not*
 # case sensitive).
-#
-# pair: IPython; tab completion
 #
 # ### Tab completion
 #
@@ -370,35 +371,26 @@
 # > Tab completion:  
 # > Provides convenient shortcuts, with or without the arrow keys, for
 # > executing commands in the IPython shell.
-#
+
 # Interactive Python as a calculator
 # ----------------------------------
 #
 # You can use the IPython shell to perform simple arithmatic calculations.
 # For example, to find the product $3\times 15$, you type `3*15` at the
 # `In` prompt and press `RETURN`:
-#
-# ``` ipython
-# In [1]: 3*15
-# Out[1]: 45
-# ```
-#
+
+3*15
+
 # Python returns the correct product, as expected. You can do more
 # complicated calculations:
-#
-# ``` ipython
-# In [2]: 6+21/3
-# Out[2]: 13.0
-# ```
-#
+
+6+21/3
+
 # Let's try some more arithmetic:
-#
-# ``` ipython
-# In [3]: (6+21)/3
-# Out[3]: 9.0
-# ```
-#
-# Notice that the effect of the parentheses in `In [3]: (6+21)/3` is to
+
+(6+21)/3
+
+# Notice that the effect of the parentheses in `In [4]: (6+21)/3` is to
 # cause the addition to be performed first and then the division. Without
 # the parentheses, Python will always perform the multiplication and
 # division operations *before* performing the addition and subtraction
@@ -478,11 +470,9 @@
 # only the integer part without rounding. *Remainder*, designated by the
 # symbols `%`, gives the remainder of after a floor division.
 #
-# Warning
+# ### Warning
 #
-# Integer division is different in Python 2 and 3
-#
-# integer division; Python 2 and 3 differences
+# #### Integer division is different in Python 2 and 3
 #
 # One peculiarity of all versions of Python prior to version 3 is that
 # dividing two integers by each other yields the "floor division"
@@ -492,11 +482,9 @@
 # Unfortunately, we are using version 2.7 of Python so `12/7` yields `1`.
 # You can force versions of Python prior to version 3 to divide integers
 # like version 3 does by typing
-#
-# ``` ipython
-# from __future__ import division
-# ```
-#
+
+from __future__ import division
+
 # at the beginning of an IPython session. You only need to type it once
 # and it works for the entire session.
 #
@@ -516,24 +504,22 @@
 # beyond the bounds of a simple integer, the it becomes a **long
 # integer**, and is designated as such by an `L` following the last digit.
 # Here are some examples of integer arithmetic:
-#
-# ``` ipython
-# In [4]: 12*3
-# Out[4]: 36
-#
-# In [5]: 4+5*6-(21*8)
-# Out[5]: -134
-#
-# In [6]: 11/5
-# Out[6]: 2.2
-#
-# In [7]: 11//5
-# Out[7]: 2
-#
-# In [8]: 9734828*79372    # product of these two large integers
-# Out[8]: 772672768016L    # is a long integer
-# ```
-#
+
+12*3
+
+4+5*6-(21*8)
+
+11/5
+
+11//5
+
+# +
+9734828*79372    # product of these two large integers is a long integer
+
+# Note: This behaviour is not true as of Python 3, and an integer will 
+# always be as large as it needs to be, as shown below -- Loren.
+# -
+
 # For the binary operators `+`, `-`, `*`, and `//`, the output is an
 # integer if the inputs are integers. The only exception is if the result
 # of the calculation is out of the bounds of Python integers, in which
@@ -548,27 +534,19 @@
 # numbers go between approximately $\pm 2 \times 10^{-308}$ and
 # $\pm 2 \times 10^{308}$. Here are some examples of floating point
 # arithmetic:
-#
-# ``` ipython
-# In [9]: 12.*3.
-# Out[9]: 36.0
-#
-# In [10]: 123.4*(-53.9)/sqrt(5.)
-# Out[10]: -2974.5338992050501
-#
-# In [11]: 11./5.
-# Out[11]: 2.2
-#
-# In [12]: 11.//5.
-# Out[12]: 2.0
-#
-# In [13]: 11.%5.
-# Out[13]: 1.0
-#
-# In [14]: 6.022e23*300.
-# Out[14]: 1.8066e+26
-# ```
-#
+
+12.*3.
+
+123.4*(-53.9)/np.sqrt(5.)
+
+11./5.
+
+11.//5.
+
+11.%5.
+
+6.022e23*300.
+
 # Note that the result of any operation involving only floating point
 # numbers as inputs is a real number, even in the cases where the floor
 # division `//` or remainder `%` operators are used. The last output also
@@ -583,21 +561,15 @@
 # imaginary part. For example, the complex number $3-2i$ is represented as
 # `3-2j` in Python where `j` represents $\sqrt{-1}$. Here are some
 # examples of complex arithmetic:
-#
-# ``` ipython
-# In [15]: (2+3j)*(-4+9j)
-# Out[15]: (-35+6j)
-#
-# In [16]: (2+3j)/(-4+9j)
-# Out[16]: (0.1958762886597938-0.3092783505154639j)
-#
-# In [17]: sqrt(-3)
-# Out[17]: nan
-#
-# In [18]: sqrt(-3+0j)
-# Out[18]: 1.7320508075688772j
-# ```
-#
+
+(2+3j)*(-4+9j)
+
+(2+3j)/(-4+9j)
+
+np.sqrt(-3)
+
+np.sqrt(-3+0j)
+
 # Notice that to obtain the expected result or $\sqrt{-3}$, you must write
 # the argument of the square root function as a complex number. Otherwise,
 # Python returns `nan` (not a number).
@@ -606,10 +578,7 @@
 # floating point number. Similarly, if you multiply a floating point
 # number by a complex number, the result is a complex number. Python
 # always promotes the result to the most complex of the inputs.
-#
-# single: Python; module pair: module; NumPy pair: module; SciPy pair:
-# module; MatPlotLib
-#
+
 # Python Modules
 # --------------
 #
@@ -675,7 +644,7 @@
 # convenient way of packaging and storing Python code so that you can
 # reuse it. We defer learning about how to write modules until after we
 # have learned about Python.
-#
+
 # Python functions: a first look
 # ------------------------------
 #
@@ -684,33 +653,21 @@
 # produces some output. For example, the NumPy function `sin(x)`
 # calculates the sine of the number `x` (where `x` is expressed in
 # radians). Let's try it out in the IPython shell:
-#
-# ``` ipython
-# In [1]: sin(0.5)
-# Out[1]: 0.47942553860420301
-# ```
-#
+
+np.sin(0.5)
+
 # The argument of the function can be a number or any kind of expression
 # whose output produces a number. For example, the function `log(x)`
 # calculates the natural logarithm of `x`. All of the following
 # expressions are legal and produce the expected output:
-#
-# ``` ipython
-# In [2]: log(sin(0.5))
-# Out[2]: -0.73516668638531424
-#
-# In [3]: log(sin(0.5)+1.0)
-# Out[3]: 0.39165386283471759
-#
-# In [4]: log(5.5/1.2)
-# Out[4]: 1.5224265354444708
-# ```
-#
-# pair: NumPy; functions
-#
+
+np.log(np.sin(0.5))
+
+np.log(np.sin(0.5)+1.0)
+
+np.log(5.5/1.2)
+
 # ### Some NumPy functions
-#
-# pair: NumPy; functions
 #
 # NumPy includes an extensive library of mathematical functions. In the
 # table below, we list some of the most useful ones. A much more complete
@@ -813,7 +770,7 @@
 # `chap5BasicPlotting` for examples of the use of keyword arguments. For
 # the moment, we don't need them so we defer a full discussion of keyword
 # arguments until we introduce them in the section on `userDefdFuncs`.
-#
+
 # Variables
 # ---------
 #
@@ -824,13 +781,11 @@
 # A variable is a name that is used to store data. It can be used to store
 # different kinds of data, but here we consider the simplest case where
 # the data is a single numerical value. Here are a few examples:
-#
-# ``` ipython
-# In [1]: a = 23
-#
-# In [2]: p, q = 83.4, sqrt(2)
-# ```
-#
+
+a = 23
+
+p, q = 83.4, np.sqrt(2)
+
 # The equal sign "`=`" is the *assignment operator*. In the first
 # statement, it assigns the value of 23 to the variable `a`. In the second
 # statement it assigns a value of 83.4 to `p` and a value of
@@ -845,38 +800,30 @@
 # scientific notation with a mantissa and an exponent.)
 #
 # Suppose we write
-#
-# ``` ipython
-# In [3]: b = a
-# ```
-#
+
+b = a
+
 # In this case Python associates a new memory location with the name `b`,
 # distinct from the one associated with `a`, and sets the value stored at
 # that memory location to 23, the value of `a`. The following sequence of
 # statements demonstrate that fact. Can you see how? Notice that simply
 # typing a variable name and pressing `Return` prints out the value of the
 # variable.
-#
-# ``` ipython
-# In [4]: a=23
-#
-# In [5]: b=a
-#
-# In [6]: a
-# Out[6]: 23
-#
-# In [7]: b
-# Out[7]: 23
-#
-# In [8]: a=12
-#
-# In [9]: a
-# Out[9]: 12
-#
-# In [10]: b
-# Out[10]: 23
-# ```
-#
+
+a = 23
+
+b = a
+
+a
+
+b
+
+a = 12
+
+a
+
+b
+
 # The assignment variable works from right to left; that is, it assigns
 # the value of the number on the right to the variable name on the left.
 # Therefore, the statement "`5=a`" makes no sense in Python. The
@@ -885,49 +832,38 @@
 #
 # The assignment operator can be used to increment or change the value of
 # a variable
-#
-# ``` ipython
-# In [11]: b = b+1
-#
-# In [12]: b
-# Out[12]: 24 
-# ```
-#
+
+b = b + 1
+
+b
+
 # The statement, `b = b+1` makes no sense in algebra, but in Python (and
 # most computer languages), it makes perfect sense: it means "add 1 to the
 # current value of `b` and assign the result to `b`." This construction
 # appears so often in computer programming that there is a special set of
 # operators to perform such changes to a variable: `+=`, `-=`, `*=`, and
 # `/=`. Here are some examples of how they work:
-#
-# ``` ipython
-# In [13]: c , d = 4, 7.92
-#
-# In [14]: c += 2
-#
-# In [15]: c
-# Out[15]: 6
-#
-# In [16]: c *= 3
-#
-# In [16]: c
-# Out[16]: 18
-#
-# In [17]: d /= -2
-#
-# In [17]: d
-# Out[17]: -3.96
-#
-# In [18]: d -= 4
-#
-# In [19]: d
-# Out[19]: -7.96
-# ```
-#
+
+c , d = 4, 7.92
+
+c += 2
+
+c
+
+c *= 3
+
+c
+
+d /= -2
+
+d
+
+d -= 4
+
+d
+
 # Verify that you understand how the above operations work.
-#
-# single: variable names
-#
+
 # ### Legal and recommended variable names
 #
 # Variable names in Python must start with a letter, and can be followed
@@ -940,25 +876,20 @@
 #
 # We recommend giving your variables descriptive names as in the following
 # calculation:
-#
-# ``` ipython
-# In [20]: distance = 34.
-#
-# In [21]: time_traveled = 0.59
-#
-# In [22]: velocity = distance/time_traveled
-#
-# In [23]: velocity
-# Out[23]: 57.6271186440678
-# ```
-#
+
+distance = 34.
+
+time_traveled = 0.59
+
+velocity = distance / time_traveled
+
+velocity
+
 # The variable names `distance`, `time_traveled`, and `velocity`
 # immediately remind you of what is being calculated here. This is good
 # practice. But so is keeping variable names reasonably short, so don't go
 # nuts!
-#
-# single: reserved words
-#
+
 # ### Reserved words in Python
 #
 # There are also some names or words that are reserved by Python for
@@ -1026,12 +957,11 @@
 # > </tbody>
 # > </table>
 # >
+#
 # In addition, you should not use function names, like `sin`, `cos`, and
 # `sqrt`, defined in the SciPy, NumPy, or any other library that you are
 # using.
-#
-# single: scripts single: programs
-#
+
 # Script files and programs
 # -------------------------
 #
@@ -1052,7 +982,7 @@
 # very simple script. Much later, we will introduce some of the more
 # advanced features of programming.
 #
-# single: Anaconda; Code Editor pair: Anaconda; tab completion
+# #### Tab Completion
 #
 # To write a script you need a text editor. In principle, any text editor
 # will do, but it's more convenient to use an editor that was designed for
@@ -1078,20 +1008,20 @@
 # Writing a script to do these calculations is straightforward. First,
 # launch Spyder and open the code editor. Enter the following in the
 # editor pane:
-#
-# ``` python
-# # Calculates time, gallons of gas used, and cost of gasoline for
-# # a trip
-# distance = 400.         # miles
-# mpg = 30.               # car mileage
-# speed = 60.             # average speed
-# costPerGallon = 4.10    # price of gas
-#
-# time = distance/speed
-# gallons = distance/mpg
-# cost = gallons*costPerGallon
-# ```
-#
+
+# +
+# Calculates time, gallons of gas used, and cost of gasoline for
+# a trip
+distance = 400.         # miles
+mpg = 30.               # car mileage
+speed = 60.             # average speed
+costPerGallon = 4.10    # price of gas
+
+time = distance / speed
+gallons = distance / mpg
+cost = gallons * costPerGallon
+# -
+
 # The number (or hash) symbol `#` is the "comment" character in Python;
 # anything on a line following `#` is ignored when the code is executed.
 # Judicious use of comments in your code will make your code much easier
@@ -1173,7 +1103,7 @@
 # and `cost` that the script calculated. We will discuss the `print`
 # function in much greater detail, as well as other methods for data
 # output, in Chapter 4 on `chap4`.
-#
+
 # ### Scripting Example 2
 #
 # Let's try another problem. Suppose you want to find the distance between
@@ -1184,17 +1114,17 @@
 #
 # Now let's write a script to do this calculation and save it in a file
 # called `twoPointDistance.py`.
-#
-# ``` python
-# # Calculates the distance between two 3d Cartesian coordinates
-# import numpy as np
-#
-# x1, y1, z1 = 23.7, -9.2, -7.8
-# x2, y2, z2 = -3.5, 4.8, 8.1
-#
-# dr = np.sqrt( (x2-x1)**2 + (y2-y1)**2 + (z2-z1)**2 )
-# ```
-#
+
+# +
+# Calculates the distance between two 3d Cartesian coordinates
+import numpy as np
+
+x1, y1, z1 = 23.7, -9.2, -7.8
+x2, y2, z2 = -3.5, 4.8, 8.1
+
+dr = np.sqrt( (x2-x1)**2 + (y2-y1)**2 + (z2-z1)**2 )
+# -
+
 # We have introduced extra spaces into some of the expressions to improve
 # readability. They are not necessary; where and whether you include them
 # is largely a matter of taste.
@@ -1202,24 +1132,20 @@
 # There are two important differences between the code above and the
 # commands we would have written into the IPython console to execute the
 # same set of commands. The first is the statement on the second line
-#
+
 # ``` python
 # ...
 # import numpy as np
 # ...
 # ```
-#
+
 # and the second is the "`np.`" in front of the `sqrt` function on the
 # last line. If you leave out the `import numpy as np` line and remove the
 # `np.` in front of the `sqrt` function, you will get the following error
 # message
-#
-# ``` ipython
-# ----> 7 dr = sqrt( (x2-x1)**2 + (y2-y1)**2 + (z2-z1)**2 )
-#
-# NameError: name 'sqrt' is not defined
-# ```
-#
+
+dr = sqrt( (x2-x1)**2 + (y2-y1)**2 + (z2-z1)**2 )
+
 # The reason for the error is that the `sqrt` function is not a part of
 # core Python. But it is a part of the NumPy module discussed earlier. To
 # make the NumPy library available to the script, you need to add the
@@ -1229,7 +1155,6 @@
 #
 # ``` ipython
 # In [10]: run twoPointDistance.py
-#
 # In [11]: dr
 # Out[11]: 34.48
 # ```
@@ -1242,22 +1167,18 @@
 # (imported) when IPython is launched. However, when a script or program
 # is executed, it is run on its own outside the IPython shell, even if the
 # command to run the script is executed from the IPython shell.
-#
-# single: line continuation
-#
+
 # #### Line continuation
 #
 # From time to time, a line of code in a script will be unusually long,
 # which can make the code difficult to read. In such cases, it is
 # advisable to split the code onto several lines. For example, line 7 in
 # the preceding script could be written as
-#
-# ``` ipython
-# dr = np.sqrt( (x2-x1)**2 
-#             + (y2-y1)**2 
-#             + (z2-z1)**2 )
-# ```
-#
+
+dr = np.sqrt( (x2-x1)**2 
+            + (y2-y1)**2 
+            + (z2-z1)**2 )
+
 # You can generally continue an expression on another line in Python for
 # code that is within a function argument, as it is here where the line is
 # split inside the argument of the square root function. Note that the
@@ -1269,21 +1190,17 @@
 # You can split any Python line inside of parentheses, brackets, and
 # braces, as illustrated above. You can split it other places as well by
 # using the backslash (`\`) character. For example, the code
-#
-# ``` ipython
-# a = 1 + 2 \
-#   + 3 + 4
-# ```
-#
+
+a = 1 + 2 \
+  + 3 + 4
+
 # is equivalent to
-#
-# ``` ipython
-# a = 1 + 2 + 3 + 4
-# ```
-#
+
+a = 1 + 2 + 3 + 4
+
 # So you can use backslash character (`\`) of explicit line continuation
 # when implicit line continuation won't work.
-#
+
 # Importing Modules
 # -----------------
 #
@@ -1359,33 +1276,23 @@
 # between similarly named functions from different modules. Nevertheless,
 # you will see the form used in programs you encounter on the web and
 # elsewhere so it is important to understand the syntax.
-#
+
 # Getting help: documentation in IPython shell
 # --------------------------------------------
 #
 # Help is never far away when you are running the IPython shell. To obtain
 # information on any valid Python or NumPy function, and many MatPlotLib
 # functions, simply type `help(` *function* `)`, as illustrated here
-#
-# ``` ipython
-# In [1]: help(range)
-# range([start,] stop[, step]) -> list of integers
-#
-# Return a list containing an arithmetic progression of integers.
-# range(i, j) returns [i, i+1, i+2, ..., j-1]; start (!) defaults
-# to 0.  When step is given, it specifies the increment (or
-# decrement).  For example, range(4) returns [0, 1, 2, 3].  The
-# end point is omitted! These are exactly the valid indices for a
-# list of 4 elements.
-# ```
-#
+
+help(range)
+
 # Often, the information provided can be quite extensive and you might
 # find it useful to clear the IPython window with the `clear` command so
 # you can easily scroll back to find the beginning of the documentation.
 # You may have also noticed that when you type the name of a function plus
 # the opening parenthesis, IPython displays a window showing the first
 # dozen lines or so of the documentation on that function.
-#
+
 # Programming is a detail-oriented activity
 # -----------------------------------------
 #
@@ -1408,68 +1315,47 @@
 # limiting cases, that is, for cases that are at the extremes of the sets
 # of parameters you will employ. Always test your code; this is a cardinal
 # rule of programming.
-#
+
 # Exercises
 # ---------
 #
 # 1.  A ball is thrown vertically up in the air from a height $h_0$ above
 #     the ground at an initial velocity $v_0$. Its subsequent height $h$
 #     and velocity $v$ are given by the equations
-#
-#     $$\begin{aligned}
+#     
+# > $\begin{aligned}
 #     h &= h_0 + v_0t - \tfrac{1}{2}gt^2 \\
 #     v &= v_0 - gt
-#     \end{aligned}$$
+# \end{aligned}$
 #
-#     where $g = 9.8$ is the acceleration due to gravity in
-#     $\mathrm{m/s^2}$. Write a script that finds the height $h$ and
-#     velocity $v$ at a time $t$ after the ball is thrown. Start the
-#     script by setting $h_0 = 1.2$ (meters) and $v_0 = 5.4$ (m/s) and
-#     have your script print out the values of height and velocity (see
-#     `printNote`). Then use the script to find the height and velocity
-#     after 0.5 seconds. Then modify your script to find them after 2.0
-#     seconds.
-#
+# where $g = 9.8$ is the acceleration due to gravity in $\mathrm{m/s^2}$. Write a script that finds the height $h$ and velocity $v$ at a time $t$ after the ball is thrown. Start the script by setting $h_0 = 1.2$ (meters) and $v_0 = 5.4$ (m/s) and have your script print out the values of height and velocity (see `printNote`). Then use the script to find the height and velocity after 0.5 seconds. Then modify your script to find them after 2.0 seconds.
+
 # 2.  Write a script that defines the variables $V_0 = 10$, $a = 2.5$, and
 #     $z = 4\tfrac{1}{3}$, and then evaluates the expression
+#     
+# > $V = V_0 \left( 1 - \frac{z}{\sqrt{a^2+z^2}} \right) \;.$
 #
-#     $$V = V_0 \left( 1 - \frac{z}{\sqrt{a^2+z^2}} \right) \;.$$
-#
-#     Then find $V$ for $z=8\frac{2}{3}$ and print it out (see
-#     `printNote`). Then find $V$ for $z=13$ by changing the value of $z$
-#     in your script.
-#
+# Then find $V$ for $z=8\frac{2}{3}$ and print it out (see `printNote`). Then find $V$ for $z=13$ by changing the value of $z$ in your script.
+
 # 3.  Write a single Python script that calculates the following
 #     expressions:
+#     
+# > $\begin{aligned}
+#     \text{1. } \displaystyle a &= \frac{2 + e^{2.8}}{\sqrt{13}-2} \\
+#     \text{2. } \displaystyle b &= \frac{1-(1+\ln 2)^{-3.5}}{1+\sqrt{5}} \\
+#     \text{3. } \displaystyle c &= \sin\left( \frac{2-\sqrt{2}}{2+\sqrt{2}} \right)
+# \end{aligned}$
 #
-#     > 1.  $\displaystyle a = \frac{2 + e^{2.8}}{\sqrt{13}-2}$
-#     > 2.  $\displaystyle b = \frac{1-(1+\ln 2)^{-3.5}}{1+\sqrt{5}}$
-#     > 3.  $\displaystyle c = \sin\left( \frac{2-\sqrt{2}}{2+\sqrt{2}} \right)$
-#
-#     After running your script in the IPython shell, typing `a`, `b`, or
-#     `c` at the IPython prompt should yield the value of the expressions
-#     in (a), (b), or (c), respectively.
-#
+#  After running your script in the IPython shell, typing `a`, `b`, or `c` at the IPython prompt should yield the value of the expressions in (a), (b), or (c), respectively.
+
 # 4.  A quadratic equation with the general form
 #
-#     $$ax^2+bx+c=0$$
+# > $ax^2+bx+c=0$
 #
-#     has two solutions given by the quadratic formula
+# has two solutions given by the quadratic formula
 #
-#     $$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a} \;.$$
+# > $x = \frac{-b \pm \sqrt{b^2-4ac}}{2a} \;.$
 #
-#     1.  Given $a$, $b$, and $c$ as inputs, write a script that gives the
-#         numerical values of the two solutions. Write the constants $a$,
-#         $b$, and $c$ as floats, and show that your script gives the
-#         correct solutions for a few test cases when the solutions are
-#         real numbers, that is, when the discriminant $b^2-4ac \ge 0$.
-#         Use the `print` function in your script, discussed at the end of
-#         Section 2.8.1 `chap2:ScriptExmp1`, to print out your two
-#         solutions.
-#     2.  Written this way, however, your script gives an error message
-#         when the solutions are complex. For example, see what happens
-#         when $a=1$, $b=2$, and $c=3$. You can fix this using statements
-#         in your script like `a = a+0j` after setting `a` to some float
-#         value. Thus, you can make the script work for any set of real
-#         inputs for $a$, $b$, and $c$. Again, use the `print` function to
-#         print out your two solutions.
+# 4.1.  Given $a$, $b$, and $c$ as inputs, write a script that gives the numerical values of the two solutions. Write the constants $a$, $b$, and $c$ as floats, and show that your script gives the correct solutions for a few test cases when the solutions are real numbers, that is, when the discriminant $b^2-4ac \ge 0$. Use the `print` function in your script, discussed at the end of Section 2.8.1 `chap2:ScriptExmp1`, to print out your two solutions.
+#
+# 4.2. Written this way, however, your script gives an error message when the solutions are complex. For example, see what happens when $a=1$, $b=2$, and $c=3$. You can fix this using statements in your script like `a = a+0j` after setting `a` to some float value. Thus, you can make the script work for any set of real inputs for $a$, $b$, and $c$. Again, use the `print` function to print out your two solutions.

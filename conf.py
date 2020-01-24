@@ -20,7 +20,7 @@ import jupytext
 
 # -- Project information -----------------------------------------------------
 
-project = "Introduction to Python for Science"
+project = "Scientific python tutorial"
 copyright = "David J Pine"
 author = "David Pine"
 
