@@ -15,9 +15,9 @@ All notebooks and exercises are available at the `GitHub Repository <https://git
    :numbered:
 
    Chapter 1: Introduction <Book/chap1/chap1_intro.ipynb>
-   Chapter 2  Jupyter <Book/chap2/chap2_basics.ipynb>
+   Chapter 2: First Steps <Book/chap2/chap2_basics.ipynb>
    Chapter 3: Arrays <Book/chap3/chap3_arrays.ipynb>
-   Chapter 4: Input output <Book/chap4/chap4_io.ipynb>
+   Chapter 4: Input and Output <Book/chap4/chap4_io.ipynb>
    Chapter 5: Plotting <Book/chap5/chap5_plot.ipynb>
    Chapter 6: Flow control <Book/chap6/chap6_loopsconds.ipynb>
    Chapter 7: Functions <Book/chap7/chap7_funcs.ipynb>
