@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction to Python for Science &mdash; Scientific python tutorial 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Scientific python tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="chap1/chap1_intro.html">1. Chapter 1: Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap2/chap2_basics.html">2. Chapter 2: First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap3/chap3_arrays.html">3. Chapter 3: Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap4/chap4_io.html">4. Chapter 4: Input and Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap5/chap5_plot.html">5. Chapter 5: Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap6/chap6_loopsconds.html">6. Chapter 6: Flow control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap7/chap7_funcs.html">7. Chapter 7: Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap8/chap8_fitting.html">8. Chapter 8: Curve Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap9/chap9_scipy.html">9. Chapter 9: Scipy</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Scientific python tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Introduction to Python for Science</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Book/latex-contents.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="introduction-to-python-for-science">
+<h1>Introduction to Python for Science<a class="headerlink" href="#introduction-to-python-for-science" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chap1/chap1_intro.html">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chap1/chap1_intro.html#introduction-to-python-and-its-use-in-science">1.1. Introduction to Python and its use in science</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chap2/chap2_basics.html">2. First Steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chap2/chap2_basics.html#Installing-Python-on-your-computer">2.1. Installing Python on your computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap2/chap2_basics.html#IPython-Basics">2.2. IPython Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap2/chap2_basics.html#Interactive-Python-as-a-calculator">2.3. Interactive Python as a calculator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap2/chap2_basics.html#Python-Modules">2.4. Python Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap2/chap2_basics.html#Python-functions:-a-first-look">2.5. Python functions: a first look</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap2/chap2_basics.html#Variables">2.6. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap2/chap2_basics.html#Script-files-and-programs">2.7. Script files and programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap2/chap2_basics.html#Importing-Modules">2.8. Importing Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap2/chap2_basics.html#Getting-help:-documentation-in-IPython-shell">2.9. Getting help: documentation in IPython shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap2/chap2_basics.html#Programming-is-a-detail-oriented-activity">2.10. Programming is a detail-oriented activity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap2/chap2_basics.html#Exercises">2.11. Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chap3/chap3_arrays.html">3. Strings, Lists, Arrays, and Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chap3/chap3_arrays.html#strings">3.1. Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap3/chap3_arrays.html#lists">3.2. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap3/chap3_arrays.html#numpy-arrays">3.3. NumPy arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap3/chap3_arrays.html#dictionaries">3.4. Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap3/chap3_arrays.html#random-numbers">3.5. Random numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap3/chap3_arrays.html#exercises">3.6. Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chap4/chap4_io.html">4. Input and Output</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chap4/chap4_io.html#Keyboard-input">4.1. Keyboard input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4/chap4_io.html#Screen-output">4.2. Screen output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4/chap4_io.html#File-input">4.3. File input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4/chap4_io.html#File-output">4.4. File output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4/chap4_io.html#Exercises">4.5. Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chap5/chap5_plot.html">5. Plotting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chap5/chap5_plot.html#an-interactive-session-with-pyplot">5.1. An interactive session with <code class="docutils literal notranslate"><span class="pre">pyplot</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap5/chap5_plot.html#basic-plotting">5.2. Basic plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap5/chap5_plot.html#logarithmic-plots">5.3. Logarithmic plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap5/chap5_plot.html#more-advanced-graphical-output">5.4. More advanced graphical output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap5/chap5_plot.html#exercises">5.5. Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chap6/chap6_loopsconds.html">6. Conditionals and Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chap6/chap6_loopsconds.html#conditionals">6.1. Conditionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap6/chap6_loopsconds.html#loops">6.2. Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap6/chap6_loopsconds.html#list-comprehensions">6.3. List Comprehensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap6/chap6_loopsconds.html#exercises">6.4. Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chap7/chap7_funcs.html">7. Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chap7/chap7_funcs.html#user-defined-functions">7.1. User-defined functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap7/chap7_funcs.html#methods-and-attributes">7.2. Methods and attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap7/chap7_funcs.html#example-linear-least-squares-fitting">7.3. Example: linear least squares fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap7/chap7_funcs.html#anonymous-functions-lambda">7.4. Anonymous functions (lambda)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap7/chap7_funcs.html#exercises">7.5. Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chap8/chap8_fitting.html">8. Curve Fitting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chap8/chap8_fitting.html#using-linear-regression-for-fitting-non-linear-functions">8.1. Using linear regression for fitting non-linear functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap8/chap8_fitting.html#nonlinear-fitting">8.2. Nonlinear fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap8/chap8_fitting.html#exercises">8.3. Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chap9/chap9_scipy.html">9. Numerical Routines: SciPy and NumPy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chap9/chap9_scipy.html#special-functions">9.1. Special functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap9/chap9_scipy.html#numerical-integration">9.2. Numerical integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap9/chap9_scipy.html#solving-odes">9.3. Solving ODEs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap9/chap9_scipy.html#discrete-fast-fourier-transforms">9.4. Discrete (fast) Fourier transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap9/chap9_scipy.html#linear-algebra">9.5. Linear algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap9/chap9_scipy.html#solving-non-linear-equations">9.6. Solving non-linear equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap9/chap9_scipy.html#exercises">9.7. Exercises</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Indices and tables:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="../search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright David J Pine
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

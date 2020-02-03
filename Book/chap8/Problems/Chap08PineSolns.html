@@ -1,0 +1,919 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Chapter 8 (Pine): Curve Fitting Solutions &mdash; Scientific python tutorial 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Scientific python tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../chap1/chap1_intro.html">1. Chapter 1: Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chap2/chap2_basics.html">First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chap3/chap3_arrays.html">2. Chapter 3: Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chap4/chap4_io.html">3. Chapter 4: Input output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chap5/chap5_plot.html">4. Chapter 5: Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chap6/chap6_loopsconds.html">5. Chapter 6: Flow control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chap7/chap7_funcs.html">6. Chapter 7: Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap8_fitting.html">7. Chapter 8: Curve Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chap9/chap9_scipy.html">8. Chapter 9: Scipy</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Scientific python tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Chapter 8 (Pine): Curve Fitting Solutions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/Book/chap8/Problems/Chap08PineSolns.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    min-width: 5ex;
+    padding-top: 0.4em;
+    padding-right: 0.4em;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    padding: 0.4em;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Chapter-8-(Pine):-Curve-Fitting-Solutions">
+<h1>Chapter 8 (Pine): Curve Fitting Solutions<a class="headerlink" href="#Chapter-8-(Pine):-Curve-Fitting-Solutions" title="Permalink to this headline">¶</a></h1>
+<p><span class="math notranslate nohighlight">\({\large\bf 1.}\)</span> We linearize the equation <span class="math notranslate nohighlight">\(V(t)=V_0e^{\Gamma t}\)</span> by taking the logarithm: <span class="math notranslate nohighlight">\(\ln V = \ln V_0 + \Gamma t\)</span>. Comparing with the equation for a straight line <span class="math notranslate nohighlight">\(Y = A + BX\)</span>, we see that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+Y &amp;= \ln V \;,&amp; X &amp;= t \\
+A &amp;= \ln V_0\;,&amp; B &amp;= \Gamma
+\end{align}\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(\bf{(a)}\)</span> &amp; <span class="math notranslate nohighlight">\(\bf{(c)}\)</span> There are two parts to this problem: (1) writing the fitting function with <span class="math notranslate nohighlight">\(\chi^2\)</span> weighting and (2) transforming the data to linear form so that it can be fit to an exponential.</p>
+<p>The first part is done with the function <code class="docutils literal notranslate"><span class="pre">LineFitWt(x,</span> <span class="pre">y,</span> <span class="pre">sig)</span></code>. There is also an ancillary function <code class="docutils literal notranslate"><span class="pre">rechisq(x,</span> <span class="pre">y,</span> <span class="pre">dy,</span> <span class="pre">slope,</span> <span class="pre">yint)</span></code> that calcuates the reduced chi-squared <span class="math notranslate nohighlight">\(\chi_r^2\)</span> for a particular set of data &amp; fitting parameters.</p>
+<p>The second part involves transforming the data and its uncertainties. This is done following the procedure described in <em>Introduction to Python for Science (by Pine)</em> in <span class="math notranslate nohighlight">\(\S 8.1.1\)</span>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>import numpy as np
+import matplotlib.pyplot as plt
+
+def LineFitWt(x, y, sig):
+    &quot;&quot;&quot;
+    Returns slope and y-intercept of weighted linear fit to
+    (x,y) data set.
+    Inputs: x and y data array and uncertainty array (unc)
+            for y data set.
+    Outputs: slope and y-intercept of best fit to data and
+             uncertainties of slope &amp; y-intercept.
+    &quot;&quot;&quot;
+    sig2 = sig**2
+    norm = (1./sig2).sum()
+    xhat = (x/sig2).sum() / norm
+    yhat = (y/sig2).sum() / norm
+    slope = ((x-xhat)*y/sig2).sum()/((x-xhat)*x/sig2).sum()
+    yint = yhat - slope*xhat
+    sig2_slope = 1./((x-xhat)*x/sig2).sum()
+    sig2_yint = sig2_slope * (x*x/sig2).sum() / norm
+    return slope, yint, np.sqrt(sig2_slope), np.sqrt(sig2_yint)
+
+def redchisq(x, y, dy, slope, yint):
+    chisq = (((y-yint-slope*x)/dy)**2).sum()
+    return chisq/float(x.size-2)
+
+# Read data from data file
+t, V, dV = np.loadtxt(&quot;RLcircuit.txt&quot;, skiprows=2, unpack=True)
+
+########## Code to tranform &amp; fit data starts here ##########
+
+# Transform data and parameters from ln V = ln V0 - Gamma t
+# to linear form: Y = A + B*X, where Y = ln V, X = t, dY = dV/V
+X = t         # transform t data for fitting (not needed as X=t)
+Y = np.log(V) # transform N data for fitting
+dY = dV/V     # transform uncertainties for fitting
+
+# Fit transformed data X, Y, dY to obtain fitting parameters
+# B &amp; A.  Also returns uncertainties dA &amp; dB in B &amp; A
+B, A, dB, dA = LineFitWt(X, Y, dY)
+# Return reduced chi-squared
+redchisqr = redchisq(X, Y, dY, B, A)
+
+# Determine fitting parameters for original exponential function
+# N = N0 exp(-Gamma t) ...
+V0 = np.exp(A)
+Gamma = -B
+# ... and their uncertainties
+dV0 = V0 * dA
+dGamma = dB
+
+###### Code to plot transformed data and fit starts here ######
+
+# Create line corresponding to fit using fitting parameters
+# Only two points are needed to specify a straight line
+Xext = 0.05*(X.max()-X.min())
+Xfit = np.array([X.min()-Xext, X.max()+Xext]) # smallest &amp; largest X points
+Yfit = B*Xfit + A                             # generates Y from X data &amp;
+                                              # fitting function
+plt.errorbar(X, Y, dY, fmt=&quot;b^&quot;)
+plt.plot(Xfit, Yfit, &quot;c-&quot;, zorder=-1)
+plt.title(r&quot;$\mathrm{Fit\ to:}\ \ln V = \ln V_0-\Gamma t$ or $Y = A + BX$&quot;)
+plt.xlabel(&#39;time (ns)&#39;)
+plt.ylabel(&#39;ln voltage (volts)&#39;)
+plt.xlim(-50, 550)
+
+plt.text(210, 1.5, u&quot;A = ln V0 = {0:0.4f} \xb1 {1:0.4f}&quot;.format(A, dA))
+plt.text(210, 1.1, u&quot;B = -Gamma = {0:0.4f} \xb1 {1:0.4f} /ns&quot;.format(B, dB))
+plt.text(210, 0.7, &quot;$\chi_r^2$ = {0:0.3f}&quot;.format(redchisqr))
+plt.text(210, 0.3, u&quot;V0 = {0:0.2f} \xb1 {1:0.2f} V&quot;.format(V0, dV0))
+plt.text(210, -0.1,u&quot;Gamma = {0:0.4f} \xb1 {1:0.4f} /ns&quot;.format(Gamma, dGamma))
+
+plt.show()
+plt.savefig(&quot;RLcircuit.pdf&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/Book_chap8_Problems_Chap08PineSolns_3_0.png" src="../../../_images/Book_chap8_Problems_Chap08PineSolns_3_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.figure.Figure at 0x105642c90&gt;
+</pre></div></div>
+</div>
+<p><span class="math notranslate nohighlight">\(\bf{(b)}\)</span> The value of <span class="math notranslate nohighlight">\(\chi_r^2\)</span> returned by the fitting routine is <span class="math notranslate nohighlight">\(0.885\)</span>, which is near 1, so it seem that the error bars are about right and an exponential is a good model for the data.</p>
+<p><span class="math notranslate nohighlight">\({\bf (d)}\)</span> Starting from <span class="math notranslate nohighlight">\(\Gamma = R/L\)</span> and assuming negligible uncertainty in <span class="math notranslate nohighlight">\(R\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+  L &amp;= \frac{R}{\Gamma} = \frac{10^4~\Omega}{(0.0121~\text{ns}^{-1})(10^9~\text{ns/s})} = 8.24 \times 10^{-4}~\text{henry}
+     = 824~\mu\text{H}\\
+  \delta L &amp;= \left|\frac{\partial L}{\partial \Gamma}\right|\delta\Gamma = \frac{R}{\Gamma^2}\delta\Gamma
+            = L \frac{\delta\Gamma}{\Gamma} = 1.1 \times 10^{-5}~\text{henry} = 11~\mu\text{H}
+\end{align}\end{split}\]</div>
+<p>Here are the calculations:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>R = 10.e3
+Gamma *= 1.e9     # convert Gamma from 1/ns to 1/s
+L = R/Gamma
+print(&quot;L = {0:0.2e} henry&quot;.format(L))
+dGamma *= 1.e9   # convert dGamma from 1/ns to 1/s
+dL = L*(dGamma/Gamma)
+print(&quot;dL = {0:0.1e} henry&quot;.format(dL))
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+L = 8.24e-04 henry
+dL = 1.1e-05 henry
+</pre></div></div>
+</div>
+<p><span class="math notranslate nohighlight">\({\large\bf 2.}\)</span> Here we want to use a linear fitting routine (<span class="math notranslate nohighlight">\(Y = A + BX\)</span>) to fit a power law model</p>
+<div class="math notranslate nohighlight">
+\[m = Kn^p\;,\]</div>
+<p>where <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(p\)</span> are fitting parameters. We transform the equation by taking the logarithm of both sides, which gives</p>
+<div class="math notranslate nohighlight">
+\[\ln m = \ln K + p\ln n\;.\]</div>
+<p>Thus, identifying the transformed variables as</p>
+<div class="math notranslate nohighlight">
+\[y=\ln m\;,\quad x=\ln n\;,\]</div>
+<p>and the <span class="math notranslate nohighlight">\(y\)</span>-intercept and slope and are given by <span class="math notranslate nohighlight">\(A=\ln K\)</span> and <span class="math notranslate nohighlight">\(B=p\)</span>, respectively.</p>
+<p>The uncertainties in <span class="math notranslate nohighlight">\(y\)</span> are related to those in <span class="math notranslate nohighlight">\(m\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[\delta y = \left| \frac{\partial y}{\partial m} \right|\delta m = \frac{\delta m}{m}\]</div>
+<p>The uncertainties in the fitting paramters follow from <span class="math notranslate nohighlight">\(K=e^A\)</span> and <span class="math notranslate nohighlight">\(p=B\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\delta K = e^A \delta A\;,\quad \delta p = \delta B\;.\]</div>
+<p>These transformations are implemented in the code below. We use the same fitting routine used in Problem 1 above.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>import numpy as np
+import matplotlib.pyplot as plt
+
+def LineFitWt(x, y, sig):
+    &quot;&quot;&quot;
+    Returns slope and y-intercept of weighted linear fit to
+    (x,y) data set.
+    Inputs: x and y data array and uncertainty array (unc)
+            for y data set.
+    Outputs: slope and y-intercept of best fit to data and
+             uncertainties of slope &amp; y-intercept.
+    &quot;&quot;&quot;
+    sig2 = sig**2
+    norm = (1./sig2).sum()
+    xhat = (x/sig2).sum() / norm
+    yhat = (y/sig2).sum() / norm
+    slope = ((x-xhat)*y/sig2).sum()/((x-xhat)*x/sig2).sum()
+    yint = yhat - slope*xhat
+    sig2_slope = 1./((x-xhat)*x/sig2).sum()
+    sig2_yint = sig2_slope * (x*x/sig2).sum() / norm
+    return slope, yint, np.sqrt(sig2_slope), np.sqrt(sig2_yint)
+
+def redchisq(x, y, dy, slope, yint):
+    chisq = (((y-yint-slope*x)/dy)**2).sum()
+    return chisq/float(x.size-2)
+
+# Read data from data file
+n, m, dm = np.loadtxt(&quot;Mass.txt&quot;, skiprows=4, unpack=True)
+
+########## Code to tranform &amp; fit data starts here ##########
+
+# Transform data and parameters to linear form: Y = A + B*X
+X = np.log(m) # transform t data for fitting
+Y = np.log(n) # transform N data for fitting
+dY = dm/m     # transform uncertainties for fitting
+
+# Fit transformed data X, Y, dY to obtain fitting parameters
+# B &amp; A.  Also returns uncertainties dA &amp; dB in B &amp; A
+B, A, dB, dA = LineFitWt(X, Y, dY)
+# Return reduced chi-squared
+redchisqr = redchisq(X, Y, dY, B, A)
+
+# Determine fitting parameters for original exponential function
+# N = N0 exp(-Gamma t) ...
+p = B
+K = np.exp(A)
+# ... and their uncertainties
+dp = dB
+dK = np.exp(A)*dA
+
+###### Code to plot transformed data and fit starts here ######
+
+# Create line corresponding to fit using fitting parameters
+# Only two points are needed to specify a straight line
+Xext = 0.05*(X.max()-X.min())
+Xfit = np.array([X.min()-Xext, X.max()+Xext])
+Yfit = B*Xfit + A                   # generates Y from X data &amp;
+                                    # fitting function
+plt.errorbar(X, Y, dY, fmt=&quot;gs&quot;)
+plt.plot(Xfit, Yfit, &quot;k-&quot;, zorder=-1)
+plt.title(r&quot;Fit to $\ln m=\ln K + p\, \ln n$ or $Y=A+BX$&quot;)
+plt.xlabel(r&#39;$\ln m$&#39;, fontsize=16)
+plt.ylabel(r&#39;$\ln n$&#39;, fontsize=16)
+
+plt.text(10, 7.6, u&quot;A = ln K = {0:0.1f} \xb1 {1:0.1f}&quot;.format(A, dA))
+plt.text(10, 7.3, u&quot;B = p = {0:0.2f} \xb1 {1:0.2f}&quot;.format(B, dB))
+plt.text(10, 7.0, u&quot;K = {0:0.1e} \xb1 {1:0.1e}&quot;.format(K, dK))
+plt.text(10, 6.7, &quot;$\chi_r^2$ = {0:0.3f}&quot;.format(redchisqr))
+
+plt.show()
+plt.savefig(&quot;Mass.pdf&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/Book_chap8_Problems_Chap08PineSolns_8_0.png" src="../../../_images/Book_chap8_Problems_Chap08PineSolns_8_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.figure.Figure at 0x105654490&gt;
+</pre></div></div>
+</div>
+<p><span class="math notranslate nohighlight">\({\large\bf 3.}\)</span> (a)</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>import numpy as np
+import matplotlib.pyplot as plt
+
+# define function to calculate reduced chi-squared
+def RedChiSqr(func, x, y, dy, params):
+    resids = y - func(x, *params)
+    chisq = ((resids/dy)**2).sum()
+    return chisq/float(x.size-params.size)
+
+# define fitting function
+def oscDecay(t, A, B, C, tau, omega):
+    y = A * (1.0 + B*np.cos(omega*t)) * np.exp(-0.5*t*t/(tau*tau)) + C
+    return y
+
+# read in spectrum from data file
+t, decay, unc = np.loadtxt(&quot;oscDecayData.txt&quot;, skiprows=4, unpack=True)
+
+# initial values for fitting parameters (guesses)
+A0 = 15.0
+B0 = 0.6
+C0 = 1.2*A0
+tau0 = 16.0
+omega0 = 2.*np.pi/8.   # period of oscillations in data is about 8
+
+# plot data and fit with estimated fitting parameters
+
+tFit = np.linspace(0., 49.5, 250)
+plt.plot(tFit, oscDecay(tFit, A0, B0, C0, tau0, omega0), &#39;b-&#39;)
+plt.errorbar(t, decay, yerr=unc, fmt=&#39;or&#39;, ecolor=&#39;black&#39;, ms=4)
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/Book_chap8_Problems_Chap08PineSolns_10_0.png" src="../../../_images/Book_chap8_Problems_Chap08PineSolns_10_0.png" />
+</div>
+</div>
+<ol class="loweralpha simple" start="2">
+<li></li>
+</ol>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec  # for unequal plot boxes
+import scipy.optimize
+
+# define function to calculate reduced chi-squared
+def RedChiSqr(func, x, y, dy, params):
+    resids = y - func(x, *params)
+    chisq = ((resids/dy)**2).sum()
+    return chisq/float(x.size-params.size)
+
+# define fitting function
+def oscDecay(t, A, B, C, tau, omega):
+    y = A * (1.0 + B*np.cos(omega*t)) * np.exp(-0.5*t*t/(tau*tau)) + C
+    return y
+
+# read in spectrum from data file
+t, decay, unc = np.loadtxt(&quot;oscDecayData.txt&quot;, skiprows=4, unpack=True)
+
+# initial values for fitting parameters (guesses)
+A0 = 15.0
+B0 = 0.6
+C0 = 1.2*A0
+tau0 = 16.0
+omega0 = 2.*np.pi/8.
+
+# fit data using SciPy&#39;s Levenberg-Marquart method
+nlfit, nlpcov = scipy.optimize.curve_fit(oscDecay,
+             t, decay, p0=[A0, B0, C0, tau0, omega0], sigma=unc)
+
+# calculate reduced chi-squared
+rchi = RedChiSqr(oscDecay, t, decay, unc, nlfit)
+
+# create fitting function from fitted parameters
+A, B, C, tau, omega = nlfit
+t_fit = np.linspace(0.0, 50., 512)
+d_fit = oscDecay(t_fit, A, B, C, tau, omega)
+
+# Create figure window to plot data
+fig = plt.figure(1, figsize=(8,8))      # extra length for residuals
+gs = gridspec.GridSpec(2, 1, height_ratios=[6, 2])
+
+# Top plot: data and fit
+ax1 = fig.add_subplot(gs[0])
+ax1.plot(t_fit, d_fit)
+ax1.errorbar(t, decay, yerr=unc, fmt=&#39;or&#39;, ecolor=&#39;black&#39;, ms=4)
+ax1.set_xlabel(&#39;time (ms)&#39;)
+ax1.set_ylabel(&#39;decay (arb units)&#39;)
+ax1.text(0.55, 0.8, &#39;A = {0:0.1f}\nB = {1:0.3f}\nC = {2:0.1f}&#39;.format(A, B, C),
+        transform = ax1.transAxes)
+ax1.text(0.75, 0.8, &#39;$\\tau$ = {0:0.1f}\n$\omega$ = {1:0.3f}\n$\chi^2$ = {2:0.3f}&#39;
+         .format(tau, omega, rchi), transform = ax1.transAxes)
+ax1.set_title(&#39;$d(t) = A (1+B\,\cos\,\omega t) e^{-t^2/2\\tau^2} + C$&#39;)
+
+# Bottom plot: residuals
+resids = decay - oscDecay(t, A, B, C, tau, omega)
+ax2 = fig.add_subplot(gs[1])
+ax2.axhline(color=&quot;gray&quot;)
+ax2.errorbar(t, resids, yerr = unc, ecolor=&quot;black&quot;, fmt=&quot;ro&quot;, ms=4)
+ax2.set_xlabel(&#39;time (ms)&#39;)
+ax2.set_ylabel(&#39;residuals&#39;)
+ax2.set_ylim(-5, 5)
+yticks = (-5, 0, 5)
+ax2.set_yticks(yticks)
+
+plt.savefig(&#39;FitOscDecay.pdf&#39;)
+
+plt.show()
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/Book_chap8_Problems_Chap08PineSolns_12_0.png" src="../../../_images/Book_chap8_Problems_Chap08PineSolns_12_0.png" />
+</div>
+</div>
+<ol class="loweralpha simple" start="3">
+<li></li>
+</ol>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span># initial values for fitting parameters (guesses)
+A0 = 15.0
+B0 = 0.6
+C0 = 1.2*A0
+tau0 = 16.0
+omega0 = 3.0 * 0.781
+
+# fit data using SciPy&#39;s Levenberg-Marquart method
+nlfit, nlpcov = scipy.optimize.curve_fit(oscDecay,
+             t, decay, p0=[A0, B0, C0, tau0, omega0], sigma=unc)
+
+# calculate reduced chi-squared
+rchi = RedChiSqr(oscDecay, t, decay, unc, nlfit)
+
+# create fitting function from fitted parameters
+A, B, C, tau, omega = nlfit
+t_fit = np.linspace(0.0, 50., 512)
+d_fit = oscDecay(t_fit, A, B, C, tau, omega)
+
+# Create figure window to plot data
+fig = plt.figure(1, figsize=(8,6))
+
+# Top plot: data and fit
+ax1 = fig.add_subplot(111)
+ax1.plot(t_fit, d_fit)
+ax1.errorbar(t, decay, yerr=unc, fmt=&#39;or&#39;, ecolor=&#39;black&#39;, ms=4)
+ax1.set_xlabel(&#39;time (ms)&#39;)
+ax1.set_ylabel(&#39;decay (arb units)&#39;)
+ax1.text(0.55, 0.8, &#39;A = {0:0.1f}\nB = {1:0.3f}\nC = {2:0.1f}&#39;.format(A, B, C),
+        transform = ax1.transAxes)
+ax1.text(0.75, 0.8, &#39;$\\tau$ = {0:0.1f}\n$\omega$ = {1:0.3f}\n$\chi^2$ = {2:0.3f}&#39;
+         .format(tau, omega, rchi), transform = ax1.transAxes)
+ax1.set_title(&#39;$d(t) = A (1+B\,\cos\,\omega t) e^{-t^2/2\\tau^2} + C$&#39;)
+
+plt.show()
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/Book_chap8_Problems_Chap08PineSolns_14_0.png" src="../../../_images/Book_chap8_Problems_Chap08PineSolns_14_0.png" />
+</div>
+</div>
+<ol class="loweralpha simple" start="4">
+<li><p>The program finds the optimal values for all the fitting paramters again</p></li>
+</ol>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span># initial values for fitting parameters (guesses)
+A0 = 15.0
+B0 = 0.6
+C0 = 1.2*A0
+tau0 = 16.0
+omega0 = 2.*np.pi/8.
+
+# fit data using SciPy&#39;s Levenberg-Marquardt method
+nlfit, nlpcov = scipy.optimize.curve_fit(oscDecay,
+             t, decay, p0=[A0, B0, C0, tau0, omega0], sigma=unc)
+
+# unpack optimal values of fitting parameters from nlfit
+A, B, C, tau, omega = nlfit
+
+# calculate reduced chi square for different values around the optimal
+omegaArray = np.linspace(0.05, 2.95, 256)
+redchiArray = np.zeros(omegaArray.size)
+for i in range(omegaArray.size):
+    nlfit = np.array([A, B, C, tau, omegaArray[i]])
+    redchiArray[i] = RedChiSqr(oscDecay, t, decay, unc, nlfit)
+
+plt.figure(figsize=(8,4))
+plt.plot(omegaArray, redchiArray)
+plt.xlabel(&#39;$\omega$&#39;)
+plt.ylabel(&#39;$\chi_r^2$&#39;)
+
+plt.savefig(&#39;VaryChiSq.pdf&#39;)
+
+plt.show()
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/Book_chap8_Problems_Chap08PineSolns_16_0.png" src="../../../_images/Book_chap8_Problems_Chap08PineSolns_16_0.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright David J Pine
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
