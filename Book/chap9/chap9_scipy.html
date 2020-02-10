@@ -21,12 +21,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -84,9 +84,9 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chap1/chap1_intro.html">1. Chapter 1: Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap2/chap2_basics.html">2. Chapter 2  Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap2/chap2_basics.html">2. Chapter 2: First Steps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap3/chap3_arrays.html">3. Chapter 3: Arrays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap4/chap4_io.html">4. Chapter 4: Input output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap4/chap4_io.html">4. Chapter 4: Input and Output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap5/chap5_plot.html">5. Chapter 5: Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap6/chap6_loopsconds.html">6. Chapter 6: Flow control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap7/chap7_funcs.html">7. Chapter 7: Functions</a></li>
@@ -1116,7 +1116,7 @@ f_2(t, \theta, \omega) &amp;= -\frac{1}{Q}\,\omega + \sin\theta
 <p>We begin with a concrete example.  Suppose we want to find the solutions to the equation</p>
 <div class="math notranslate nohighlight">
 \[\tan x=\sqrt{(8/x)^2-1}\]</div>
-<p>Plots of <span class="math notranslate nohighlight">\(\tan x\)</span> and <span class="math notranslate nohighlight">\(\sqrt{(8/x)^2-1}\)</span> <em>vs</em> <span class="math notranslate nohighlight">\(x\)</span> are shown in the top plot in the figure <a class="reference internal" href="../chap5/chap5_plot.html#fig-subplotdemo"><span class="std std-ref">Crossing functions</span></a>, albeit with <span class="math notranslate nohighlight">\(x\)</span> replaced by <span class="math notranslate nohighlight">\(\theta\)</span>.  The solutions to this equation are those <span class="math notranslate nohighlight">\(x\)</span> values where the two curves <span class="math notranslate nohighlight">\(\tan x\)</span> and <span class="math notranslate nohighlight">\(\sqrt{(8/x)^2-1}\)</span> cross each other. The first step towards obtaining a numerical solution is to rewrite the equation to be solved in the form <span class="math notranslate nohighlight">\(f(x)=0\)</span>.  Doing so, the above equation becomes</p>
+<p>Plots of <span class="math notranslate nohighlight">\(\tan x\)</span> and <span class="math notranslate nohighlight">\(\sqrt{(8/x)^2-1}\)</span> <em>vs</em> <span class="math notranslate nohighlight">\(x\)</span> are shown in the top plot in the figure <span class="xref std std-ref">fig-subplotDemo</span>, albeit with <span class="math notranslate nohighlight">\(x\)</span> replaced by <span class="math notranslate nohighlight">\(\theta\)</span>.  The solutions to this equation are those <span class="math notranslate nohighlight">\(x\)</span> values where the two curves <span class="math notranslate nohighlight">\(\tan x\)</span> and <span class="math notranslate nohighlight">\(\sqrt{(8/x)^2-1}\)</span> cross each other. The first step towards obtaining a numerical solution is to rewrite the equation to be solved in the form <span class="math notranslate nohighlight">\(f(x)=0\)</span>.  Doing so, the above equation becomes</p>
 <div class="math notranslate nohighlight">
 \[\tan x - \sqrt{(8/x)^2-1} = 0\]</div>
 <p>Obviously the two equations above have the same solutions for <span class="math notranslate nohighlight">\(x\)</span>.  Parenthetically we mention that the problem of finding the solutions to equations of the form <span class="math notranslate nohighlight">\(f(x)=0\)</span> is often referred to as <em>finding the roots</em> of <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
